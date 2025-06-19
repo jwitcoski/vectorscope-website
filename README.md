@@ -1,42 +1,42 @@
 # Vector Scope AI Website
 
-This repository contains the website for Vector Scope AI LLC, a geospatial AI solutions company.
+[![Deploy Website](https://github.com/jwitcoski/vectorscope-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/jwitcoski/vectorscope-website/actions/workflows/deploy.yml)
 
-## Infrastructure
+This repository contains the website for Vector Scope AI LLC, a geospatial AI solutions company. The website is automatically deployed to AWS using GitHub Actions.
 
-The website is hosted on AWS using the following services:
-- S3 for static website hosting
-- CloudFront for content delivery
-- Route 53 for DNS management (optional)
-- GitHub Actions for CI/CD
+## 🌐 Website
 
-## Prerequisites
+- Production: [vectorscopeai.com](https://vectorscopeai.com)
+- Development: [S3 Website Endpoint]
+
+## 🏗️ Infrastructure
+
+The website is hosted on AWS using:
+- **S3** for static website hosting
+- **CloudFront** for content delivery
+- **Route 53** for DNS management (coming soon)
+- **GitHub Actions** for CI/CD
+
+## 🚀 Deployment Status
+
+The website is automatically deployed when changes are merged to the main branch. You can check the deployment status in the [Actions tab](https://github.com/jwitcoski/vectorscope-website/actions).
+
+### Recent Deployments
+- Main Branch: ![Deploy Website](https://github.com/jwitcoski/vectorscope-website/actions/workflows/deploy.yml/badge.svg?branch=main)
+
+## 🛠️ Development
+
+### Prerequisites
 
 1. AWS Account with appropriate permissions
-2. GitHub repository
-3. Domain name (vectorscopeai.com)
-4. Terraform installed locally for development
+2. Terraform installed locally
+3. Git
 
-## Initial Setup
-
-1. Create an S3 bucket for Terraform state:
-```bash
-aws s3 mb s3://vectorscope-terraform-state --region us-east-1
-```
-
-2. Create an IAM role for GitHub Actions with the following permissions:
-   - S3 full access to the website bucket
-   - CloudFront distribution management
-   - Terraform state bucket access
-
-3. Add the following secrets to your GitHub repository:
-   - `AWS_ROLE_ARN`: The ARN of the IAM role created for GitHub Actions
-
-## Local Development
+### Local Setup
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/vectorscope-website.git
+git clone https://github.com/jwitcoski/vectorscope-website.git
 cd vectorscope-website
 ```
 
@@ -46,37 +46,29 @@ terraform init
 ```
 
 3. Make changes and test locally
-4. Commit and push changes to trigger the deployment
+4. Create a pull request to trigger the deployment workflow
 
-## Deployment
+## 📝 Contributing
 
-The website is automatically deployed when changes are pushed to the main branch:
+1. Create a new branch from main
+2. Make your changes
+3. Submit a pull request
+4. Wait for the automated checks to pass
+5. Request review
 
-1. GitHub Actions workflow is triggered
-2. Terraform creates/updates infrastructure
-3. Website files are synced to S3
-4. CloudFront cache is invalidated
+## 🔐 Security
 
-## Manual Deployment
+- All deployments are handled through GitHub Actions using OIDC authentication
+- No long-term AWS credentials are stored in GitHub
+- Branch protection rules ensure code quality and security
 
-If needed, you can deploy manually:
+## 📄 License
 
-```bash
-# Initialize Terraform
-terraform init
+See [LICENSE](LICENSE.txt) file for details.
 
-# Plan changes
-terraform plan
+## 🤝 Contact
 
-# Apply changes
-terraform apply
-
-# Sync files to S3
-aws s3 sync . s3://vectorscopeai.com/ --exclude "*" --include "*.html" --include "*.css" --include "*.js" --include "assets/*" --include "images/*"
-
-# Invalidate CloudFront cache
-aws cloudfront create-invalidation --distribution-id <DISTRIBUTION_ID> --paths "/*"
-```
+For questions or support, please [open an issue](https://github.com/jwitcoski/vectorscope-website/issues) or contact us through our website.
 
 ## Directory Structure
 
