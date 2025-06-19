@@ -58,12 +58,15 @@ resource "aws_iam_role_policy" "github_actions_policy" {
           "${aws_s3_bucket.website.arn}/*"
         ]
       },
-      # S3 permissions for Terraform state bucket
+      # S3 permissions for Terraform state bucket (including creation)
       {
         Effect = "Allow"
         Action = [
+          "s3:CreateBucket",
           "s3:ListBucket",
-          "s3:GetBucketLocation"
+          "s3:GetBucketLocation",
+          "s3:PutBucketVersioning",
+          "s3:PutBucketEncryption"
         ]
         Resource = [
           "arn:aws:s3:::vectorscope-terraform-state"
