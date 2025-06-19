@@ -106,7 +106,8 @@ resource "aws_cloudfront_distribution" "website" {
     cloudfront_default_certificate = true
   }
 
-  aliases = ["vectorscopeai.com", "www.vectorscopeai.com"]
+  # Temporarily comment out aliases until we have SSL certificate
+  # aliases = ["vectorscopeai.com", "www.vectorscopeai.com"]
 }
 
 resource "aws_cloudfront_origin_access_identity" "website" {
