@@ -15,15 +15,26 @@ if aws s3api head-bucket --bucket "$BUCKET_NAME" 2>/dev/null; then
 else
     echo "Creating bucket $BUCKET_NAME..."
     
-    # Create the bucket
-    if aws s3api create-bucket \
-        --bucket "$BUCKET_NAME" \
-        --region "$REGION" \
-        --create-bucket-configuration LocationConstraint="$REGION"; then
-        echo "Bucket $BUCKET_NAME created successfully"
+    # Create the bucket - handle us-east-1 differently
+    if [ "$REGION" = "us-east-1" ]; then
+        # us-east-1 doesn't use LocationConstraint
+        if aws s3api create-bucket --bucket "$BUCKET_NAME" --region "$REGION"; then
+            echo "Bucket $BUCKET_NAME created successfully"
+        else
+            echo "Failed to create bucket $BUCKET_NAME"
+            exit 1
+        fi
     else
-        echo "Failed to create bucket $BUCKET_NAME"
-        exit 1
+        # Other regions use LocationConstraint
+        if aws s3api create-bucket \
+            --bucket "$BUCKET_NAME" \
+            --region "$REGION" \
+            --create-bucket-configuration LocationConstraint="$REGION"; then
+            echo "Bucket $BUCKET_NAME created successfully"
+        else
+            echo "Failed to create bucket $BUCKET_NAME"
+            exit 1
+        fi
     fi
 fi
 

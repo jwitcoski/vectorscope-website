@@ -26,11 +26,17 @@ if ($LASTEXITCODE -eq 0) {
 } else {
     Write-Host "Creating bucket $BucketName..." -ForegroundColor Yellow
     
-    # Create the bucket
-    aws s3api create-bucket `
-        --bucket $BucketName `
-        --region $Region `
-        --create-bucket-configuration LocationConstraint=$Region
+    # Create the bucket - handle us-east-1 differently
+    if ($Region -eq "us-east-1") {
+        # us-east-1 doesn't use LocationConstraint
+        aws s3api create-bucket --bucket $BucketName --region $Region
+    } else {
+        # Other regions use LocationConstraint
+        aws s3api create-bucket `
+            --bucket $BucketName `
+            --region $Region `
+            --create-bucket-configuration LocationConstraint=$Region
+    }
 
     if ($LASTEXITCODE -eq 0) {
         Write-Host "Bucket $BucketName created successfully" -ForegroundColor Green
