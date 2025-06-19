@@ -37,13 +37,14 @@ resource "aws_iam_role_policy" "github_actions_policy" {
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
-      # IAM permissions for creating and managing OIDC providers and roles
       {
-        Effect = "Allow"
+        Sid = "IAMPermissions",
+        Effect = "Allow",
         Action = [
           "iam:CreateOpenIDConnectProvider",
           "iam:GetOpenIDConnectProvider",
           "iam:DeleteOpenIDConnectProvider",
+          "iam:ListOpenIDConnectProviders",
           "iam:CreateRole",
           "iam:GetRole",
           "iam:PutRolePolicy",
@@ -53,96 +54,32 @@ resource "aws_iam_role_policy" "github_actions_policy" {
           "iam:AttachRolePolicy",
           "iam:DetachRolePolicy",
           "iam:PassRole"
-        ]
+        ],
         Resource = "*"
       },
-      # S3 permissions for website bucket (including creation)
       {
-        Effect = "Allow"
+        Sid = "S3AllPermissions",
+        Effect = "Allow",
         Action = [
-          "s3:CreateBucket",
-          "s3:DeleteBucket",
-          "s3:GetBucketLocation",
-          "s3:GetBucketPolicy",
-          "s3:PutBucketPolicy",
-          "s3:DeleteBucketPolicy",
-          "s3:PutBucketWebsite",
-          "s3:GetBucketWebsite",
-          "s3:DeleteBucketWebsite",
-          "s3:PutBucketPublicAccessBlock",
-          "s3:GetBucketPublicAccessBlock",
-          "s3:PutObject",
-          "s3:GetObject",
-          "s3:ListBucket",
-          "s3:DeleteObject",
-          "s3:PutObjectAcl",
-          "s3:GetObjectAcl"
-        ]
-        Resource = [
-          "arn:aws:s3:::vectorscopeai.com",
-          "arn:aws:s3:::vectorscopeai.com/*"
-        ]
-      },
-      # S3 permissions for Terraform state bucket (including creation)
-      {
-        Effect = "Allow"
-        Action = [
-          "s3:CreateBucket",
-          "s3:DeleteBucket",
-          "s3:ListBucket",
-          "s3:GetBucketLocation",
-          "s3:PutBucketVersioning",
-          "s3:GetBucketVersioning",
-          "s3:PutBucketEncryption",
-          "s3:GetBucketEncryption",
-          "s3:GetBucketPolicy",
-          "s3:PutBucketPolicy",
-          "s3:DeleteBucketPolicy"
-        ]
-        Resource = [
-          "arn:aws:s3:::vectorscope-terraform-state"
-        ]
-      },
-      {
-        Effect = "Allow"
-        Action = [
-          "s3:GetObject",
-          "s3:PutObject",
-          "s3:DeleteObject",
-          "s3:GetObjectVersion",
-          "s3:DeleteObjectVersion"
-        ]
-        Resource = [
-          "arn:aws:s3:::vectorscope-terraform-state/*"
-        ]
-      },
-      # CloudFront permissions (including creation)
-      {
-        Effect = "Allow"
-        Action = [
-          "cloudfront:CreateDistribution",
-          "cloudfront:GetDistribution",
-          "cloudfront:UpdateDistribution",
-          "cloudfront:DeleteDistribution",
-          "cloudfront:ListDistributions",
-          "cloudfront:CreateInvalidation",
-          "cloudfront:GetInvalidation",
-          "cloudfront:ListInvalidations",
-          "cloudfront:CreateCloudFrontOriginAccessIdentity",
-          "cloudfront:GetCloudFrontOriginAccessIdentity",
-          "cloudfront:UpdateCloudFrontOriginAccessIdentity",
-          "cloudfront:DeleteCloudFrontOriginAccessIdentity",
-          "cloudfront:ListCloudFrontOriginAccessIdentities"
-        ]
+          "s3:*"
+        ],
         Resource = "*"
       },
-      # EC2 permissions for Terraform
       {
-        Effect = "Allow"
+        Sid = "CloudFrontAllPermissions",
+        Effect = "Allow",
+        Action = [
+          "cloudfront:*"
+        ],
+        Resource = "*"
+      },
+      {
+        Sid = "EC2Permissions",
+        Effect = "Allow",
         Action = [
           "ec2:DescribeRegions",
           "ec2:DescribeAvailabilityZones"
-        ]
+        ],
         Resource = "*"
       }
     ]
