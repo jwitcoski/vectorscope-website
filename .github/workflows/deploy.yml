@@ -25,6 +25,11 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: us-east-1
 
+      - name: Setup Terraform backend
+        run: |
+          chmod +x setup-terraform-backend.sh
+          ./setup-terraform-backend.sh
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
@@ -32,19 +37,13 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        env:
-          AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
 
       - name: Terraform Plan
         run: terraform plan
-        env:
-          AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
-        env:
-          AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
 
       - name: Upload website files to S3
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

@@ -35,68 +35,35 @@ resource "aws_iam_role" "github_actions" {
   })
 }
 
-# Policy for S3 access
-resource "aws_iam_role_policy" "s3_access" {
-  name = "s3-access"
+# Comprehensive policy for all required permissions
+resource "aws_iam_role_policy" "github_actions_policy" {
+  name = "github-actions-comprehensive"
   role = aws_iam_role.github_actions.id
 
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
+      # S3 permissions for website bucket
       {
         Effect = "Allow"
         Action = [
           "s3:PutObject",
           "s3:GetObject",
           "s3:ListBucket",
-          "s3:DeleteObject"
+          "s3:DeleteObject",
+          "s3:PutObjectAcl"
         ]
         Resource = [
           aws_s3_bucket.website.arn,
-          "${aws_s3_bucket.website.arn}/*",
-          "arn:aws:s3:::vectorscope-terraform-state",
-          "arn:aws:s3:::vectorscope-terraform-state/*"
+          "${aws_s3_bucket.website.arn}/*"
         ]
-      }
-    ]
-  })
-}
-
-# Policy for CloudFront access
-resource "aws_iam_role_policy" "cloudfront_access" {
-  name = "cloudfront-access"
-  role = aws_iam_role.github_actions.id
-
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
+      },
+      # S3 permissions for Terraform state bucket
       {
         Effect = "Allow"
         Action = [
-          "cloudfront:CreateInvalidation",
-          "cloudfront:GetInvalidation",
-          "cloudfront:ListInvalidations"
-        ]
-        Resource = [
-          aws_cloudfront_distribution.website.arn
-        ]
-      }
-    ]
-  })
-}
-
-# Policy for Terraform state management
-resource "aws_iam_role_policy" "terraform_state" {
-  name = "terraform-state"
-  role = aws_iam_role.github_actions.id
-
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect = "Allow"
-        Action = [
-          "s3:ListBucket"
+          "s3:ListBucket",
+          "s3:GetBucketLocation"
         ]
         Resource = [
           "arn:aws:s3:::vectorscope-terraform-state"
@@ -112,6 +79,42 @@ resource "aws_iam_role_policy" "terraform_state" {
         Resource = [
           "arn:aws:s3:::vectorscope-terraform-state/*"
         ]
+      },
+      # CloudFront permissions
+      {
+        Effect = "Allow"
+        Action = [
+          "cloudfront:CreateInvalidation",
+          "cloudfront:GetInvalidation",
+          "cloudfront:ListInvalidations",
+          "cloudfront:GetDistribution",
+          "cloudfront:ListDistributions"
+        ]
+        Resource = [
+          aws_cloudfront_distribution.website.arn,
+          "arn:aws:cloudfront::*:distribution/*"
+        ]
+      },
+      # IAM permissions for managing the role itself
+      {
+        Effect = "Allow"
+        Action = [
+          "iam:GetRole",
+          "iam:GetRolePolicy",
+          "iam:PutRolePolicy",
+          "iam:DeleteRolePolicy"
+        ]
+        Resource = [
+          aws_iam_role.github_actions.arn
+        ]
+      },
+      # EC2 permissions for Terraform
+      {
+        Effect = "Allow"
+        Action = [
+          "ec2:DescribeRegions"
+        ]
+        Resource = "*"
       }
     ]
   })
