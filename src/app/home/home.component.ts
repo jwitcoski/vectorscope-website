@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 /** Formspree form ID - https://formspree.io/f/mykjvjwb */
 const FORMSPREE_FORM_ID = 'mykjvjwb';
@@ -8,7 +9,7 @@ const FORMSPREE_FORM_ID = 'mykjvjwb';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './home.component.html',
   styles: []
 })

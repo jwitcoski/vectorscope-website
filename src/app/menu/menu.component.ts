@@ -12,6 +12,7 @@ import { MenuService } from '../menu.service';
         <h2>Menu</h2>
         <ul class="links">
           <li><a routerLink="/" (click)="menuService.hide()">Home</a></li>
+          <li><a routerLink="/census-demo" (click)="menuService.hide()">Census Demo</a></li>
           <li><a href="#four" (click)="onAnchorClick($event, '#four')">AI Services</a></li>
           <li><a href="#case-studies" (click)="onAnchorClick($event, '#case-studies')">Case Studies</a></li>
           <li><a href="#five" (click)="onAnchorClick($event, '#five')">About</a></li>
