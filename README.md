@@ -24,6 +24,15 @@ The website is automatically deployed when changes are merged to the main branch
 ### Recent Deployments
 - Main Branch: ![Deploy Website](https://github.com/jwitcoski/vectorscope-website/actions/workflows/deploy.yml/badge.svg?branch=main)
 
+## 📬 Contact form (Formspree)
+
+The contact form at the bottom of the page uses [Formspree](https://formspree.io) so submissions work without a backend:
+
+1. Sign up at [formspree.io](https://formspree.io) and create a new form.
+2. Copy your form ID from the form’s endpoint (e.g. `https://formspree.io/f/abc123xy` → `abc123xy`).
+3. In `src/app/home/home.component.ts`, set `FORMSPREE_FORM_ID = 'abc123xy'` (replace `YOUR_FORM_ID`).
+4. Submissions will be emailed to the address you set in Formspree; you can also view them in the Formspree dashboard.
+
 ## 🛠️ Development
 
 ### Prerequisites

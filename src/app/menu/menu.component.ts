@@ -18,7 +18,7 @@ import { MenuService } from '../menu.service';
           <li><a href="#contact" (click)="onAnchorClick($event, '#contact')">Contact</a></li>
           <li><a href="https://vectorscopeai.com" target="_blank" rel="noopener" (click)="menuService.hide()">Main Site</a></li>
         </ul>
-        <a href="#" class="close" (click)="onCloseClick($event)">Close</a>
+        <a href="#" class="close" (click)="onCloseClick($event)" aria-label="Close menu">Close</a>
       </div>
     </nav>
   `,

@@ -13,7 +13,7 @@ import { MenuService } from '../menu.service';
         <a routerLink="/">Vector Scope AI</a>
       </h1>
       <nav>
-        <a href="#" (click)="toggleMenu($event)">Menu</a>
+        <a href="#menu" (click)="toggleMenu($event)">Menu</a>
       </nav>
     </header>
   `,
