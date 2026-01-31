@@ -17,4 +17,10 @@ Thumbs.db
 
 # Environment variables
 .env
-.env.* 
+.env.*
+
+# Node / Angular
+node_modules/
+dist/
+.angular/
+*.js.map 

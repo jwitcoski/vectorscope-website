@@ -1,0 +1,27 @@
+/* Custom styles for Vector Scope AI */
+.logo-img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+#header .logo-small {
+  max-height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#header h1 {
+  display: flex;
+  align-items: center;
+}
+
+.banner-logo {
+  margin-bottom: 2em;
+
+  img {
+    max-width: 250px;
+    height: auto;
+  }
+}
