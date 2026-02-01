@@ -1,274 +1,655 @@
-<!DOCTYPE HTML>
-<!--
-	Vector Scope AI LLC - Geospatial AI Solutions
-	Customized from Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Vector Scope AI - AI-Powered Geospatial Solutions for Government</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="AI-powered geospatial solutions for government and enterprise. Expert in FISMA-compliant AI systems, geospatial foundation models, and secure ML deployment for sensitive government data." />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			.logo-img {
-				max-width: 200px;
-				height: auto;
-				margin-bottom: 1em;
-			}
-			#header .logo-small {
-				max-height: 40px;
-				width: auto;
-				vertical-align: middle;
-				margin-right: 10px;
-			}
-			#header h1 {
-				display: flex;
-				align-items: center;
-			}
-			.banner-logo {
-				margin-bottom: 2em;
-			}
-			.banner-logo img {
-				max-width: 250px;
-				height: auto;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vector Scope AI – AI-Powered Geospatial Intelligence</title>
+        <meta name="description" content="FISMA-compliant AI systems, geospatial foundation models, and secure ML deployment. The AI expert who understands government security requirements." />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo.png"
+            type="image/x-icon"
+        />
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="Vector Scope AI – AI-Powered Geospatial Intelligence" />
+        <meta property="og:description" content="FISMA-compliant AI solutions for government & enterprise. Geospatial foundation models, multimodal AI, and secure ML deployment." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vectorscopeai.com" />
+        <meta property="og:image" content="" />
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1>
-							<img src="images/logo.png" alt="VectorScope AI Logo" class="logo-small" />
-							<a href="index.html">Vector Scope AI</a>
-						</h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+        <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css"> -->
+        <link rel="stylesheet" href="./css/tailwind-build.css" />
+        <link rel="stylesheet" href="css/index.css" />
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="census-demo.html">Census Demo</a></li>
-								<li><a href="#four">AI Services</a></li>
-								<li><a href="#case-studies">Case Studies</a></li>
-								<li><a href="#five">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li><a href="https://vectorscopeai.com">Main Site</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff]">
+        <header
+            class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 
+                    tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around"
+        >
+            <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="#" aria-label="Vector Scope AI home">
+                <img
+                    src="./assets/logo.png"
+                    alt="Vector Scope AI"
+                    class="tw-object tw-h-full tw-w-full"
+                />
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black 
+                            max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end 
+                            max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                >
+                    <a class="header-links" href="#services"> Services </a>
+                    <a class="header-links" href="#case-studies"> Case Studies </a>
+                    <a class="header-links" href="#expert"> Your Expert </a>
+                    <a class="header-links" href="#contact"> Contact </a>
+                </div>
+                <div
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base 
+                            max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <a
+                        href="mailto:jwitcoski@gmail.com"
+                        aria-label="Contact"
+                        class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full
+                                tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
+                    >
+                        <span>Contact</span>
+                        <div
+                            class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center 
+                                    tw-place-items-center tw-rounded-full tw-bg-primary 
+                                    tw-font-semibold tw-text-black"
+                        >
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl 
+                        tw-text-black lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="banner-logo">
-								<img src="images/logo.png" alt="VectorScope AI" />
-							</div>
-							<h2>AI-Powered Geospatial Intelligence</h2>
-							<p>The AI expert who understands government security requirements.<br />
-							FISMA-compliant AI systems, geospatial foundation models, and secure ML deployment.</p>
-						</div>
-					</section>
+        <section
+            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col 
+                    tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]"
+        >
+            <div
+                class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-place-content-center 
+                        tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col"
+            >
+                <div class="tw-flex tw-flex-col tw-place-content-center">
+                    <div
+                        class="tw-flex tw-flex-wrap tw-text-6xl tw-font-semibold tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                        <span class="reveal-hero-text">
+                            AI-Powered Geospatial
+                        </span>
+                        <br />
+                        <span class="reveal-hero-text"> Intelligence </span>
+                    </div>
+                    <div
+                        class="reveal-hero-text tw-mt-2 tw-max-w-[500px] tw-p-2 
+                                tw-text-justify max-lg:tw-max-w-full"
+                    >
+                        The AI expert who understands government security requirements.
+                        FISMA-compliant AI systems, geospatial foundation models, and secure ML deployment.
+                    </div>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+                    <div
+                        class="reveal-hero-text tw-mt-4 tw-flex tw-place-items-center tw-gap-4 
+                                tw-overflow-hidden tw-p-2"
+                    >
+                        <a
+                            href="#services"
+                            class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full
+                                    tw-bg-black tw-px-5 tw-text-white"
+                        >
+                            Explore AI Services
+                        </a>
+                    </div>
+                </div>
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="AI-Powered Geospatial Solutions" /></a>
-									<div class="content">
-										<h2 class="major">AI-Powered Geospatial Solutions for Government & Enterprise</h2>
-										<p>We bridge the gap between cutting-edge AI technology and government security requirements. With expertise in Amazon Bedrock, SageMaker, OpenAI API, and computer vision models, we deliver FISMA-compliant AI solutions that most AI consultants can't—because they don't understand government procurement, security controls for ML models, or legacy system integration challenges.</p>
-										<a href="#four" class="special">Explore AI Services</a>
-									</div>
-								</div>
-							</section>
+                <div
+                    class="tw-flex tw-w-full tw-max-w-[50%] tw-place-content-center tw-place-items-center 
+                            tw-overflow-hidden max-lg:tw-max-w-[unset]"
+                >
+                    <div
+                        class="tw-relative tw-flex tw-max-h-[580px] tw-min-h-[450px] tw-min-w-[350px] 
+                            tw-max-w-[650px] tw-overflow-hidden max-lg:tw-h-fit max-lg:tw-max-h-[320px] 
+                            max-lg:tw-min-h-[180px] max-lg:tw-w-[320px] max-lg:tw-min-w-[320px]"
+                    >
+                        <img
+                            src="./assets/images/pic01.jpg"
+                            alt="AI-Powered Geospatial Intelligence"
+                            class="reveal-hero-img tw-z-[1] tw-h-full tw-w-full tw-object-contain"
+                        />
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="Modern AI Tech Stack" /></a>
-									<div class="content">
-										<h2 class="major">Advanced AI Tech Stack</h2>
-										<p>Leveraging the latest AI technologies: Amazon Bedrock for foundation models, AWS SageMaker for custom ML models, OpenAI API for geospatial applications, computer vision for imagery analysis, and LangChain for geospatial RAG implementations. All deployed with enterprise-grade security and compliance.</p>
-										<a href="#five" class="special">View Case Studies</a>
-									</div>
-								</div>
-							</section>
+                        <div
+                            class="tw-absolute tw-bottom-0 tw-left-1/2 tw-h-[80%] tw-w-[80%] 
+                                    tw--translate-x-1/2 tw-rounded-full tw-bg-secondary"
+                            id="hero-img-bg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center 
+                    tw-place-items-center tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="reveal-up tw-flex tw-min-h-[140px] tw-w-full tw-max-w-[80%] tw-place-items-center 
+                        tw-justify-center tw-gap-8 tw-rounded-xl tw-bg-[#e7e6e685] tw-p-6 max-lg:tw-max-w-full max-md:tw-flex-col"
+            >
+                <span class="tw-text-center tw-text-lg tw-font-medium">
+                    AI-Powered Geospatial Solutions for Government &amp; Enterprise
+                </span>
+            </div>
+        </section>
 
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="Government AI Expertise" /></a>
-									<div class="content">
-										<h2 class="major">Government AI Expertise</h2>
-										<p>Specialized in geospatial foundation models trained on government datasets, multimodal AI for maps and satellite imagery, AI governance for sensitive data, and edge AI deployment in disconnected/classified environments. Your AI partner who speaks both government and technology.</p>
-										<a href="#contact" class="special">Get Started</a>
-									</div>
-								</div>
-							</section>
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center
+                        tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
+            >
+                <div class="tw-flex">
+                    <div class="tw-h-[450px] tw-w-[300px]">
+                        <img
+                            src="./assets/images/pic02.jpg"
+                            alt="Geospatial AI"
+                            class="tw-h-full tw-w-full tw-object-contain"
+                        />
+                    </div>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[500px] tw-flex-col tw-gap-4"
+                >
+                    <h3 class="tw-text-4xl tw-font-medium">AI-Powered Geospatial Solutions</h3>
+                    <p class="tw-text-xl tw-leading-relaxed">
+                        We bridge the gap between cutting-edge AI technology and government security requirements. With expertise in Amazon Bedrock, SageMaker, OpenAI API, and computer vision models, we deliver FISMA-compliant AI solutions that most AI consultants can't—because they don't understand government procurement, security controls for ML models, or legacy system integration challenges.
+                    </p>
+                    <a
+                        href="#services"
+                        class="tw-mt-2 tw-inline-flex tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-px-5 tw-text-white"
+                    >Explore AI Services</a>
+                </div>
+            </div>
+        </section>
 
-						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">AI-Powered Services</h2>
-									<p>Cutting-edge AI solutions designed specifically for government agencies and enterprise clients who need both innovation and compliance.</p>
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="Geospatial Foundation Models" /></a>
-											<h3 class="major">Geospatial Foundation Models</h3>
-											<p>Custom AI models trained on government spatial datasets using AWS SageMaker. Deploy foundation models that understand your specific geospatial domain while maintaining FISMA compliance.</p>
-											<a href="#contact" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="Multimodal AI Solutions" /></a>
-											<h3 class="major">Multimodal AI Solutions</h3>
-											<p>AI systems that understand both maps and satellite imagery. Computer vision models for automated feature extraction, change detection, and intelligent data processing from multiple geospatial sources.</p>
-											<a href="#contact" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="AI Governance & Compliance" /></a>
-											<h3 class="major">AI Governance & Compliance</h3>
-											<p>Responsible AI implementation for sensitive government data. Security controls for ML models, FISMA compliance frameworks, and risk assessments tailored for AI systems in government environments.</p>
-											<a href="#contact" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="Edge AI Deployment" /></a>
-											<h3 class="major">Edge AI Deployment</h3>
-											<p>Deploying AI models in disconnected/classified environments. Secure, containerized AI solutions that work offline, maintain data sovereignty, and provide real-time geospatial intelligence where connectivity is limited.</p>
-											<a href="#contact" class="special">Learn more</a>
-										</article>
-									</section>
-									<ul class="actions">
-										<li><a href="#contact" class="button">Request AI Consultation</a></li>
-									</ul>
-								</div>
-							</section>
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center 
+                        tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
+            >
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[500px] tw-flex-col tw-gap-4"
+                >
+                    <h3 class="tw-text-4xl tw-font-medium">Modern AI Tech Stack</h3>
+                    <p class="tw-text-xl tw-leading-relaxed">
+                        Leveraging the latest AI technologies: Amazon Bedrock for foundation models, AWS SageMaker for custom ML models, OpenAI API for geospatial applications, computer vision for imagery analysis, and LangChain for geospatial RAG implementations. All deployed with enterprise-grade security and compliance.
+                    </p>
+                    <a
+                        href="#case-studies"
+                        class="tw-mt-2 tw-inline-flex tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-px-5 tw-text-white"
+                    >View Case Studies</a>
+                </div>
 
-						<!-- Case Studies -->
-							<section id="case-studies" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">AI Case Studies</h2>
-									<p>Real-world examples of AI-powered geospatial solutions delivering measurable results for government and enterprise clients.</p>
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic01cs.jpg" alt="AI-Powered Ski Resort Intelligence" /></a>
-											<h3 class="major">AI-Powered Ski Resort Intelligence</h3>
-											<p><strong>Project:</strong> Global Ski Atlas - Comprehensive ski resort mapping and intelligence platform</p>
-											<p><strong>AI Technologies:</strong></p>
-											<ul>
-												<li>Automated content generation using Amazon Bedrock foundation models</li>
-												<li>Intelligent data extraction from OpenStreetMap with custom ML models</li>
-												<li>Dynamic visualization generation with AI assistance</li>
-												<li>Natural language processing for resort descriptions</li>
-											</ul>
-											<p><strong>Outcomes:</strong> Reduced manual data processing by 80%, generated 10,000+ resort profiles automatically, and created dynamic visualizations that adapt to user queries.</p>
-											<a href="#contact" class="special">Discuss Similar Project</a>
-										</article>
-										<article>
-											<a href="census-demo.html" class="image"><img src="images/pic02cs.jpg" alt="Conversational Census Data - Try Demo" /></a>
-											<h3 class="major"><a href="census-demo.html">Conversational Census Data</a></h3>
-											<p><strong>Project:</strong> Natural language interface for complex demographic analysis</p>
-											<p><strong>The Challenge:</strong> Urban planners and community stakeholders needed to access Census tract data, boundary layers, and demographic indicators—but lacked the technical skills to run SQL queries or navigate complex geospatial databases.</p>
-											<p><strong>AI Technologies:</strong></p>
-											<ul>
-												<li>Natural language interface for complex demographic queries using OpenAI API</li>
-												<li>AI-generated insights from Census boundary data with SageMaker</li>
-												<li>Automated report generation for urban planners</li>
-												<li>LangChain implementation for geospatial RAG</li>
-											</ul>
-											<p><strong>Outcomes:</strong> Enabled non-technical users to query complex demographic data in plain English, automated report generation saving 15+ hours per analysis, and provided AI-powered insights for urban planning decisions.</p>
-											<a href="census-demo.html" class="special">Try Demo</a>
-											<a href="#contact" class="special">Discuss Similar Project</a>
-										</article>
-									</section>
-									<div class="content">
-										<h3>Why These Projects Succeeded</h3>
-										<p><strong>Government Compliance:</strong> All AI systems were designed with FISMA compliance in mind, including proper security controls, data encryption, and audit trails.</p>
-										<p><strong>Scalable Architecture:</strong> Built on AWS serverless infrastructure for cost-effective scaling and high availability.</p>
-										<p><strong>User-Centric Design:</strong> AI solutions that enhance human capabilities rather than replace them, with intuitive interfaces for non-technical users.</p>
-									</div>
-									<ul class="actions">
-										<li><a href="#contact" class="button">Start Your AI Project</a></li>
-									</ul>
-								</div>
-							</section>
+                <div class="tw-flex">
+                    <div class="tw-h-[450px] tw-w-[300px]">
+                        <img
+                            src="./assets/images/pic04.jpg"
+                            alt="AI Tech Stack"
+                            class="tw-h-full tw-w-full tw-object-contain"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
 
-						<!-- Five -->
-							<section id="five" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic08.jpg" alt="Your AI Expert" /></a>
-									<div class="content">
-										<h2 class="major">Your AI Expert Who Understands Government</h2>
-										<p>Led by a former Census Bureau geographer with over 15 years of experience, our team brings a unique combination of deep geospatial expertise and cutting-edge AI knowledge. Our background provides the foundation for building compliant, mission-critical AI solutions that government agencies can trust.</p>
-										<p><strong>Key Differentiator:</strong> Most AI consultants don't understand FISMA compliance for AI systems, security controls for ML models, government procurement processes, or legacy system integration challenges. We do.</p>
-										<p><strong>Trusted Experience:</strong> Our leadership has worked with CDC, DHS, and FEMA on mission-critical spatial analysis and developing FISMA-compliant geospatial solutions. Now bringing that same expertise to AI-powered geospatial intelligence.</p>
-										<a href="#contact" class="special">Discuss Your AI Project</a>
-									</div>
-								</div>
-							</section>
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="reveal-up tw-flex tw-min-h-[40vh] tw-place-content-center tw-place-items-center 
+                        tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
+            >
+                <div class="tw-flex tw-max-w-[700px] tw-flex-col tw-gap-4 tw-text-center">
+                    <h3 class="tw-text-4xl tw-font-medium">Government AI Expertise</h3>
+                    <p class="tw-text-xl tw-leading-relaxed">
+                        Specialized in geospatial foundation models trained on government datasets, multimodal AI for maps and satellite imagery, AI governance for sensitive data, and edge AI deployment in disconnected/classified environments. Your AI partner who speaks both government and technology.
+                    </p>
+                    <a
+                        href="mailto:jwitcoski@gmail.com"
+                        class="tw-mt-2 tw-inline-flex tw-mx-auto tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-px-5 tw-text-white"
+                    >Get Started</a>
+                </div>
+            </div>
+        </section>
 
-						<!-- Six -->
-							<section id="contact" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<div class="content">
-										<h2 class="major">Ready to Deploy AI?</h2>
-										<p>Transform your geospatial capabilities with AI that understands government requirements. Contact Vector Scope AI LLC to discuss how our FISMA-compliant AI solutions can drive your spatial intelligence initiatives forward.</p>
-										<ul class="actions">
-											<li><a href="mailto:jwitcoski@gmail.com?subject=Vector Scope AI - AI Solutions Inquiry&body=Hello,%0D%0A%0D%0AI'm interested in learning more about your AI-powered geospatial solutions.%0D%0A%0D%0APlease include:%0D%0A- Your name and organization%0D%0A- Current geospatial challenges%0D%0A- AI/ML requirements%0D%0A- Compliance needs (FISMA, etc.)%0D%0A%0D%0AThank you!" class="button">Send Email</a></li>
-										</ul>
-										<ul class="contact">
-											<li class="icon solid fa-home">
-												Vector Scope AI LLC<br />
-												AI-Powered Geospatial Solutions<br />
-												United States
-											</li>
-											<li class="icon solid fa-phone">Contact via email</li>
-											<li class="icon solid fa-envelope"><a href="mailto:jwitcoski@gmail.com">jwitcoski@gmail.com</a></li>
-											<li class="icon solid fa-globe"><a href="https://vectorscopeai.com">vectorscopeai.com</a></li>
-											<li class="icon brands fa-linkedin"><a href="#">LinkedIn</a></li>
-											<li class="icon brands fa-twitter"><a href="#">Twitter</a></li>
-										</ul>
-									</div>
-									<a href="#" class="image"><img src="images/pic09.jpg" alt="Contact Vector Scope AI" /></a>
-								</div>
-							</section>
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center 
+                    tw-place-items-center tw-overflow-hidden tw-p-6"
+            id="services"
+        >
+            <h2 class="reveal-up tw-mb-8 tw-text-4xl tw-font-medium max-md:tw-text-2xl">
+                AI-Powered Services
+            </h2>
+            <p class="reveal-up tw-mb-10 tw-max-w-[700px] tw-text-center tw-text-lg">
+                Cutting-edge AI solutions designed specifically for government agencies and enterprise clients who need both innovation and compliance.
+            </p>
+            <div
+                class="reveal-up tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[1200px] tw-flex-wrap tw-place-content-center 
+                        tw-place-items-stretch tw-gap-8 tw-rounded-xl tw-p-4 max-lg:tw-flex-col"
+            >
+                <div
+                    class="tw-flex tw-min-h-[320px] tw-w-[280px] tw-flex-1 tw-flex-col tw-gap-[5%] 
+                            tw-rounded-xl tw-bg-[#FFD5CA] tw-p-8 tw-shadow-lg"
+                >
+                    <div
+                        class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center tw-rounded-full tw-bg-white"
+                    >
+                        <i class="material-icons md-40">map</i>
+                    </div>
+                    <h3 class="tw-mt-5 tw-text-2xl tw-font-medium">Geospatial Foundation Models</h3>
+                    <p class="tw-text-base tw-leading-relaxed">
+                        Custom AI models trained on government spatial datasets using AWS SageMaker. Deploy foundation models that understand your specific geospatial domain while maintaining FISMA compliance.
+                    </p>
+                    <a href="mailto:jwitcoski@gmail.com" class="tw-mt-auto tw-font-medium tw-text-black tw-underline">Learn more</a>
+                </div>
 
-					</section>
+                <div
+                    class="tw-flex tw-min-h-[320px] tw-w-[280px] tw-flex-1 tw-flex-col tw-gap-[5%] tw-rounded-xl
+                         tw-bg-primary tw-p-8 tw-shadow-lg"
+                >
+                    <div
+                        class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center
+                                 tw-rounded-full tw-bg-white"
+                    >
+                        <i class="material-icons md-40">satellite_alt</i>
+                    </div>
+                    <h3 class="tw-mt-5 tw-text-2xl tw-font-medium">Multimodal AI Solutions</h3>
+                    <p class="tw-text-base tw-leading-relaxed">
+                        AI systems that understand both maps and satellite imagery. Computer vision models for automated feature extraction, change detection, and intelligent data processing from multiple geospatial sources.
+                    </p>
+                    <a href="mailto:jwitcoski@gmail.com" class="tw-mt-auto tw-font-medium tw-text-black tw-underline">Learn more</a>
+                </div>
+                <div
+                    class="tw-flex tw-min-h-[320px] tw-w-[280px] tw-flex-1 tw-flex-col tw-gap-[5%] tw-rounded-xl 
+                            tw-bg-[#FFEB99] tw-p-8 tw-shadow-lg"
+                >
+                    <div
+                        class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center 
+                                tw-rounded-full tw-bg-white"
+                    >
+                        <i class="material-icons md-40">shield</i>
+                    </div>
+                    <h3 class="tw-mt-5 tw-text-2xl tw-font-medium">AI Governance &amp; Compliance</h3>
+                    <p class="tw-text-base tw-leading-relaxed">
+                        Responsible AI implementation for sensitive government data. Security controls for ML models, FISMA compliance frameworks, and risk assessments tailored for AI systems in government environments.
+                    </p>
+                    <a href="mailto:jwitcoski@gmail.com" class="tw-mt-auto tw-font-medium tw-text-black tw-underline">Learn more</a>
+                </div>
+                <div
+                    class="tw-flex tw-min-h-[320px] tw-w-[280px] tw-flex-1 tw-flex-col tw-gap-[5%] tw-rounded-xl 
+                            tw-bg-[#e7e6e6] tw-p-8 tw-shadow-lg"
+                >
+                    <div
+                        class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center 
+                                tw-rounded-full tw-bg-white"
+                    >
+                        <i class="material-icons md-40">router</i>
+                    </div>
+                    <h3 class="tw-mt-5 tw-text-2xl tw-font-medium">Edge AI Deployment</h3>
+                    <p class="tw-text-base tw-leading-relaxed">
+                        Deploying AI models in disconnected/classified environments. Secure, containerized AI solutions that work offline, maintain data sovereignty, and provide real-time geospatial intelligence where connectivity is limited.
+                    </p>
+                    <a href="mailto:jwitcoski@gmail.com" class="tw-mt-auto tw-font-medium tw-text-black tw-underline">Learn more</a>
+                </div>
+            </div>
+        </section>
 
-				<!-- Footer -->
+        <section
+            class="tw-mt-5 tw-flex tw-min-h-[60vh] tw-w-full tw-flex-col tw-place-content-center 
+                    tw-place-items-center tw-bg-black tw-p-[2%] tw-text-white max-lg:tw-min-h-[40vh]"
+            id="case-studies"
+        >
+            <h3 class="reveal-up tw-text-5xl tw-font-medium max-md:tw-text-2xl">
+                AI Case Studies
+            </h3>
+            <p class="reveal-up tw-mt-2 tw-max-w-[600px] tw-text-center tw-text-gray-300">
+                Real-world examples of AI-powered geospatial solutions delivering measurable results for government and enterprise clients.
+            </p>
+            <!-- Case Studies -->
+            <div class="reveal-up tw-max-w-[750px] tw-mt-8 max-md:tw-max-w-[100vw]">
+                <div
+                    class="swiper tw-flex tw-flex-col tw-gap-10 tw-space-y-8"
+                >
+                    <div class="swiper-wrapper">
+                        <div
+                            class="swiper-slide tw-flex tw-place-content-center"
+                        >
+                            <div
+                                class="tw-flex tw-h-fit tw-max-w-[750px] tw-flex-col tw-place-content-center tw-gap-4 tw-rounded-lg tw-p-6 tw-shadow-lg"
+                            >
+                                <img src="./assets/images/pic01cs.jpg" alt="Ski Resort Intelligence" class="tw-h-[140px] tw-w-full tw-object-cover tw-rounded-md" />
+                                <h4 class="tw-text-2xl tw-font-semibold tw-text-primary">AI-Powered Ski Resort Intelligence</h4>
+                                <p class="tw-text-sm tw-text-gray-400">Project: Global Ski Atlas – Comprehensive ski resort mapping and intelligence platform</p>
+                                <p class="tw-text-gray-200">
+                                    <strong>AI Technologies:</strong> Automated content generation using Amazon Bedrock foundation models; intelligent data extraction from OpenStreetMap with custom ML models; dynamic visualization generation with AI assistance; natural language processing for resort descriptions.
+                                </p>
+                                <p class="tw-text-gray-200">
+                                    <strong>Outcomes:</strong> Reduced manual data processing by 80%, generated 10,000+ resort profiles automatically, and created dynamic visualizations that adapt to user queries.
+                                </p>
+                                <a href="mailto:jwitcoski@gmail.com" class="tw-mt-2 tw-text-primary tw-underline">Discuss Similar Project</a>
+                            </div>
+                        </div>
+                        <div
+                            class="swiper-slide tw-flex tw-place-content-center"
+                        >
+                            <div
+                                class="tw-flex tw-h-fit tw-max-w-[750px] tw-flex-col tw-place-content-center tw-gap-4 tw-rounded-lg tw-p-6 tw-shadow-lg"
+                            >
+                                <img src="./assets/images/pic02cs.jpg" alt="Conversational Census" class="tw-h-[140px] tw-w-full tw-object-cover tw-rounded-md" />
+                                <h4 class="tw-text-2xl tw-font-semibold tw-text-primary">Conversational Census Data</h4>
+                                <p class="tw-text-sm tw-text-gray-400">Project: Natural language interface for complex demographic analysis</p>
+                                <p class="tw-text-gray-200">
+                                    <strong>AI Technologies:</strong> Natural language interface for complex demographic queries using OpenAI API; AI-generated insights from Census boundary data with SageMaker; automated report generation for urban planners; LangChain implementation for geospatial RAG.
+                                </p>
+                                <p class="tw-text-gray-200">
+                                    <strong>Outcomes:</strong> Enabled non-technical users to query complex demographic data in plain English, automated report generation saving 15+ hours per analysis, and provided AI-powered insights for urban planning decisions.
+                                </p>
+                                <a href="mailto:jwitcoski@gmail.com" class="tw-mt-2 tw-text-primary tw-underline">Discuss Similar Project</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div
+                        class="pagination-container tw-flex tw-place-content-center"
+                    ></div>
 
-			</div>
-			<section id="footer">
-				<div class="inner">
+                    <div class="tw-flex tw-place-content-center tw-gap-6">
+                        <div
+                            class="testmonial-prev tw-flex tw-h-[40px] tw-w-[40px] tw-place-content-center 
+                                    tw-place-items-center tw-rounded-full tw-border-2 tw-border-solid 
+                                    tw-border-gray-300 tw-text-2xl tw-cursor-pointer"
+                        >
+                            <i class="bi bi-arrow-left"></i>
+                        </div>
+                        <div
+                            class="testmonial-next tw-flex tw-h-[40px] tw-w-[40px] tw-place-content-center 
+                                    tw-place-items-center tw-rounded-full tw-border-2 tw-border-solid 
+                                    tw-border-gray-300 tw-text-2xl tw-cursor-pointer"
+                        >
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-					<ul class="copyright">
-						<li>© 2024 Vector Scope AI LLC. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</section>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <section
+            class="tw-relative tw-flex tw-min-h-[50vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center 
+                    tw-place-items-center tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-8"
+            >
+                <div
+                    class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
+                >
+                    <h2 class="tw-text-4xl tw-font-semibold">
+                        Why These Projects Succeeded
+                    </h2>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[900px] tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
+                >
+                    <div
+                        class="reveal-up tw-flex tw-max-w-[280px] tw-flex-col tw-gap-2 tw-p-4"
+                    >
+                        <div class="tw-flex tw-gap-2">
+                            <i class="bi bi-shield-check tw-text-2xl"></i>
+                            <h3 class="tw-text-xl tw-font-semibold">
+                                Government Compliance
+                            </h3>
+                        </div>
+                        <div class="tw-text-[#595959]">
+                            All AI systems were designed with FISMA compliance in mind, including proper security controls, data encryption, and audit trails.
+                        </div>
+                    </div>
+                    <div
+                        class="reveal-up tw-flex tw-max-w-[280px] tw-flex-col tw-gap-2 tw-p-4"
+                    >
+                        <div class="tw-flex tw-gap-2">
+                            <i class="bi bi-cloud-arrow-up tw-text-2xl"></i>
+                            <h3 class="tw-text-xl tw-font-semibold">
+                                Scalable Architecture
+                            </h3>
+                        </div>
+                        <div class="tw-text-[#595959]">
+                            Built on AWS serverless infrastructure for cost-effective scaling and high availability.
+                        </div>
+                    </div>
+                    <div
+                        class="reveal-up tw-flex tw-max-w-[280px] tw-flex-col tw-gap-2 tw-p-4"
+                    >
+                        <div class="tw-flex tw-gap-2">
+                            <i class="bi bi-person-check tw-text-2xl"></i>
+                            <h3 class="tw-text-xl tw-font-semibold">
+                                User-Centric Design
+                            </h3>
+                        </div>
+                        <div class="tw-text-[#595959]">
+                            AI solutions that enhance human capabilities rather than replace them, with intuitive interfaces for non-technical users.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	</body>
+        <section
+            class="tw-relative tw-flex tw-min-h-[50vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center 
+                    tw-place-items-center tw-overflow-hidden tw-p-6 tw-bg-[#f5f5f5]"
+            id="expert"
+        >
+            <div
+                class="tw-mt-8 tw-flex tw-max-w-[800px] tw-flex-col tw-place-items-center tw-gap-6 tw-text-center"
+            >
+                <h2 class="reveal-up tw-text-4xl tw-font-semibold">
+                    Your AI Expert Who Understands Government
+                </h2>
+                <p class="reveal-up tw-text-lg tw-leading-relaxed">
+                    Led by a former Census Bureau geographer with over 15 years of experience, our team brings a unique combination of deep geospatial expertise and cutting-edge AI knowledge. Our background provides the foundation for building compliant, mission-critical AI solutions that government agencies can trust.
+                </p>
+                <p class="reveal-up tw-text-base tw-leading-relaxed">
+                    <strong>Key Differentiator:</strong> Most AI consultants don't understand FISMA compliance for AI systems, security controls for ML models, government procurement processes, or legacy system integration challenges. We do.
+                </p>
+                <p class="reveal-up tw-text-base tw-leading-relaxed">
+                    <strong>Trusted Experience:</strong> Our leadership has worked with CDC, DHS, and FEMA on mission-critical spatial analysis and developing FISMA-compliant geospatial solutions. Now bringing that same expertise to AI-powered geospatial intelligence.
+                </p>
+                <a
+                    href="mailto:jwitcoski@gmail.com"
+                    aria-label="Discuss"
+                    class="reveal-up tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full
+                             tw-bg-black tw-px-6 tw-text-white"
+                >
+                    Discuss Your AI Project
+                </a>
+            </div>
+        </section>
+
+        <section
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-6 
+                    tw-p-[5%] tw-px-[10%]"
+            id="contact"
+        >
+            <div
+                class="tw-flex tw-w-full tw-max-w-[600px] tw-flex-col tw-place-content-center tw-place-items-center tw-gap-4 tw-text-center"
+            >
+                <h2 class="tw-text-3xl tw-font-semibold max-md:tw-text-xl">
+                    Ready to Deploy AI?
+                </h2>
+                <p class="tw-text-lg tw-text-gray-600">
+                    Transform your geospatial capabilities with AI that understands government requirements. Contact Vector Scope AI LLC to discuss how our FISMA-compliant AI solutions can drive your spatial intelligence initiatives forward.
+                </p>
+                <a
+                    href="mailto:jwitcoski@gmail.com"
+                    class="btn tw-h-[50px] tw-px-8 tw-transition-colors tw-duration-[0.3s]"
+                >
+                    Send Email
+                </a>
+            </div>
+        </section>
+
+        <footer
+            class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] 
+                    tw-text-black max-md:tw-flex-col"
+        >
+            <div
+                class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 
+                        max-md:tw-w-full"
+            >
+                <img
+                    src="./assets/logo.png"
+                    alt="Vector Scope AI logo"
+                    class="tw-max-w-[120px]"
+                />
+                <div class="tw-text-center">
+                    <strong>Vector Scope AI LLC</strong>
+                    <br />
+                    AI-Powered Geospatial Solutions
+                    <br />
+                    United States
+                </div>
+                <div class="tw-mt-3 tw-text-lg tw-font-semibold">Contact Vector Scope AI</div>
+                <div class="tw-flex tw-flex-col tw-gap-1 tw-text-center">
+                    <a href="mailto:jwitcoski@gmail.com" class="footer-link">jwitcoski@gmail.com</a>
+                    <a href="https://vectorscopeai.com" class="footer-link" target="_blank" rel="noopener">vectorscopeai.com</a>
+                </div>
+                <div class="tw-flex tw-gap-4 tw-text-2xl">
+                    <a href="https://www.linkedin.com/company/vectorscopeai" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/vectorscopeai" aria-label="Twitter" target="_blank" rel="noopener">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Company</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#case-studies" class="footer-link">Case Studies</a>
+                    <a href="mailto:jwitcoski@gmail.com" class="footer-link">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Resources</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="#expert" class="footer-link">About us</a>
+                    <a href="mailto:jwitcoski@gmail.com" class="footer-link">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+        <div class="tw-w-full tw-py-4 tw-text-center tw-text-sm tw-text-gray-600">
+            © 2024 Vector Scope AI LLC. All rights reserved.
+        </div>
+    </body>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./index.js"></script>
+
+    <style>
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            /* font-size: 12px; */
+            opacity: 1;
+            background: #f7f7f7fa;
+            left: auto;
+        }
+        .swiper-pagination-bullet:hover {
+            color: #000;
+            opacity: 1;
+            background: #ede0e0bd;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #f39696 !important;
+        }
+
+        .swiper {
+            padding: 10px !important;
+        }
+    </style>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.pagination-container',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return `<span class="${className}"></span>`
+                },
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.testmonial-next',
+                prevEl: '.testmonial-prev',
+            },
+        })
+    </script>
 </html>
