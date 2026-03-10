@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root{
 
     --btn-color: #fdfdfd;/* button color*/
-    --btn-bg: #0d0d0d;/* button bg color*/
+    --btn-bg: #1A73E8;/* button bg color - Esri blue*/
 
-    --primary-text-color: #000;
-    --link-hover: #6dbb00;
-    --footer-link-hover: #6dbb00;
-    --input-focus-bd-color: #0d0d0d;
+    --primary-text-color: #202124;
+    --link-hover: #34A853;
+    --footer-link-hover: #34A853;
+    --input-focus-bd-color: #1A73E8;
 }
 
 
 html {
     scroll-behavior: smooth;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 header{
@@ -117,7 +117,7 @@ header > .collapsible-header{
 }
 
 .footer-link{
-    color: #0d0d0d;
+    color: #202124;
     transition: color 0.3s;
 }
 

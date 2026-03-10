@@ -56,77 +56,72 @@ window.addEventListener("resize", responsive)
  * Animations
  */
 
-gsap.registerPlugin(ScrollTrigger)
+if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger)
 
-gsap.to(".reveal-hero-text", {
-    opacity: 0,
-    y: "100%",
-})
-
-gsap.to(".reveal-hero-img", {
-    opacity: 0,
-    y: "100%",
-})
-
-gsap.to("#hero-img-bg", {
-    scale: 0
-})
-
-gsap.to(".reveal-up", {
-    opacity: 0,
-    y: "100%",
-})
-
-
-window.addEventListener("load", () => {
-    // animate from initial position
     gsap.to(".reveal-hero-text", {
-        opacity: 1,
-        y: "0%",
-        duration: 0.8,
-        // ease: "power3.out",
-        stagger: 0.5, // Delay between each word's reveal,
-        // delay: 3
+        opacity: 0,
+        y: "100%",
     })
 
-    gsap.to(".reveal-hero-img", {
-        opacity: 1,
-        y: "0%",
+    gsap.to(".reveal-up", {
+        opacity: 0,
+        y: "100%",
     })
 
-    gsap.to("#hero-img-bg", {
-        scale: 1,
-        duration: 0.8,
-        delay: 0.4
-    })
-    
-})
+    const heroImgBg = document.getElementById("hero-img-bg")
+    if (heroImgBg) {
+        gsap.to(heroImgBg, { scale: 0 })
+    }
 
+    const revealHeroImg = document.querySelector(".reveal-hero-img")
+    if (revealHeroImg) {
+        gsap.to(revealHeroImg, { opacity: 0, y: "100%" })
+    }
+
+    window.addEventListener("load", () => {
+        gsap.to(".reveal-hero-text", {
+            opacity: 1,
+            y: "0%",
+            duration: 0.8,
+            stagger: 0.5,
+        })
+
+        if (heroImgBg) {
+            gsap.to(heroImgBg, {
+                scale: 1,
+                duration: 0.8,
+                delay: 0.4,
+            })
+        }
+
+        if (revealHeroImg) {
+            gsap.to(revealHeroImg, { opacity: 1, y: "0%" })
+        }
+    })
+}
 
 // ------------- reveal section animations ---------------
 
-const sections = gsap.utils.toArray("section")
-
-sections.forEach((sec) => {
-
-    const revealUptimeline = gsap.timeline({paused: true, 
-                                            scrollTrigger: {
-                                                            trigger: sec,
-                                                            start: "10% 80%", // top of trigger hits the top of viewport
-                                                            end: "20% 90%",
-                                                            // markers: true,
-                                                            // scrub: 1,
-                                                        }})
-
-    revealUptimeline.to(sec.querySelectorAll(".reveal-up"), {
-        opacity: 1,
-        duration: 0.8,
-        y: "0%",
-        stagger: 0.2,
+if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    const sections = gsap.utils.toArray("section")
+    sections.forEach((sec) => {
+        const revealUptimeline = gsap.timeline({
+            paused: true,
+            scrollTrigger: {
+                trigger: sec,
+                start: "10% 80%",
+                end: "20% 90%",
+            },
+        })
+        revealUptimeline.to(sec.querySelectorAll(".reveal-up"), {
+            opacity: 1,
+            duration: 0.8,
+            y: "0%",
+            stagger: 0.2,
+        })
     })
-
-
-})
+}
 
 
 

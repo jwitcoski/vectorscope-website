@@ -3,29 +3,73 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vector Scope AI – AI-Powered Geospatial Intelligence</title>
-        <meta name="description" content="FISMA-compliant AI systems, geospatial foundation models, and secure ML deployment. The AI expert who understands government security requirements." />
-        <link
-            rel="shortcut icon"
-            href="./assets/logo.png"
-            type="image/x-icon"
-        />
+        <title>Vector Scope AI – Collaborative Map Updates for Agencies | VectorLedger</title>
+        <meta name="description" content="The missing lakehouse layer for ArcGIS. Collaborative editing on Iceberg and GeoParquet, containerized GIS—so your Spark/Sedona data lakes work with ArcGIS Online. VectorLedger." />
+        <meta name="keywords" content="ArcGIS, GeoParquet, collaborative mapping, GIS, Esri, VectorLedger, geospatial, map updates, Iceberg, Spark, Sedona, ArcGIS Online, Experience Builder, agencies" />
+        <meta name="author" content="Vector Scope AI" />
+        <link rel="canonical" href="https://vectorscopeai.com/" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#1A73E8" />
+        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
 
         <!-- Open Graph / Facebook -->
-        <meta property="og:title" content="Vector Scope AI – AI-Powered Geospatial Intelligence" />
-        <meta property="og:description" content="FISMA-compliant AI solutions for government & enterprise. Geospatial foundation models, multimodal AI, and secure ML deployment." />
+        <meta property="og:title" content="Vector Scope AI – Collaborative Map Updates for Agencies" />
+        <meta property="og:description" content="The missing lakehouse layer for ArcGIS. Collaborative editing on Iceberg and GeoParquet, containerized GIS—so your Spark/Sedona data lakes work with ArcGIS Online. VectorLedger." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://vectorscopeai.com" />
-        <meta property="og:image" content="" />
+        <meta property="og:url" content="https://vectorscopeai.com/" />
+        <meta property="og:image" content="https://vectorscopeai.com/assets/logo.png" />
+        <meta property="og:site_name" content="Vector Scope AI" />
+        <meta property="og:locale" content="en_US" />
 
-        <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css"> -->
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Vector Scope AI – Collaborative Map Updates for Agencies" />
+        <meta name="twitter:description" content="The missing lakehouse layer for ArcGIS. Collaborative editing on Iceberg and GeoParquet—VectorLedger connects ArcGIS with GeoParquet and data lakes." />
+        <meta name="twitter:image" content="https://vectorscopeai.com/assets/logo.png" />
+
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="https://vectorscopeai.com/sitemap.xml" />
+
+        <!-- JSON-LD structured data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://vectorscopeai.com/#organization",
+                    "name": "Vector Scope AI",
+                    "url": "https://vectorscopeai.com",
+                    "logo": "https://vectorscopeai.com/assets/logo.png",
+                    "description": "Collaborative map updates for agencies. The missing lakehouse layer for ArcGIS—VectorLedger connects ArcGIS Online with Iceberg, GeoParquet, and Spark/Sedona data lakes.",
+                    "sameAs": [
+                        "https://www.linkedin.com/company/vectorscopeai",
+                        "https://twitter.com/vectorscopeai"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://vectorscopeai.com/#website",
+                    "url": "https://vectorscopeai.com",
+                    "name": "Vector Scope AI",
+                    "publisher": { "@id": "https://vectorscopeai.com/#organization" },
+                    "description": "Collaborative map updates for agencies. VectorLedger: Esri web apps meet GeoParquet and data lakes."
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "VectorLedger",
+                    "applicationCategory": "BusinessApplication",
+                    "operatingSystem": "Web",
+                    "description": "Agencies get authoritative map data updated by staff and partners via Esri web apps, delivered as versioned GeoParquet files. The bridge between ArcGIS and Iceberg/Spark/Sedona data lakes.",
+                    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+                }
+            ]
+        }
+        </script>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
         <link rel="stylesheet" href="./css/tailwind-build.css" />
         <link rel="stylesheet" href="css/index.css" />
-
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
@@ -34,47 +78,33 @@
             referrerpolicy="no-referrer"
         />
     </head>
-    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff]">
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#F8F9FA]">
         <header
-            class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 
-                    tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around"
+            class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around"
         >
             <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="#" aria-label="Vector Scope AI home">
-                <img
-                    src="./assets/logo.png"
-                    alt="Vector Scope AI"
-                    class="tw-object tw-h-full tw-w-full"
-                />
+                <img src="./assets/logo.png" alt="Vector Scope AI" class="tw-object tw-h-full tw-w-full" />
             </a>
-            <div
-                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
-                id="collapsed-header-items"
-            >
+            <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
                 <div
-                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black 
-                            max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end 
-                            max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-[#202124] max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
                 >
-                    <a class="header-links" href="#services"> Services </a>
-                    <a class="header-links" href="#case-studies"> Case Studies </a>
-                    <a class="header-links" href="#expert"> Your Expert </a>
-                    <a class="header-links" href="#contact"> Contact </a>
+                    <a class="header-links" href="#product">Product</a>
+                    <a class="header-links" href="#how-it-works">How It Works</a>
+                    <a class="header-links" href="https://globalskiatlas.com" target="_blank" rel="noopener">Demo</a>
+                    <a class="header-links" href="#contact">Contact</a>
                 </div>
                 <div
-                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base 
-                            max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
                 >
                     <a
                         href="#contact"
-                        aria-label="Contact"
-                        class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full
-                                tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
+                        aria-label="Contact for Pilot"
+                        class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-p-1 tw-pl-4 tw-text-white"
                     >
-                        <span>Contact</span>
+                        <span>Contact for Pilot</span>
                         <div
-                            class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center 
-                                    tw-place-items-center tw-rounded-full tw-bg-primary 
-                                    tw-font-semibold tw-text-black"
+                            class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-[#1A73E8]"
                         >
                             <i class="bi bi-envelope"></i>
                         </div>
@@ -82,617 +112,361 @@
                 </div>
             </div>
             <button
-                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl 
-                        tw-text-black lg:tw-hidden"
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-[#202124] lg:tw-hidden"
                 onclick="toggleHeader()"
                 aria-label="menu"
                 id="collapse-btn"
             ></button>
         </header>
 
+        <!-- Hero -->
         <section
-            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col 
-                    tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]"
+            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-items-center tw-justify-center tw-overflow-hidden tw-p-[5%] tw-pt-[80px] max-lg:tw-p-4 max-md:tw-mt-[50px]"
+            style="background-image: url(./assets/images/hero-map.jpg); background-size: cover; background-position: center;"
         >
-            <div
-                class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-place-content-center 
-                        tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col"
-            >
-                <div class="tw-flex tw-flex-col tw-place-content-center">
-                    <div
-                        class="tw-flex tw-flex-wrap tw-text-6xl tw-font-semibold tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
-                    >
-                        <span class="reveal-hero-text">
-                            AI-Powered Geospatial
-                        </span>
-                        <br />
-                        <span class="reveal-hero-text"> Intelligence </span>
-                    </div>
-                    <div
-                        class="reveal-hero-text tw-mt-2 tw-max-w-[500px] tw-p-2 
-                                tw-text-justify max-lg:tw-max-w-full"
-                    >
-                        The AI expert who understands government security requirements.
-                        FISMA-compliant AI systems, geospatial foundation models, and secure ML deployment.
-                    </div>
-                    <p class="reveal-hero-text tw-mt-1 tw-max-w-[500px] tw-text-sm tw-italic tw-text-gray-600 max-lg:tw-max-w-full">
-                        In film, a vector scope reveals what’s really in the signal. We bring that same clarity to geospatial intelligence.
-                    </p>
-
-                    <div
-                        class="reveal-hero-text tw-mt-4 tw-flex tw-place-items-center tw-gap-4 
-                                tw-overflow-hidden tw-p-2"
-                    >
-                        <a
-                            href="#services"
-                            class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full
-                                    tw-bg-black tw-px-5 tw-text-white"
-                        >
-                            Explore AI Services
-                        </a>
-                    </div>
-                </div>
-
-                <div
-                    class="tw-flex tw-w-full tw-max-w-[50%] tw-place-content-center tw-place-items-center 
-                            tw-overflow-hidden max-lg:tw-max-w-[unset]"
-                >
-                    <div
-                        class="tw-relative tw-flex tw-max-h-[580px] tw-min-h-[450px] tw-min-w-[350px] 
-                            tw-max-w-[650px] tw-overflow-hidden max-lg:tw-h-fit max-lg:tw-max-h-[320px] 
-                            max-lg:tw-min-h-[180px] max-lg:tw-w-[320px] max-lg:tw-min-w-[320px]"
-                    >
-                        <img
-                            src="./assets/images/pic01.jpg"
-                            alt="AI-Powered Geospatial Intelligence"
-                            class="reveal-hero-img tw-z-[1] tw-h-full tw-w-full tw-object-contain"
-                        />
-
-                        <div
-                            class="tw-absolute tw-bottom-0 tw-left-1/2 tw-h-[80%] tw-w-[80%] 
-                                    tw--translate-x-1/2 tw-rounded-full tw-bg-secondary"
-                            id="hero-img-bg"
-                        ></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section
-            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center 
-                    tw-place-items-center tw-overflow-hidden tw-p-6"
-        >
-            <div
-                class="reveal-up tw-flex tw-min-h-[140px] tw-w-full tw-max-w-[80%] tw-place-items-center 
-                        tw-justify-center tw-gap-8 tw-rounded-xl tw-bg-[#e7e6e685] tw-p-6 max-lg:tw-max-w-full max-md:tw-flex-col"
-            >
-                <span class="tw-text-center tw-text-lg tw-font-medium">
-                    AI-Powered Geospatial Solutions for Government &amp; Enterprise
-                </span>
-            </div>
-        </section>
-
-        <section
-            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
-        >
-            <div
-                class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center
-                        tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
-            >
-                <div class="tw-flex">
-                    <div class="tw-h-[450px] tw-w-[300px]">
-                        <img
-                            src="./assets/images/pic02.jpg"
-                            alt="Geospatial AI"
-                            class="tw-h-full tw-w-full tw-object-contain"
-                        />
-                    </div>
-                </div>
-                <div
-                    class="tw-mt-6 tw-flex tw-max-w-[500px] tw-flex-col tw-gap-4"
-                >
-                    <h3 class="tw-text-4xl tw-font-medium">AI-Powered Geospatial Solutions</h3>
-                    <p class="tw-text-xl tw-leading-relaxed">
-                        We bridge the gap between cutting-edge AI technology and government security requirements. With expertise in Amazon Bedrock, SageMaker, OpenAI API, and computer vision models, we deliver FISMA-compliant AI solutions that most AI consultants can't—because they don't understand government procurement, security controls for ML models, or legacy system integration challenges.
-                    </p>
+            <div class="tw-absolute tw-inset-0" style="background-color: rgba(248, 249, 250, 0.88);"></div>
+            <div class="tw-relative tw-flex tw-max-w-[800px] tw-flex-col tw-items-center tw-text-center">
+                <h1 class="reveal-hero-text tw-text-5xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-lg:tw-text-4xl max-md:tw-text-3xl">
+                    VECTOR SCOPE AI
+                </h1>
+                <p class="reveal-hero-text tw-mt-4 tw-text-2xl tw-font-medium tw-text-[#202124] max-lg:tw-text-xl">
+                    Collaborative Map Updates for Agencies &amp; Organizations
+                </p>
+                <p class="reveal-hero-text tw-mt-4 tw-max-w-[600px] tw-text-base tw-leading-relaxed tw-text-[#202124]">
+                    Non-technical staff and partners update official geospatial data through simple Esri web apps. We handle validation, versioning, and deliver clean GeoParquet files for analytics and archiving.
+                </p>
+                <p class="reveal-hero-text tw-mt-2 tw-max-w-[640px] tw-text-sm tw-leading-relaxed tw-text-gray-700">
+                    The missing lakehouse layer for ArcGIS: collaborative editing on Iceberg and GeoParquet, with containerized GIS—so your Spark/Sedona data lakes work with ArcGIS Online.
+                </p>
+                <div class="reveal-hero-text tw-mt-8 tw-flex tw-flex-wrap tw-justify-center tw-gap-4">
                     <a
-                        href="#services"
-                        class="tw-mt-2 tw-inline-flex tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-px-5 tw-text-white"
-                    >Explore AI Services</a>
-                </div>
-            </div>
-        </section>
-
-        <section
-            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
-        >
-            <div
-                class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center 
-                        tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
-            >
-                <div
-                    class="tw-mt-6 tw-flex tw-max-w-[500px] tw-flex-col tw-gap-4"
-                >
-                    <h3 class="tw-text-4xl tw-font-medium">Modern AI Tech Stack</h3>
-                    <p class="tw-text-xl tw-leading-relaxed">
-                        Leveraging the latest AI technologies: Amazon Bedrock for foundation models, AWS SageMaker for custom ML models, OpenAI API for geospatial applications, computer vision for imagery analysis, and LangChain for geospatial RAG implementations. All deployed with enterprise-grade security and compliance.
-                    </p>
-                    <a
-                        href="#case-studies"
-                        class="tw-mt-2 tw-inline-flex tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-px-5 tw-text-white"
-                    >View Case Studies</a>
-                </div>
-
-                <div class="tw-flex">
-                    <div class="tw-h-[450px] tw-w-[300px]">
-                        <img
-                            src="./assets/images/pic04.jpg"
-                            alt="AI Tech Stack"
-                            class="tw-h-full tw-w-full tw-object-contain"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section
-            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
-        >
-            <div
-                class="reveal-up tw-flex tw-min-h-[40vh] tw-place-content-center tw-place-items-center 
-                        tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
-            >
-                <div class="tw-flex tw-max-w-[700px] tw-flex-col tw-gap-4 tw-text-center">
-                    <h3 class="tw-text-4xl tw-font-medium">Government AI Expertise</h3>
-                    <p class="tw-text-xl tw-leading-relaxed">
-                        Specialized in geospatial foundation models trained on government datasets, multimodal AI for maps and satellite imagery, AI governance for sensitive data, and edge AI deployment in disconnected/classified environments. Your AI partner who speaks both government and technology.
-                    </p>
+                        href="https://globalskiatlas.com"
+                        target="_blank"
+                        rel="noopener"
+                        class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
+                    >
+                        See GlobalSkiAtlas Demo
+                    </a>
                     <a
                         href="#contact"
-                        class="tw-mt-2 tw-inline-flex tw-mx-auto tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-px-5 tw-text-white"
-                    >Get Started</a>
+                        class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
+                    >
+                        Contact for Pilot
+                    </a>
                 </div>
             </div>
         </section>
 
+        <!-- Product: VectorLedger -->
         <section
-            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center 
-                    tw-place-items-center tw-overflow-hidden tw-p-6"
-            id="services"
+            id="product"
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-white tw-py-16 tw-px-6"
         >
-            <h2 class="reveal-up tw-mb-8 tw-text-4xl tw-font-medium max-md:tw-text-2xl">
-                AI-Powered Services
+            <h2 class="reveal-up tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
+                VECTORLEDGER
             </h2>
-            <p class="reveal-up tw-mb-10 tw-max-w-[700px] tw-text-center tw-text-lg">
-                Cutting-edge AI solutions designed specifically for government agencies and enterprise clients who need both innovation and compliance.
+            <p class="reveal-up tw-mt-3 tw-max-w-[600px] tw-text-center tw-text-lg tw-text-[#202124]">
+                Agencies get authoritative map data updated by real people, delivered as modern GeoParquet files.
+            </p>
+            <p class="reveal-up tw-mt-2 tw-max-w-[700px] tw-text-center tw-text-base tw-text-gray-600">
+                No Esri partner ships Iceberg + wiki editing + GeoParquet for ArcGIS today—we do. VectorLedger is the bridge between your Spark/Sedona/Iceberg data lakes and collaborative editing in ArcGIS.
             </p>
             <div
-                class="reveal-up tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[1200px] tw-flex-wrap tw-place-content-center 
-                        tw-place-items-stretch tw-gap-8 tw-rounded-xl tw-p-4 max-lg:tw-flex-col"
+                class="reveal-up tw-mt-12 tw-flex tw-w-full tw-max-w-[1100px] tw-flex-wrap tw-items-start tw-justify-center tw-gap-12 max-lg:tw-flex-col max-lg:tw-items-center"
             >
-                <div
-                    class="tw-flex tw-min-h-[320px] tw-w-[280px] tw-flex-1 tw-flex-col tw-gap-[5%] 
-                            tw-rounded-xl tw-bg-[#FFD5CA] tw-p-8 tw-shadow-lg"
-                >
-                    <div
-                        class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center tw-rounded-full tw-bg-white"
-                    >
-                        <i class="material-icons md-40">map</i>
-                    </div>
-                    <h3 class="tw-mt-5 tw-text-2xl tw-font-medium">Geospatial Foundation Models</h3>
-                    <p class="tw-text-base tw-leading-relaxed">
-                        Custom AI models trained on government spatial datasets using AWS SageMaker. Deploy foundation models that understand your specific geospatial domain while maintaining FISMA compliance.
-                    </p>
-                    <a href="#contact" class="tw-mt-auto tw-font-medium tw-text-black tw-underline">Learn more</a>
+                <div class="tw-flex tw-flex-1 tw-flex-col tw-gap-6 tw-min-w-[280px]">
+                    <img
+                        src="./assets/images/placeholder-editing.jpg"
+                        alt="Web editing interface"
+                        class="tw-h-[140px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow-md"
+                    />
+                    <img
+                        src="./assets/images/placeholder-dashboard.jpg"
+                        alt="Approval workflow dashboard"
+                        class="tw-h-[140px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow-md"
+                    />
+                    <img
+                        src="./assets/images/placeholder-geoparquet.jpg"
+                        alt="GeoParquet file download"
+                        class="tw-h-[140px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow-md"
+                    />
                 </div>
-
-                <div
-                    class="tw-flex tw-min-h-[320px] tw-w-[280px] tw-flex-1 tw-flex-col tw-gap-[5%] tw-rounded-xl
-                         tw-bg-primary tw-p-8 tw-shadow-lg"
-                >
-                    <div
-                        class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center
-                                 tw-rounded-full tw-bg-white"
-                    >
-                        <i class="material-icons md-40">satellite_alt</i>
-                    </div>
-                    <h3 class="tw-mt-5 tw-text-2xl tw-font-medium">Multimodal AI Solutions</h3>
-                    <p class="tw-text-base tw-leading-relaxed">
-                        AI systems that understand both maps and satellite imagery. Computer vision models for automated feature extraction, change detection, and intelligent data processing from multiple geospatial sources.
+                <div class="tw-flex tw-flex-1 tw-flex-col tw-gap-4 tw-min-w-[280px]">
+                    <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
+                        <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
+                        Staff &amp; volunteers edit via Esri web apps (no GIS skills needed)
                     </p>
-                    <a href="#contact" class="tw-mt-auto tw-font-medium tw-text-black tw-underline">Learn more</a>
-                </div>
-                <div
-                    class="tw-flex tw-min-h-[320px] tw-w-[280px] tw-flex-1 tw-flex-col tw-gap-[5%] tw-rounded-xl 
-                            tw-bg-[#FFEB99] tw-p-8 tw-shadow-lg"
-                >
-                    <div
-                        class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center 
-                                tw-rounded-full tw-bg-white"
-                    >
-                        <i class="material-icons md-40">shield</i>
-                    </div>
-                    <h3 class="tw-mt-5 tw-text-2xl tw-font-medium">AI Governance &amp; Compliance</h3>
-                    <p class="tw-text-base tw-leading-relaxed">
-                        Responsible AI implementation for sensitive government data. Security controls for ML models, FISMA compliance frameworks, and risk assessments tailored for AI systems in government environments.
+                    <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
+                        <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
+                        Built-in quality checks &amp; approval workflows
                     </p>
-                    <a href="#contact" class="tw-mt-auto tw-font-medium tw-text-black tw-underline">Learn more</a>
-                </div>
-                <div
-                    class="tw-flex tw-min-h-[320px] tw-w-[280px] tw-flex-1 tw-flex-col tw-gap-[5%] tw-rounded-xl 
-                            tw-bg-[#e7e6e6] tw-p-8 tw-shadow-lg"
-                >
-                    <div
-                        class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center 
-                                tw-rounded-full tw-bg-white"
-                    >
-                        <i class="material-icons md-40">router</i>
-                    </div>
-                    <h3 class="tw-mt-5 tw-text-2xl tw-font-medium">Edge AI Deployment</h3>
-                    <p class="tw-text-base tw-leading-relaxed">
-                        Deploying AI models in disconnected/classified environments. Secure, containerized AI solutions that work offline, maintain data sovereignty, and provide real-time geospatial intelligence where connectivity is limited.
+                    <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
+                        <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
+                        Every change saved as versioned GeoParquet files
                     </p>
-                    <a href="#contact" class="tw-mt-auto tw-font-medium tw-text-black tw-underline">Learn more</a>
+                    <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
+                        <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
+                        Works with your existing ArcGIS Online/Enterprise
+                    </p>
+                    <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
+                        <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
+                        No database lock-in, instant analytics compatibility
+                    </p>
                 </div>
             </div>
         </section>
 
+        <!-- How It Works -->
         <section
-            class="tw-mt-5 tw-flex tw-min-h-[60vh] tw-w-full tw-flex-col tw-place-content-center 
-                    tw-place-items-center tw-bg-black tw-p-[2%] tw-text-white max-lg:tw-min-h-[40vh]"
-            id="case-studies"
+            id="how-it-works"
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-py-16 tw-px-6"
         >
-            <h3 class="reveal-up tw-text-5xl tw-font-medium max-md:tw-text-2xl">
-                AI Case Studies
-            </h3>
-            <p class="reveal-up tw-mt-2 tw-max-w-[600px] tw-text-center tw-text-gray-300">
-                Real-world examples of AI-powered geospatial solutions delivering measurable results for government and enterprise clients.
+            <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
+                FROM ESRI EDITS TO GEOPARQUET IN MINUTES
+            </h2>
+            <div
+                class="reveal-up tw-mt-12 tw-flex tw-w-full tw-max-w-[1000px] tw-flex-wrap tw-justify-center tw-gap-8 max-lg:tw-flex-col max-lg:tw-items-center"
+            >
+                <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
+                    <img
+                        src="./assets/images/placeholder-editing.jpg"
+                        alt="Editing app"
+                        class="tw-h-[120px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow"
+                    />
+                    <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Staff &amp; Partners Edit</h3>
+                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">Via guided Esri web apps and forms</p>
+                </div>
+                <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
+                    <img
+                        src="./assets/images/placeholder-dashboard.jpg"
+                        alt="Approval workflow dashboard"
+                        class="tw-h-[120px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow"
+                    />
+                    <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Approval Workflow</h3>
+                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">Review changes, run QC, approve updates</p>
+                </div>
+                <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
+                    <img
+                        src="./assets/images/placeholder-geoparquet.jpg"
+                        alt="GeoParquet snapshots"
+                        class="tw-h-[120px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow"
+                    />
+                    <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">GeoParquet Snapshots</h3>
+                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">Versioned files for analytics, sharing, archiving</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology -->
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-white tw-py-16 tw-px-6"
+        >
+            <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
+                BUILT ON ESRI + MODERN DATA STANDARDS
+            </h2>
+            <div
+                class="reveal-up tw-mt-8 tw-flex tw-w-full tw-max-w-[800px] tw-flex-wrap tw-justify-center tw-gap-8"
+            >
+                <div class="tw-flex tw-flex-col tw-items-center tw-gap-2 tw-rounded tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-min-w-[140px]">
+                    <img src="./assets/images/tech/arcgis.png" alt="ArcGIS Online/Enterprise" class="tw-h-10 tw-w-auto tw-object-contain" />
+                    <span class="tw-text-sm tw-font-medium tw-text-[#202124]">ArcGIS Online/Enterprise</span>
+                </div>
+                <div class="tw-flex tw-flex-col tw-items-center tw-gap-2 tw-rounded tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-min-w-[140px]">
+                    <img src="./assets/images/tech/experience-builder.png" alt="Experience Builder" class="tw-h-10 tw-w-auto tw-object-contain" />
+                    <span class="tw-text-sm tw-font-medium tw-text-[#202124]">Experience Builder</span>
+                </div>
+                <div class="tw-flex tw-flex-col tw-items-center tw-gap-2 tw-rounded tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-min-w-[140px]">
+                    <img src="./assets/images/tech/geoparquet.png" alt="GeoParquet" class="tw-h-10 tw-w-auto tw-object-contain" />
+                    <span class="tw-text-sm tw-font-medium tw-text-[#202124]">GeoParquet</span>
+                </div>
+                <div class="tw-flex tw-flex-col tw-items-center tw-gap-2 tw-rounded tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-min-w-[140px]">
+                    <img src="./assets/images/tech/aws.png" alt="AWS" class="tw-h-10 tw-w-auto tw-object-contain" />
+                    <span class="tw-text-sm tw-font-medium tw-text-[#202124]">AWS</span>
+                </div>
+            </div>
+            <p class="reveal-up tw-mt-6 tw-max-w-[600px] tw-text-center tw-text-base tw-text-gray-600">
+                Esri web apps meet open-standard GeoParquet storage. Your data stays portable, scalable, and analytics-ready.
             </p>
-            <!-- Case Studies -->
-            <div class="reveal-up tw-max-w-[750px] tw-mt-8 max-md:tw-max-w-[100vw]">
-                <div
-                    class="swiper tw-flex tw-flex-col tw-gap-10 tw-space-y-8"
-                >
-                    <div class="swiper-wrapper">
-                        <div
-                            class="swiper-slide tw-flex tw-place-content-center"
-                        >
-                            <div
-                                class="tw-flex tw-h-fit tw-max-w-[750px] tw-flex-col tw-place-content-center tw-gap-4 tw-rounded-lg tw-p-6 tw-shadow-lg"
-                            >
-                                <img src="./assets/images/pic01cs.jpg" alt="Ski Resort Intelligence" class="tw-h-[140px] tw-w-full tw-object-cover tw-rounded-md" />
-                                <h4 class="tw-text-2xl tw-font-semibold tw-text-primary">AI-Powered Ski Resort Intelligence</h4>
-                                <p class="tw-text-sm tw-text-gray-400">Project: Global Ski Atlas – Comprehensive ski resort mapping and intelligence platform</p>
-                                <a href="https://globalskiatlas.com" target="_blank" rel="noopener" class="tw-inline-flex tw-items-center tw-gap-1 tw-text-primary tw-font-medium tw-underline hover:tw-opacity-90">
-                                    Visit globalskiatlas.com <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
-                                </a>
-                                <p class="tw-text-gray-200">
-                                    <strong>AI Technologies:</strong> Automated content generation using Amazon Bedrock foundation models; intelligent data extraction from OpenStreetMap with custom ML models; dynamic visualization generation with AI assistance; natural language processing for resort descriptions.
-                                </p>
-                                <p class="tw-text-gray-200">
-                                    <strong>Outcomes:</strong> Reduced manual data processing by 80%, generated 10,000+ resort profiles automatically, and created dynamic visualizations that adapt to user queries.
-                                </p>
-                                <a href="#contact" class="tw-mt-2 tw-text-primary tw-underline">Discuss Similar Project</a>
-                            </div>
-                        </div>
-                        <div
-                            class="swiper-slide tw-flex tw-place-content-center"
-                        >
-                            <div
-                                class="tw-flex tw-h-fit tw-max-w-[750px] tw-flex-col tw-place-content-center tw-gap-4 tw-rounded-lg tw-p-6 tw-shadow-lg"
-                            >
-                                <img src="./assets/images/pic02cs.jpg" alt="Conversational Census" class="tw-h-[140px] tw-w-full tw-object-cover tw-rounded-md" />
-                                <h4 class="tw-text-2xl tw-font-semibold tw-text-primary">Conversational Census Data</h4>
-                                <p class="tw-text-sm tw-text-gray-400">Project: Natural language interface for complex demographic analysis</p>
-                                <p class="tw-text-gray-200">
-                                    <strong>AI Technologies:</strong> Natural language interface for complex demographic queries using OpenAI API; AI-generated insights from Census boundary data with SageMaker; automated report generation for urban planners; LangChain implementation for geospatial RAG.
-                                </p>
-                                <p class="tw-text-gray-200">
-                                    <strong>Outcomes:</strong> Enabled non-technical users to query complex demographic data in plain English, automated report generation saving 15+ hours per analysis, and provided AI-powered insights for urban planning decisions.
-                                </p>
-                                <a href="#contact" class="tw-mt-2 tw-text-primary tw-underline">Discuss Similar Project</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="pagination-container tw-flex tw-place-content-center"
-                    ></div>
-
-                    <div class="tw-flex tw-place-content-center tw-gap-6">
-                        <div
-                            class="testmonial-prev tw-flex tw-h-[40px] tw-w-[40px] tw-place-content-center 
-                                    tw-place-items-center tw-rounded-full tw-border-2 tw-border-solid 
-                                    tw-border-gray-300 tw-text-2xl tw-cursor-pointer"
-                        >
-                            <i class="bi bi-arrow-left"></i>
-                        </div>
-                        <div
-                            class="testmonial-next tw-flex tw-h-[40px] tw-w-[40px] tw-place-content-center 
-                                    tw-place-items-center tw-rounded-full tw-border-2 tw-border-solid 
-                                    tw-border-gray-300 tw-text-2xl tw-cursor-pointer"
-                        >
-                            <i class="bi bi-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
+        <!-- Showcase: Global Ski Atlas -->
         <section
-            class="tw-relative tw-flex tw-min-h-[50vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center 
-                    tw-place-items-center tw-overflow-hidden tw-p-6"
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-py-16 tw-px-6"
         >
-            <div
-                class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-8"
-            >
-                <div
-                    class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
-                >
-                    <h2 class="tw-text-4xl tw-font-semibold">
-                        Why These Projects Succeeded
-                    </h2>
-                </div>
-                <div
-                    class="tw-mt-6 tw-flex tw-max-w-[900px] tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
-                >
-                    <div
-                        class="reveal-up tw-flex tw-max-w-[280px] tw-flex-col tw-gap-2 tw-p-4"
-                    >
-                        <div class="tw-flex tw-gap-2">
-                            <i class="bi bi-shield-check tw-text-2xl"></i>
-                            <h3 class="tw-text-xl tw-font-semibold">
-                                Government Compliance
-                            </h3>
-                        </div>
-                        <div class="tw-text-[#595959]">
-                            All AI systems were designed with FISMA compliance in mind, including proper security controls, data encryption, and audit trails.
-                        </div>
-                    </div>
-                    <div
-                        class="reveal-up tw-flex tw-max-w-[280px] tw-flex-col tw-gap-2 tw-p-4"
-                    >
-                        <div class="tw-flex tw-gap-2">
-                            <i class="bi bi-cloud-arrow-up tw-text-2xl"></i>
-                            <h3 class="tw-text-xl tw-font-semibold">
-                                Scalable Architecture
-                            </h3>
-                        </div>
-                        <div class="tw-text-[#595959]">
-                            Built on AWS serverless infrastructure for cost-effective scaling and high availability.
-                        </div>
-                    </div>
-                    <div
-                        class="reveal-up tw-flex tw-max-w-[280px] tw-flex-col tw-gap-2 tw-p-4"
-                    >
-                        <div class="tw-flex tw-gap-2">
-                            <i class="bi bi-person-check tw-text-2xl"></i>
-                            <h3 class="tw-text-xl tw-font-semibold">
-                                User-Centric Design
-                            </h3>
-                        </div>
-                        <div class="tw-text-[#595959]">
-                            AI solutions that enhance human capabilities rather than replace them, with intuitive interfaces for non-technical users.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section
-            class="tw-relative tw-flex tw-min-h-[50vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center 
-                    tw-place-items-center tw-overflow-hidden tw-p-6 tw-bg-[#f5f5f5]"
-            id="expert"
-        >
-            <div
-                class="tw-mt-8 tw-flex tw-max-w-[800px] tw-flex-col tw-place-items-center tw-gap-6 tw-text-center"
-            >
-                <h2 class="reveal-up tw-text-4xl tw-font-semibold">
-                    Your AI Expert Who Understands Government
-                </h2>
-                <p class="reveal-up tw-text-lg tw-leading-relaxed">
-                    Led by a former Census Bureau geographer with over 15 years of experience, our team brings a unique combination of deep geospatial expertise and cutting-edge AI knowledge. Our background provides the foundation for building compliant, mission-critical AI solutions that government agencies can trust.
-                </p>
-                <p class="reveal-up tw-text-base tw-leading-relaxed tw-italic tw-text-gray-700">
-                    Our name nods to the vector scope—the precision tool that reveals what’s really in every frame. We bring that same clarity to your spatial data.
-                </p>
-                <p class="reveal-up tw-text-base tw-leading-relaxed">
-                    <strong>Key Differentiator:</strong> Most AI consultants don't understand FISMA compliance for AI systems, security controls for ML models, government procurement processes, or legacy system integration challenges. We do.
-                </p>
-                <p class="reveal-up tw-text-base tw-leading-relaxed">
-                    <strong>Trusted Experience:</strong> Our leadership has worked with CDC, DHS, and FEMA on mission-critical spatial analysis and developing FISMA-compliant geospatial solutions. Now bringing that same expertise to AI-powered geospatial intelligence.
-                </p>
+            <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
+                GLOBAL SKI ATLAS
+            </h2>
+            <p class="reveal-up tw-mt-2 tw-text-center tw-text-lg tw-text-[#202124]">
+                Our first vertical: ski resorts &amp; communities.
+            </p>
+            <p class="reveal-up tw-mt-1 tw-max-w-[600px] tw-text-center tw-text-base tw-text-gray-600">
+                A live demo of the same platform we can run for your boundaries, infrastructure, or program areas.
+            </p>
+            <div class="reveal-up tw-mt-10 tw-flex tw-max-w-[700px] tw-flex-col tw-gap-6 tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
+                <img
+                    src="./assets/images/pic01cs.jpg"
+                    alt="Global Ski Atlas"
+                    class="tw-h-[200px] tw-w-full tw-object-cover tw-rounded-lg"
+                />
+                <ul class="tw-flex tw-flex-col tw-gap-2 tw-text-[#202124]">
+                    <li>50+ resorts with live conditions, runs, lifts</li>
+                    <li>Resorts update via web editor (no GIS needed)</li>
+                    <li>Volunteers contribute photos &amp; trail reports</li>
+                    <li>Public atlas powered by ArcGIS Online</li>
+                </ul>
                 <a
-                    href="#contact"
-                    aria-label="Discuss"
-                    class="reveal-up tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full
-                             tw-bg-black tw-px-6 tw-text-white"
+                    href="https://globalskiatlas.com"
+                    target="_blank"
+                    rel="noopener"
+                    class="tw-inline-flex tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
                 >
-                    Discuss Your AI Project
+                    Live demo <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
                 </a>
             </div>
         </section>
 
+        <!-- Who We Serve -->
         <section
-            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-6 
-                    tw-p-[5%] tw-px-[10%]"
-            id="contact"
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-white tw-py-16 tw-px-6"
         >
+            <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
+                WHO WE SERVE
+            </h2>
+            <p class="reveal-up tw-mt-4 tw-max-w-[600px] tw-text-center tw-text-base tw-text-gray-600">
+                Boundary updates, infrastructure tracking, service areas, program mapping—any authoritative geospatial data your organization maintains.
+            </p>
             <div
-                class="tw-flex tw-w-full tw-max-w-[600px] tw-flex-col tw-place-content-center tw-place-items-center tw-gap-4 tw-text-center"
+                class="reveal-up tw-mt-10 tw-flex tw-w-full tw-max-w-[900px] tw-flex-wrap tw-justify-center tw-gap-6"
             >
-                <h2 class="tw-text-3xl tw-font-semibold max-md:tw-text-xl">
-                    Ready to Deploy AI?
-                </h2>
-                <p class="tw-text-lg tw-text-gray-600">
-                    Transform your geospatial capabilities with AI that understands government requirements. Send a message below and we’ll get back to you.
-                </p>
-                <form
-                    action="https://formspree.io/f/mykjvjwb"
-                    method="POST"
-                    class="tw-flex tw-w-full tw-max-w-[480px] tw-flex-col tw-gap-4 tw-text-left"
-                    id="contact-form"
-                >
-                    <label for="contact-name" class="tw-sr-only">Your name</label>
-                    <input
-                        type="text"
-                        name="name"
-                        id="contact-name"
-                        placeholder="Your name"
-                        required
-                        class="tw-w-full tw-rounded-lg tw-border tw-border-gray-300 tw-px-4 tw-py-3 tw-text-base focus:tw-border-primary focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-primary"
-                    />
-                    <label for="contact-email" class="tw-sr-only">Your email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="contact-email"
-                        placeholder="Your email"
-                        required
-                        class="tw-w-full tw-rounded-lg tw-border tw-border-gray-300 tw-px-4 tw-py-3 tw-text-base focus:tw-border-primary focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-primary"
-                    />
-                    <label for="contact-message" class="tw-sr-only">Message</label>
-                    <textarea
-                        name="message"
-                        id="contact-message"
-                        rows="5"
-                        placeholder="How can we help? Tell us about your project or questions."
-                        required
-                        class="tw-w-full tw-rounded-lg tw-border tw-border-gray-300 tw-px-4 tw-py-3 tw-text-base focus:tw-border-primary focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-primary"
-                    ></textarea>
-                    <button
-                        type="submit"
-                        class="btn tw-h-[50px] tw-w-full tw-px-8 tw-transition-colors tw-duration-[0.3s]"
-                    >
-                        Send message
-                    </button>
-                </form>
+                <div class="tw-flex tw-h-[100px] tw-w-[140px] tw-flex-col tw-items-center tw-justify-center tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-text-center tw-text-sm tw-font-medium tw-text-[#202124]">
+                    Local Government
+                </div>
+                <div class="tw-flex tw-h-[100px] tw-w-[140px] tw-flex-col tw-items-center tw-justify-center tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-text-center tw-text-sm tw-font-medium tw-text-[#202124]">
+                    State Agencies
+                </div>
+                <div class="tw-flex tw-h-[100px] tw-w-[140px] tw-flex-col tw-items-center tw-justify-center tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-text-center tw-text-sm tw-font-medium tw-text-[#202124]">
+                    Non-Profits
+                </div>
+                <div class="tw-flex tw-h-[100px] tw-w-[140px] tw-flex-col tw-items-center tw-justify-center tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-text-center tw-text-sm tw-font-medium tw-text-[#202124]">
+                    Utilities
+                </div>
+                <div class="tw-flex tw-h-[100px] tw-w-[140px] tw-flex-col tw-items-center tw-justify-center tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-text-center tw-text-sm tw-font-medium tw-text-[#202124]">
+                    Health Depts
+                </div>
+                <div class="tw-flex tw-h-[100px] tw-w-[140px] tw-flex-col tw-items-center tw-justify-center tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-text-center tw-text-sm tw-font-medium tw-text-[#202124]">
+                    Tourism Offices
+                </div>
             </div>
         </section>
 
-        <footer
-            class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] 
-                    tw-text-black max-md:tw-flex-col"
+        <!-- About Us -->
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-py-16 tw-px-6"
         >
-            <div
-                class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 
-                        max-md:tw-w-full"
+            <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
+                ABOUT US
+            </h2>
+            <div class="reveal-up tw-mt-10 tw-flex tw-max-w-[560px] tw-flex-col tw-items-center tw-text-center">
+                <p class="tw-text-lg tw-font-semibold tw-text-[#202124]">Jonathan Witcoski</p>
+                <p class="tw-mt-1 tw-text-base tw-font-medium tw-text-gray-600">Founder &amp; GIS Architect</p>
+                <p class="tw-mt-4 tw-text-base tw-leading-relaxed tw-text-[#202124]">
+                    15+ years federal GIS contracting (CDC, State Dept). Python ETL, AWS serverless, geospatial automation expert. Building tools that make agencies move faster.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section
+            id="contact"
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-6 tw-bg-white tw-py-16 tw-px-6 tw-px-[10%]"
+        >
+            <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-semibold tw-text-[#202124] max-md:tw-text-xl">
+                Ready to simplify collaborative map updates?
+            </h2>
+            <p class="reveal-up tw-text-center tw-text-lg tw-text-gray-600">
+                Send a message below and we’ll get back to you.
+            </p>
+            <form
+                action="https://formspree.io/f/mykjvjwb"
+                method="POST"
+                class="tw-flex tw-w-full tw-max-w-[480px] tw-flex-col tw-gap-4 tw-text-left"
+                id="contact-form"
             >
-                <img
-                    src="./assets/logo.png"
-                    alt="Vector Scope AI logo"
-                    class="tw-max-w-[120px]"
+                <label for="contact-name" class="tw-sr-only">Your name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="contact-name"
+                    placeholder="Your name"
+                    required
+                    class="tw-w-full tw-rounded-lg tw-border tw-border-gray-300 tw-px-4 tw-py-3 tw-text-base focus:tw-border-[#1A73E8] focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-[#1A73E8]"
                 />
-                <div class="tw-text-center">
-                    <strong>Vector Scope AI LLC</strong>
-                    <br />
-                    AI-Powered Geospatial Solutions
-                    <br />
-                    United States
-                </div>
-                <div class="tw-mt-3 tw-text-lg tw-font-semibold">Contact Vector Scope AI</div>
-                <div class="tw-flex tw-flex-col tw-gap-1 tw-text-center">
-                    <a href="#contact" class="footer-link">Contact us</a>
-                    <a href="https://vectorscopeai.com" class="footer-link" target="_blank" rel="noopener">vectorscopeai.com</a>
-                </div>
-                <div class="tw-flex tw-gap-4 tw-text-2xl">
-                    <a href="https://www.linkedin.com/company/vectorscopeai" aria-label="LinkedIn" target="_blank" rel="noopener">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a href="https://twitter.com/vectorscopeai" aria-label="Twitter" target="_blank" rel="noopener">
-                        <i class="bi bi-twitter-x"></i>
-                    </a>
-                </div>
-            </div>
+                <label for="contact-email" class="tw-sr-only">Your email</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="contact-email"
+                    placeholder="Your email"
+                    required
+                    class="tw-w-full tw-rounded-lg tw-border tw-border-gray-300 tw-px-4 tw-py-3 tw-text-base focus:tw-border-[#1A73E8] focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-[#1A73E8]"
+                />
+                <label for="contact-message" class="tw-sr-only">Message</label>
+                <textarea
+                    name="message"
+                    id="contact-message"
+                    rows="5"
+                    placeholder="How can we help? Tell us about your project or questions."
+                    required
+                    class="tw-w-full tw-rounded-lg tw-border tw-border-gray-300 tw-px-4 tw-py-3 tw-text-base focus:tw-border-[#1A73E8] focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-[#1A73E8]"
+                ></textarea>
+                <button type="submit" class="btn tw-h-[50px] tw-w-full tw-px-8 tw-transition-colors tw-duration-[0.3s]">
+                    Start Pilot
+                </button>
+            </form>
+        </section>
 
-            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
-                <h2 class="tw-text-3xl max-md:tw-text-xl">Company</h2>
-                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
-                    <a href="#services" class="footer-link">Services</a>
-                    <a href="#case-studies" class="footer-link">Case Studies</a>
-                    <a href="#contact" class="footer-link">Contact Us</a>
-                </div>
+        <!-- Footer -->
+        <footer
+            class="tw-mt-auto tw-flex tw-w-full tw-flex-col tw-place-items-center tw-gap-6 tw-bg-[#202124] tw-py-12 tw-px-6 tw-text-white"
+        >
+            <p class="tw-text-center tw-text-lg tw-font-medium">Ready to simplify collaborative map updates?</p>
+            <a
+                href="#contact"
+                class="tw-flex tw-h-[50px] tw-place-items-center tw-justify-center tw-rounded-full tw-bg-[#1A73E8] tw-px-8 tw-text-lg tw-font-medium tw-text-white"
+            >
+                START YOUR PILOT
+            </a>
+            <div class="tw-flex tw-gap-6 tw-text-sm">
+                <a href="#product" class="footer-link tw-text-gray-300 hover:tw-text-white">Product</a>
+                <a href="#how-it-works" class="footer-link tw-text-gray-300 hover:tw-text-white">How It Works</a>
+                <a href="https://globalskiatlas.com" target="_blank" rel="noopener" class="footer-link tw-text-gray-300 hover:tw-text-white">Demo</a>
+                <a href="#contact" class="footer-link tw-text-gray-300 hover:tw-text-white">Contact</a>
             </div>
-
-            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
-                <h2 class="tw-text-3xl max-md:tw-text-xl">Resources</h2>
-                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
-                    <a href="#expert" class="footer-link">About us</a>
-                    <a href="#contact" class="footer-link">Contact Us</a>
-                </div>
+            <div class="tw-flex tw-gap-4 tw-text-2xl tw-text-gray-400">
+                <a href="https://www.linkedin.com/company/vectorscopeai" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/vectorscopeai" aria-label="Twitter" target="_blank" rel="noopener">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
             </div>
         </footer>
-        <div class="tw-w-full tw-py-4 tw-text-center tw-text-sm tw-text-gray-600">
-            © 2024 Vector Scope AI LLC. All rights reserved.
+        <div class="tw-w-full tw-py-4 tw-text-center tw-text-sm tw-text-gray-500 tw-bg-[#202124]">
+            © 2026 Vector Scope AI | Applying to Esri Startup Program
         </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+            integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+            integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="./index.js"></script>
     </body>
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
-        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    ></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
-        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    ></script>
-
-    <script src="./index.js"></script>
-
-    <style>
-        .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            text-align: center;
-            /* font-size: 12px; */
-            opacity: 1;
-            background: #f7f7f7fa;
-            left: auto;
-        }
-        .swiper-pagination-bullet:hover {
-            color: #000;
-            opacity: 1;
-            background: #ede0e0bd;
-        }
-
-        .swiper-pagination-bullet-active {
-            background: #f39696 !important;
-        }
-
-        .swiper {
-            padding: 10px !important;
-        }
-    </style>
-
-    <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            centeredSlides: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.pagination-container',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return `<span class="${className}"></span>`
-                },
-            },
-            // Navigation arrows
-            navigation: {
-                nextEl: '.testmonial-next',
-                prevEl: '.testmonial-prev',
-            },
-        })
-    </script>
 </html>
