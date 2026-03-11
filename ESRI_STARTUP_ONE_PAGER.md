@@ -10,11 +10,11 @@
 
 ---
 
-## Product: VectorLedger
+## Product: Vector Ledger
 
 - **What it is:** A platform where all map edits are recorded and versioned in one ledger—whether from Esri web apps, cloud QGIS, or cloud ArcGIS Pro. Output is versioned GeoParquet (and Iceberg when adopted).
 - **Who it’s for:** Agencies and organizations that already have (or want) Spark/Sedona/Iceberg data lakes and need collaborative editing and clean GeoParquet for ArcGIS.
-- **How it uses ArcGIS:** Esri web apps and ArcGIS Online/Enterprise for editing and publishing; VectorLedger adds the wiki/lakehouse layer so Iceberg/GeoParquet tables become editable and stay in sync with ArcGIS.
+- **How it uses ArcGIS:** Esri web apps and ArcGIS Online/Enterprise for editing and publishing; Vector Ledger adds the wiki/lakehouse layer so Iceberg/GeoParquet tables become editable and stay in sync with ArcGIS.
 
 ---
 
