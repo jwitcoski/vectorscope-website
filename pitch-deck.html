@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vector Scope AI – Pitch Deck | Vector Ledger</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: #202124; color: #202124; overflow: hidden; }
+        .deck { position: relative; width: 100vw; height: 100vh; }
+        .slide { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem 5%; opacity: 0; visibility: hidden; transition: opacity 0.35s ease, visibility 0.35s; background: #F8F9FA url(./assets/images/hero-map.jpg) center/cover no-repeat; }
+        .slide::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: rgba(248,249,250,0.88); }
+        .slide.bg-dark::before { background: rgba(32,33,36,0.85); }
+        .slide > * { position: relative; z-index: 1; }
+        .slide.active { opacity: 1; visibility: visible; z-index: 1; }
+        .slide.bg-dark { color: #fff; }
+        .slide.bg-dark h1, .slide.bg-dark h2, .slide.bg-dark p, .slide.bg-dark a { color: #fff; }
+        .slide { overflow-y: auto; }
+        .slide h1 { font-size: clamp(2.25rem, 6vw, 4rem); font-weight: 700; margin: 0; text-align: center; }
+        .slide h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 700; margin: 0 0 0.75em; text-align: center; }
+        .slide p { font-size: clamp(1rem, 2.2vw, 1.5rem); line-height: 1.45; margin: 0.4em 0; max-width: min(880px, 92vw); text-align: center; }
+        .slide a { color: #1A73E8; text-decoration: none; font-size: inherit; }
+        .slide a:hover { text-decoration: underline; }
+        .slide .img-wrap { margin: 0.75em 0; width: 95%; max-width: 1200px; flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; }
+        .slide .img-wrap img { max-width: 100%; max-height: 65vh; width: auto; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        .slide .img-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; width: 95%; max-width: 1100px; margin: 0.75em 0; }
+        .slide .img-grid img { width: 100%; height: min(220px, 22vh); min-height: 160px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .slide .img-grid p { font-size: clamp(0.95rem, 1.8vw, 1.2rem); margin-top: 0.4em; }
+        .slide .tech-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 0.75em 0; }
+        .slide .tech-logos img { height: min(72px, 7vh); width: auto; object-fit: contain; }
+        .slide .tagline { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 600; color: #1A73E8; margin-bottom: 0.4em; }
+        .nav { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 1rem; z-index: 10; background: rgba(255,255,255,0.95); padding: 0.5rem 1rem; border-radius: 999px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+        .nav button { background: #1A73E8; color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .nav button:hover { background: #1557b0; }
+        .nav span { font-size: 0.9rem; color: #202124; min-width: 4ch; }
+        @media print {
+            body { overflow: auto; background: #fff; }
+            .slide { position: relative; visibility: visible; opacity: 1; page-break-after: always; min-height: 100vh; }
+            .slide.active { position: relative; }
+            .nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="deck">
+        <!-- 1. Title -->
+        <section class="slide active bg-dark" id="s1">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img src="./assets/logo.png" alt="Vector Scope AI" style="height: min(120px, 12vh); width: auto; margin-bottom: 1rem;" />
+                <h1>VECTOR SCOPE AI</h1>
+                <p class="tagline" style="color: #fff;">Collaborative Map Updates for Agencies</p>
+                <p style="color: rgba(255,255,255,0.9); max-width: min(640px, 90vw); font-size: clamp(1rem, 2.2vw, 1.4rem);">The missing lakehouse layer for ArcGIS. Vector Ledger connects ArcGIS Online with Iceberg, GeoParquet, and Spark/Sedona data lakes.</p>
+            </div>
+        </section>
+
+        <!-- 2. Problem -->
+        <section class="slide" id="s2">
+            <h2>The gap we fill</h2>
+            <p><strong>No major Esri partner</strong> ships Iceberg + wiki-style editing + GeoParquet for ArcGIS today.</p>
+            <p>Agencies want collaborative editing in ArcGIS <em>and</em> versioned, portable data for analytics—without lock-in.</p>
+            <p>Esri community has 100+ votes on ideas for Sedona/Iceberg support (source: <a href="https://community.esri.com/community/arcgis-ideas" target="_blank" rel="noopener">Esri ArcGIS Ideas</a>). Clear demand, no partner solution.</p>
+        </section>
+
+        <!-- 3. Solution -->
+        <section class="slide" id="s3">
+            <h2>Vector Ledger</h2>
+            <p class="tagline">The lakehouse layer for ArcGIS</p>
+            <p>All map edits recorded and versioned in one ledger—from Esri web apps, cloud QGIS, or ArcGIS Pro. Output: versioned GeoParquet (and Iceberg).</p>
+            <p><strong>Who it’s for:</strong> Agencies with or planning Spark/Sedona/Iceberg data lakes who need collaborative editing and clean GeoParquet for ArcGIS.</p>
+        </section>
+
+        <!-- 4. Architecture -->
+        <section class="slide" id="s4">
+            <h2>Future architecture</h2>
+            <p>ESRI web apps → Ledger Editor → Ledger Lake (GeoParquet/Iceberg on AWS) → Ledger Dashboard & Ledger Grid → ArcGIS and analytics.</p>
+            <div class="img-wrap">
+                <img src="./assets/images/VectorLedger_AWS_ESRI_Architecture.png" alt="Vector Ledger architecture with ESRI and AWS" />
+            </div>
+        </section>
+
+        <!-- 5. Four parts -->
+        <section class="slide" id="s5">
+            <h2>Four parts</h2>
+            <div class="img-grid">
+                <div style="text-align: center;">
+                    <img src="./assets/images/placeholder-editing.jpg" alt="Ledger Editor" />
+                    <p><strong>Ledger Editor</strong><br/>Esri web apps, no GIS skills needed</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="./assets/images/placeholder-dashboard.jpg" alt="Ledger Dashboard" />
+                    <p><strong>Ledger Dashboard</strong><br/>Statistics, QC, approval workflows</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="./assets/images/placeholder-geoparquet.jpg" alt="Ledger Lake" />
+                    <p><strong>Ledger Lake</strong><br/>Versioned GeoParquet storage</p>
+                </div>
+            </div>
+            <p style="margin-top: 0.5em;"><strong>Ledger Grid:</strong> Kubernetes runs GIS for map production.</p>
+        </section>
+
+        <!-- 6. Built on Esri + modern data -->
+        <section class="slide" id="s6">
+            <h2>Built on Esri + modern data standards</h2>
+            <p>Esri web apps meet open-standard GeoParquet. Your data stays portable, scalable, and analytics-ready.</p>
+            <div class="tech-logos">
+                <img src="./assets/images/tech/arcgis.png" alt="ArcGIS" />
+                <img src="./assets/images/tech/experience-builder.png" alt="Experience Builder" />
+                <img src="./assets/images/tech/geoparquet.png" alt="GeoParquet" />
+                <img src="./assets/images/tech/aws.png" alt="AWS" />
+                <img src="./assets/images/tech/kubernetes.png" alt="Kubernetes" />
+            </div>
+        </section>
+
+        <!-- 7. Proof: Global Ski Atlas -->
+        <section class="slide" id="s7">
+            <h2>Proof: Global Ski Atlas</h2>
+            <p>Live demo of the same platform we offer for your boundaries, infrastructure, or program areas.</p>
+            <div class="img-wrap">
+                <img src="./assets/images/pic01cs.jpg" alt="Global Ski Atlas" />
+            </div>
+            <p><strong>Today:</strong> OSM data · MapTiler, MapLibre, DynamoDB, JS front end · 3000+ resorts, web editor, public atlas.</p>
+            <p><strong>Can use Esri:</strong> Same workflow can run on ArcGIS and Esri data for agencies.</p>
+            <p><a href="https://globalskiatlas.com" target="_blank" rel="noopener">globalskiatlas.com</a></p>
+        </section>
+
+        <!-- 8. Business model -->
+        <section class="slide" id="s8">
+            <h2>Business model</h2>
+            <p><strong>Pre-revenue.</strong> We’re building the reference implementation (git repo + sample datasets) now.</p>
+            <p><strong>Next:</strong> Pilot engagements (free or discounted). Commercial pricing TBD after pilots.</p>
+            <p><strong>Then:</strong> Sell the solution and/or customize to fit each customer’s environment (ArcGIS, cloud, data sources). Revenue from licensing and implementation services.</p>
+        </section>
+
+        <!-- 9. Ask -->
+        <section class="slide" id="s9">
+            <h2>Ask</h2>
+            <p><strong>Esri Startup Program:</strong> We want to be the go-to lakehouse GIS collaboration layer for ArcGIS users.</p>
+            <p><strong>Pilot:</strong> Ready for customers who have (or plan) Spark/Sedona/Iceberg data and need collaborative editing + GeoParquet for ArcGIS Online.</p>
+        </section>
+
+        <!-- 10. Team & Contact -->
+        <section class="slide" id="s10">
+            <h2>Team & contact</h2>
+            <p><strong>Jonathan Witcoski</strong> — Founder & GIS Architect</p>
+            <p>15+ years federal GIS (CDC, Census, ARNG, DHS). Python ETL, AWS serverless, geospatial automation.</p>
+            <p><a href="https://witcoskitech.com" target="_blank" rel="noopener">witcoskitech.com</a></p>
+            <p style="margin-top: 1.5rem;"><strong>Vector Scope AI</strong></p>
+            <p><a href="https://vectorscopeai.com" target="_blank" rel="noopener">vectorscopeai.com</a> · hello@vectorscopeai.com</p>
+            <img src="./assets/logo.png" alt="Vector Scope AI" style="height: min(64px, 6vh); margin-top: 1rem;" />
+        </section>
+    </div>
+
+    <nav class="nav" aria-label="Slide navigation">
+        <button type="button" id="prev" aria-label="Previous slide"><i class="bi bi-chevron-left"></i></button>
+        <span id="counter">1 / 10</span>
+        <button type="button" id="next" aria-label="Next slide"><i class="bi bi-chevron-right"></i></button>
+    </nav>
+
+    <script>
+        (function () {
+            var slides = document.querySelectorAll('.slide');
+            var total = slides.length;
+            var idx = 0;
+
+            function go(n) {
+                slides[idx].classList.remove('active');
+                idx = (n + total) % total;
+                slides[idx].classList.add('active');
+                document.getElementById('counter').textContent = (idx + 1) + ' / ' + total;
+            }
+
+            document.getElementById('prev').addEventListener('click', function () { go(idx - 1); });
+            document.getElementById('next').addEventListener('click', function () { go(idx + 1); });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowLeft') go(idx - 1);
+                if (e.key === 'ArrowRight') go(idx + 1);
+            });
+        })();
+    </script>
+</body>
+</html>

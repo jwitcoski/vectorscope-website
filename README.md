@@ -4,6 +4,8 @@
 
 This repository contains the website for Vector Scope AI LLC, a geospatial AI solutions company. The website is automatically deployed to AWS using GitHub Actions.
 
+**Note:** “Vector Scope AI” is a placeholder business name and can be changed as needed (copy, logo, domain, etc.).
+
 ## 🌐 Website
 
 - Production: [vectorscopeai.com](https://vectorscopeai.com)
