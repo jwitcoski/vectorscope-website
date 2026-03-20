@@ -60,7 +60,7 @@ jobs:
       - name: Prepare static site for deploy
         run: |
           mkdir -p dist/vectorscope-ai/browser
-          cp index.html index.js pitch-deck.html dist/vectorscope-ai/browser/
+          cp index.html index.js pitch-deck.html sitemap.xml robots.txt dist/vectorscope-ai/browser/
           cp -r css assets dist/vectorscope-ai/browser/
 
       - name: Upload website files to S3
