@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   id-token: write
@@ -34,6 +35,7 @@ jobs:
         uses: hashicorp/setup-terraform@v4
         with:
           terraform_version: "1.11.4"
+          terraform_wrapper: false
 
       - name: Terraform Init
         run: terraform init
@@ -64,7 +66,7 @@ jobs:
           cp -r css assets dist/vectorscope-ai/browser/
 
       - name: Upload website files to S3
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         run: |
           aws s3 sync dist/vectorscope-ai/browser/ s3://vectorscopeai.com/ \
             --delete \
@@ -77,8 +79,28 @@ jobs:
           done
 
       - name: Invalidate CloudFront cache
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         run: |
-          aws cloudfront create-invalidation \
-            --distribution-id $(terraform output -raw cloudfront_distribution_id) \
-            --paths "/*" "/index.html" "/" 
+          set -euo pipefail
+          TF_DIST="$(terraform output -raw cloudfront_distribution_id | tr -d '"' | awk 'NF { print; exit }')"
+          echo "Terraform CloudFront distribution: ${TF_DIST}"
+          echo "${TF_DIST}" > /tmp/cf-dist-ids.txt
+
+          # vectorscopeai.com is served by a separate ACM/alias distribution.
+          # Invalidate every distro whose aliases or S3 origin match this site.
+          if aws cloudfront list-distributions \
+            --query "DistributionList.Items[?contains(Aliases.Items, 'vectorscopeai.com') || contains(Aliases.Items, 'www.vectorscopeai.com') || Origins.Items[?contains(DomainName, 'vectorscopeai.com')]].Id" \
+            --output text >> /tmp/cf-dist-ids.txt; then
+            true
+          else
+            echo "list-distributions failed; invalidating Terraform distro only" >&2
+          fi
+
+          awk 'NF && !seen[$0]++' /tmp/cf-dist-ids.txt | tr '\t' '\n' | awk 'NF && !seen[$0]++' > /tmp/cf-dist-ids.uniq
+          echo "Invalidating distributions:"
+          cat /tmp/cf-dist-ids.uniq
+          while read -r dist_id; do
+            aws cloudfront create-invalidation \
+              --distribution-id "$dist_id" \
+              --paths "/*" "/index.html" "/"
+          done < /tmp/cf-dist-ids.uniq 
