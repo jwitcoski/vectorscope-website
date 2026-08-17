@@ -55,7 +55,7 @@
         @media (max-width: 900px) {
             .slide .img-grid { grid-template-columns: repeat(2, 1fr); }
         }
-        .slide .img-grid img { width: 100%; height: min(220px, 22vh); min-height: 160px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .slide .img-grid img { width: 100%; height: min(220px, 22vh); min-height: 160px; object-fit: contain; background: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .slide .img-grid p { font-size: clamp(0.95rem, 1.8vw, 1.2rem); margin-top: 0.4em; }
         .slide .tech-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 0.75em 0; }
         .slide .tech-logos img { height: min(72px, 7vh); width: auto; object-fit: contain; }
@@ -114,7 +114,7 @@
             <h2>Four parts</h2>
             <div class="img-grid">
                 <div style="text-align: center;">
-                    <img src="./assets/images/placeholder-setup.jpg" alt="Ledger Setup" />
+                    <img src="./assets/images/vector-setup.jpg" alt="Ledger Setup" />
                     <p><strong>Ledger Setup</strong><br/>Sandbox, shapefile zip, GeoParquet</p>
                 </div>
                 <div style="text-align: center;">
