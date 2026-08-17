@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vector Ledger Pitch Deck | Iceberg + GeoParquet for ArcGIS</title>
-    <meta name="description" content="Vector Ledger connects ArcGIS Online/Enterprise with versioned GeoParquet and Apache Iceberg data lakes. Vector Ledger enables collaborative editing via Esri web apps and publishes approved data back to ArcGIS for geospatial analytics." />
-    <meta name="keywords" content="ArcGIS, Iceberg, GeoParquet, geospatial analytics, geospatial, Vector Ledger, ArcGIS Online, Experience Builder" />
+    <title>Vector Ledger Pitch Deck | Vector Scope AI</title>
+    <meta name="description" content="Vector Ledger is a hosted app for collaborative map updates. Upload a shapefile, edit on the map, approve changes, and publish GeoParquet, PMTiles, and a web map." />
+    <meta name="keywords" content="Vector Ledger, GeoParquet, PMTiles, MapLibre, collaborative mapping, GIS, shapefile" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://vectorscopeai.com/pitch-deck.html" />
-    <meta property="og:title" content="Vector Ledger Pitch Deck | Iceberg + GeoParquet for ArcGIS" />
-    <meta property="og:description" content="Collaborative map editing in Esri web apps with versioned GeoParquet and Apache Iceberg for geospatial analytics and ArcGIS publishing." />
+    <meta property="og:title" content="Vector Ledger Pitch Deck" />
+    <meta property="og:description" content="Setup, Editor, Dashboard, and Lake. Free trial, then $30 or $100 a month." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://vectorscopeai.com/pitch-deck.html" />
     <meta property="og:image" content="https://vectorscopeai.com/assets/images/hero-map.jpg" />
     <meta property="og:site_name" content="Vector Scope AI / Vector Ledger" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vector Ledger Pitch Deck | Iceberg + GeoParquet for ArcGIS" />
-    <meta name="twitter:description" content="Collaborative map editing in Esri web apps with versioned GeoParquet and Apache Iceberg for geospatial analytics and ArcGIS publishing." />
+    <meta name="twitter:title" content="Vector Ledger Pitch Deck" />
+    <meta name="twitter:description" content="Collaborative map updates: shapefile in, GeoParquet and a shareable web map out." />
     <meta name="twitter:image" content="https://vectorscopeai.com/assets/images/hero-map.jpg" />
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <script type="application/ld+json">
@@ -26,7 +26,7 @@
         "name": "Vector Ledger",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "Vector Ledger connects ArcGIS Online/Enterprise with versioned GeoParquet and Apache Iceberg data lakes. Edits originate in Esri web apps and are published back to ArcGIS as hosted layers.",
+        "description": "Hosted collaborative map editing. Upload a shapefile, review proposed edits, and publish versioned GeoParquet, PMTiles, and TileJSON.",
         "url": "https://vectorscopeai.com/pitch-deck.html"
     }
     </script>
@@ -51,7 +51,10 @@
         .slide a:hover { text-decoration: underline; }
         .slide .img-wrap { margin: 0.75em 0; width: 95%; max-width: 1200px; flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; }
         .slide .img-wrap img { max-width: 100%; max-height: 65vh; width: auto; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-        .slide .img-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; width: 95%; max-width: 1100px; margin: 0.75em 0; }
+        .slide .img-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; width: 95%; max-width: 1200px; margin: 0.75em 0; }
+        @media (max-width: 900px) {
+            .slide .img-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         .slide .img-grid img { width: 100%; height: min(220px, 22vh); min-height: 160px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .slide .img-grid p { font-size: clamp(0.95rem, 1.8vw, 1.2rem); margin-top: 0.4em; }
         .slide .tech-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 0.75em 0; }
@@ -76,31 +79,31 @@
             <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                 <img src="./assets/logo.png" alt="Vector Scope AI" style="height: min(120px, 12vh); width: auto; margin-bottom: 1rem;" />
                 <h1>VECTOR SCOPE AI</h1>
-                <p class="tagline" style="color: #fff;">Collaborative Map Updates for Agencies</p>
-                <p style="color: rgba(255,255,255,0.9); max-width: min(640px, 90vw); font-size: clamp(1rem, 2.2vw, 1.4rem);">The missing lakehouse layer for ArcGIS. Vector Ledger connects ArcGIS Online with Iceberg, GeoParquet, and Spark/Sedona data lakes.</p>
+                <p class="tagline" style="color: #fff;">Collaborative map updates for agencies</p>
+                <p style="color: rgba(255,255,255,0.9); max-width: min(640px, 90vw); font-size: clamp(1rem, 2.2vw, 1.4rem);">Vector Ledger is a hosted app: upload a shapefile, edit on the map, approve the change list, publish GeoParquet and a web map.</p>
             </div>
         </section>
 
         <!-- 2. Problem -->
         <section class="slide" id="s2">
             <h2>The gap we fill</h2>
-            <p><strong>No major Esri partner</strong> ships Iceberg + wiki-style editing + GeoParquet for ArcGIS today.</p>
-            <p>Agencies want collaborative editing in ArcGIS <em>and</em> versioned, portable data for analytics—without lock-in.</p>
-            <p>Esri community has 100+ votes on ideas for Sedona/Iceberg support (source: <a href="https://community.esri.com/community/arcgis-ideas" target="_blank" rel="noopener">Esri ArcGIS Ideas</a>). Clear demand, no partner solution.</p>
+            <p>Map data still moves around as email attachments, or it gets locked in a database nobody else can open.</p>
+            <p>Teams want a shared editor with an approval trail—and a file they can open in QGIS, ArcGIS Pro, or DuckDB.</p>
+            <p>Vector Ledger is that hosted workflow. Live today at <a href="https://app.vectorscopeai.com" target="_blank" rel="noopener">app.vectorscopeai.com</a>.</p>
         </section>
 
         <!-- 3. Solution -->
         <section class="slide" id="s3">
             <h2>Vector Ledger</h2>
-            <p class="tagline">The lakehouse layer for ArcGIS</p>
-            <p>All map edits recorded and versioned in one ledger—from Esri web apps, cloud QGIS, or ArcGIS Pro. Output: versioned GeoParquet (and Iceberg).</p>
-            <p><strong>Who it’s for:</strong> Agencies with or planning Spark/Sedona/Iceberg data lakes who need collaborative editing and clean GeoParquet for ArcGIS.</p>
+            <p class="tagline">Setup, Editor, Dashboard, Lake</p>
+            <p>Create a sandbox, upload a shapefile zip, convert to GeoParquet. People edit on the map. Approvers see the change list. Publish GeoParquet, PMTiles, and a MapLibre preview.</p>
+            <p><strong>Who it’s for:</strong> agencies and orgs that need non-GIS staff to update official map data—and still want real files at the end.</p>
         </section>
 
         <!-- 4. Architecture -->
         <section class="slide" id="s4">
             <h2>Future architecture</h2>
-            <p>ESRI web apps → Ledger Editor → Ledger Lake (GeoParquet/Iceberg on AWS) → Ledger Dashboard & Ledger Grid → ArcGIS and analytics.</p>
+            <p>Roadmap: tighter ArcGIS sync, Iceberg tables, heavier GIS production. The live product is Setup → Editor → Dashboard → Lake.</p>
             <div class="img-wrap">
                 <img src="./assets/images/VectorLedger_AWS_ESRI_Architecture.png" alt="Vector Ledger architecture with ESRI and AWS" />
             </div>
@@ -111,32 +114,34 @@
             <h2>Four parts</h2>
             <div class="img-grid">
                 <div style="text-align: center;">
+                    <img src="./assets/images/placeholder-setup.jpg" alt="Ledger Setup" />
+                    <p><strong>Ledger Setup</strong><br/>Sandbox, shapefile zip, GeoParquet</p>
+                </div>
+                <div style="text-align: center;">
                     <img src="./assets/images/placeholder-editing.jpg" alt="Ledger Editor" />
-                    <p><strong>Ledger Editor</strong><br/>Esri web apps, no GIS skills needed</p>
+                    <p><strong>Ledger Editor</strong><br/>Draw and edit on the map</p>
                 </div>
                 <div style="text-align: center;">
                     <img src="./assets/images/placeholder-dashboard.jpg" alt="Ledger Dashboard" />
-                    <p><strong>Ledger Dashboard</strong><br/>Statistics, QC, approval workflows</p>
+                    <p><strong>Ledger Dashboard</strong><br/>Proposals, roles, invites</p>
                 </div>
                 <div style="text-align: center;">
                     <img src="./assets/images/placeholder-geoparquet.jpg" alt="Ledger Lake" />
-                    <p><strong>Ledger Lake</strong><br/>Versioned GeoParquet storage</p>
+                    <p><strong>Ledger Lake</strong><br/>GeoParquet, PMTiles, MapLibre</p>
                 </div>
             </div>
-            <p style="margin-top: 0.5em;"><strong>Ledger Grid:</strong> Kubernetes runs GIS for map production.</p>
         </section>
 
         <!-- 6. Built on Esri + modern data -->
         <section class="slide" id="s6">
-            <h2>Built on Esri + Iceberg/GeoParquet data standards</h2>
-            <p>Esri web apps meet open-standard GeoParquet. Your data stays portable, scalable, and analytics-ready.</p>
+            <h2>Open files, a real web map</h2>
+            <p>GeoParquet for desktop GIS and analytics. PMTiles and TileJSON for MapLibre. QGIS and ArcGIS Pro can open the lake file.</p>
             <div class="tech-logos">
-                <img src="./assets/images/tech/arcgis.png" alt="ArcGIS" />
-                <img src="./assets/images/tech/experience-builder.png" alt="Experience Builder" />
                 <img src="./assets/images/tech/geoparquet.png" alt="GeoParquet" />
                 <img src="./assets/images/tech/aws.png" alt="AWS" />
-                <img src="./assets/images/tech/kubernetes.png" alt="Kubernetes" />
+                <img src="./assets/images/tech/arcgis.png" alt="ArcGIS Pro / QGIS" />
             </div>
+            <p>Iceberg and deeper ArcGIS Online sync are on the roadmap.</p>
         </section>
 
         <!-- 7. Proof: Global Ski Atlas -->
@@ -146,42 +151,41 @@
             <div class="img-wrap">
                 <img src="./assets/images/pic01cs.jpg" alt="Global Ski Atlas" />
             </div>
-            <p><strong>Today:</strong> OSM data · MapTiler, MapLibre, DynamoDB, JS front end · 3000+ resorts, web editor, public atlas.</p>
-            <p><strong>Can use Esri:</strong> Same workflow can run on ArcGIS and Esri data for agencies.</p>
+            <p><strong>Today:</strong> OSM data · MapTiler, MapLibre, DynamoDB · 3000+ resorts, web editor, public atlas.</p>
+            <p>It is a related vertical, not Vector Ledger running on Esri.</p>
             <p><a href="https://globalskiatlas.com" target="_blank" rel="noopener">globalskiatlas.com</a></p>
         </section>
 
         <!-- 8. Competition / Why us -->
         <section class="slide" id="s8">
-            <h2>Competition / Why us</h2>
-            <p><strong>Who else?</strong> CARTO and Wherobots push Iceberg + GeoParquet as data platforms—but not as “Esri + lakehouse collaboration.” Most agencies DIY or have nothing.</p>
-            <p><strong>Vector Ledger:</strong> First Esri-aligned partner doing Iceberg + collaborative editing + GeoParquet for ArcGIS.</p>
-            <p><strong>Moat:</strong> Working product, not just a diagram—Esri sync, approval workflows, deployment support.</p>
+            <h2>Why this exists</h2>
+            <p><strong>The usual mess:</strong> shapefiles in email, or a geodatabase nobody else can open.</p>
+            <p><strong>Vector Ledger:</strong> hosted editor, approval trail, GeoParquet and PMTiles you can download.</p>
+            <p>CARTO and Wherobots are strong at lakehouse analytics. We are aimed at the people who still have to change the lines on the map.</p>
         </section>
 
         <!-- 9. Business model -->
         <section class="slide" id="s9">
-            <h2>Business model</h2>
-            <p><strong>Pre-revenue.</strong> We’re building the reference implementation (git repo + sample datasets) now.</p>
-            <p><strong>Next:</strong> Pilot engagements (free or discounted). Commercial pricing TBD after pilots.</p>
-            <p><strong>Then:</strong> License the software and provide implementation for each customer’s ArcGIS and cloud environment. License $10K–$30K/year + implementation $15K–$40K per deployment.</p>
-            <p><strong>Moat:</strong> Integration depth and support—not something they can replicate from a diagram.</p>
+            <h2>Pricing</h2>
+            <p><strong>Free trial:</strong> one dataset, under 25 MB. Try the live app.</p>
+            <p><strong>Standard:</strong> $30/month for ongoing work and more than one dataset.</p>
+            <p><strong>Unlimited:</strong> $100/month for teams with a lot of layers.</p>
+            <p><a href="https://app.vectorscopeai.com" target="_blank" rel="noopener">app.vectorscopeai.com</a></p>
         </section>
 
         <!-- 10. Ask -->
         <section class="slide" id="s10">
             <h2>Ask</h2>
-            <p><strong>Esri Startup Program:</strong> We want to be the go-to lakehouse GIS collaboration layer for ArcGIS users.</p>
-            <p><strong>Esri software licenses</strong> to build and test demo products (Experience Builder, ArcGIS Online).</p>
-            <p><strong>Co-sell and go-to-market support</strong> for Esri customers.</p>
-            <p><strong>Pilot:</strong> Ready for customers who have (or plan) Spark/Sedona/Iceberg data and need collaborative editing + GeoParquet for ArcGIS Online.</p>
+            <p><strong>Esri Startup Program:</strong> we want to be a practical collaboration layer next to ArcGIS, with files agencies can take with them.</p>
+            <p><strong>Esri software licenses</strong> help us test the ArcGIS Pro / Online side of the roadmap.</p>
+            <p><strong>Try it:</strong> one dataset under 25 MB, free, at <a href="https://app.vectorscopeai.com" target="_blank" rel="noopener">app.vectorscopeai.com</a>.</p>
         </section>
 
         <!-- 11. Team & Contact -->
         <section class="slide" id="s11">
             <h2>Team & contact</h2>
             <p><strong>Jonathan Witcoski</strong> — Founder & GIS Architect</p>
-            <p>15+ years federal GIS (CDC, Census, ARNG, DHS). Python ETL, AWS serverless, geospatial automation.</p>
+            <p>Fifteen-plus years of federal GIS (CDC, Census, ARNG, DHS). Built Vector Ledger so map data does not die in email.</p>
             <p><a href="https://witcoskitech.com" target="_blank" rel="noopener">witcoskitech.com</a></p>
             <p style="margin-top: 1.5rem;"><strong>Vector Scope AI</strong></p>
             <p><a href="https://vectorscopeai.com" target="_blank" rel="noopener">vectorscopeai.com</a> · <a href="https://vectorscopeai.com/#contact">request info</a></p>
