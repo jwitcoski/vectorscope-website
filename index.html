@@ -73,7 +73,71 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
         <link rel="stylesheet" href="./css/tailwind-build.css" />
-        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/index.css?v=phone-2" />
+        <style>
+            /* Inlined so phones are not stuck with a cached stylesheet. */
+            [hidden] { display: none !important; }
+            .playground-iframe {
+                display: block;
+                width: 100%;
+                height: min(75vh, 780px);
+                min-height: 520px;
+                border: 0;
+            }
+            .playground-phone { display: none; }
+            @media (min-width: 1024px) {
+                .playground-desktop { display: block !important; }
+                .playground-phone { display: none !important; }
+            }
+            @media (max-width: 1023px) {
+                #try-it { padding-top: 88px; }
+                .playground-desktop { display: none !important; }
+                .playground-phone {
+                    position: relative;
+                    display: block !important;
+                    min-height: 220px;
+                    color: inherit;
+                    text-decoration: none;
+                    -webkit-tap-highlight-color: transparent;
+                }
+                .playground-phone img {
+                    display: block;
+                    width: 100%;
+                    height: min(48vw, 260px);
+                    min-height: 200px;
+                    object-fit: cover;
+                    object-position: left center;
+                }
+                .playground-phone-overlay {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    padding: 1.25rem 1rem;
+                    background: linear-gradient(to top, rgba(32, 33, 36, 0.78), rgba(32, 33, 36, 0.05) 55%);
+                }
+                .playground-phone-button {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.4rem;
+                    min-height: 44px;
+                    padding: 0.6rem 1.25rem;
+                    border-radius: 999px;
+                    background: #1A73E8;
+                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+                .try-steps {
+                    text-align: left;
+                }
+            }
+            .try-steps {
+                text-align: left;
+            }
+        </style>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link
             rel="stylesheet"
@@ -94,7 +158,7 @@
                 <div
                     class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-[#202124] max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
                 >
-                    <a class="header-links" href="#try-it">Try the map</a>
+                    <a class="header-links" href="#try-it">Open the map</a>
                     <a class="header-links" href="#product">Product</a>
                     <a class="header-links" href="#how-it-works">How It Works</a>
                     <a class="header-links" href="#pricing">Pricing</a>
@@ -141,32 +205,24 @@
                 <p class="reveal-hero-text tw-mt-4 tw-text-xl tw-font-medium tw-text-[#202124] max-lg:tw-text-lg">
                     Collaborative map updates, without the GIS bottleneck
                 </p>
-                <p class="reveal-hero-text tw-mt-4 tw-max-w-[720px] tw-text-base tw-leading-relaxed tw-text-gray-700">
-                    Try the live map—no login. Select a feature, propose an edit, and see it on the change list.
+                <p class="reveal-hero-text tw-mt-4 tw-max-w-[640px] tw-text-base tw-font-semibold tw-text-[#202124]">
+                    How to try it
                 </p>
-                <p class="reveal-hero-text tw-mt-2 tw-max-w-[720px] tw-text-sm tw-leading-relaxed tw-text-gray-600">
-                    One dataset free (under 25 MB). Open the files in QGIS, ArcGIS Pro, or DuckDB—they are not stuck in our app.
+                <ol class="try-steps reveal-hero-text tw-mt-2 tw-max-w-[520px] tw-list-decimal tw-pl-5 tw-text-left tw-text-base tw-leading-relaxed tw-text-gray-700">
+                    <li>Open the map. You don't need an account.</li>
+                    <li>Tap a park or a building.</li>
+                    <li>Change the name, or draw a new shape, then hit submit.</li>
+                    <li>Someone reviews it before it goes on the published map.</li>
+                </ol>
+                <p class="reveal-hero-text tw-mt-3 tw-max-w-[640px] tw-text-sm tw-leading-relaxed tw-text-gray-600">
+                    One dataset is free if it's under 25 MB. You can download the files and open them in QGIS, ArcGIS Pro, or DuckDB.
                 </p>
                 <div class="reveal-hero-text tw-mt-8 tw-flex tw-flex-wrap tw-justify-center tw-gap-4">
                     <a
                         href="https://app.vectorscopeai.com/public"
-                        class="playground-phone-cta tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
+                        class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
                     >
-                        Try the map
-                    </a>
-                    <a
-                        href="#ledger-playground"
-                        class="playground-desktop-cta tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
-                    >
-                        Try the map
-                    </a>
-                    <a
-                        href="https://app.vectorscopeai.com/public"
-                        target="_blank"
-                        rel="noopener"
-                        class="playground-desktop-cta tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
-                    >
-                        Open full screen <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
+                        Open the map
                     </a>
                 </div>
             </div>
@@ -175,14 +231,9 @@
                 id="ledger-playground"
                 class="playground tw-mt-10 tw-w-full tw-max-w-[1160px] tw-overflow-hidden tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-shadow-xl"
             >
-                <div class="playground-desktop">
+                <div class="playground-desktop" hidden>
                     <div class="tw-flex tw-h-10 tw-items-center tw-justify-between tw-gap-3 tw-border-b tw-border-gray-200 tw-bg-gray-100 tw-px-3">
-                        <div class="tw-flex tw-min-w-0 tw-items-center tw-gap-1.5">
-                            <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FF5F57]"></span>
-                            <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FEBC2E]"></span>
-                            <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#28C840]"></span>
-                            <span class="tw-ml-2 tw-truncate tw-text-xs tw-text-gray-500">app.vectorscopeai.com/public — live, no login</span>
-                        </div>
+                        <span class="tw-truncate tw-text-xs tw-text-gray-600">Map demo</span>
                         <a
                             href="https://app.vectorscopeai.com/public"
                             target="_blank"
@@ -195,46 +246,46 @@
                     <iframe
                         id="ledger-embed"
                         data-src="https://app.vectorscopeai.com/public?embed=1"
-                        title="Vector Ledger public playground. Select a feature to propose edits. No login required."
+                        title="Vector Ledger map demo. Tap a park or building to suggest an edit."
                         allow="clipboard-write; fullscreen"
                         referrerpolicy="strict-origin-when-cross-origin"
                         class="playground-iframe"
                     ></iframe>
-                    <script>
-                        (function () {
-                            var iframe = document.getElementById("ledger-embed");
-                            if (iframe && window.matchMedia("(min-width: 1024px)").matches) {
-                                iframe.src = iframe.getAttribute("data-src");
-                            }
-                        })();
-                    </script>
                 </div>
                 <a
                     class="playground-phone"
                     href="https://app.vectorscopeai.com/public"
-                    aria-label="Open the live Vector Ledger map"
+                    aria-label="Open the map"
                 >
                     <img
                         src="./assets/images/product-editor.jpg"
-                        alt="Ledger Editor map with a park polygon selected"
-                        width="1160"
-                        height="640"
+                        alt="Map of Liberty Park in the Ledger editor"
+                        width="1328"
+                        height="462"
                     />
                     <span class="playground-phone-overlay">
-                        <span class="playground-phone-kicker">Live map · no login</span>
                         <span class="playground-phone-button">
-                            Open the live map
+                            Open the map
                             <i class="bi bi-arrow-right"></i>
                         </span>
-                        <span class="playground-phone-hint">Easier to pan and zoom full screen.</span>
                     </span>
                 </a>
             </div>
-            <p class="playground-desktop-cta tw-mt-3 tw-max-w-[720px] tw-text-center tw-text-sm tw-text-gray-600">
-                This is the real public sandbox. Edits you submit stay pending until they are reviewed.
-            </p>
-            <p class="playground-phone-cta tw-mt-3 tw-max-w-[720px] tw-text-center tw-text-sm tw-text-gray-600">
-                Opens the real public sandbox full screen. Edits stay pending until they are reviewed.
+            <script>
+                (function () {
+                    var isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+                    var desktop = document.querySelector(".playground-desktop");
+                    var phone = document.querySelector(".playground-phone");
+                    if (desktop) desktop.hidden = !isDesktop;
+                    if (phone) phone.hidden = isDesktop;
+                    var iframe = document.getElementById("ledger-embed");
+                    if (iframe && isDesktop) {
+                        iframe.src = iframe.getAttribute("data-src");
+                    }
+                })();
+            </script>
+            <p class="tw-mt-3 tw-max-w-[640px] tw-text-center tw-text-sm tw-text-gray-600">
+                Feel free to submit a change. It won't update the published map until someone approves it.
             </p>
         </section>
 
@@ -283,7 +334,7 @@
                         href="#try-it"
                         class="tw-mt-2 tw-inline-flex tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
                     >
-                        Try the live map <i class="bi bi-arrow-up tw-text-sm"></i>
+                        Try the map <i class="bi bi-arrow-up tw-text-sm"></i>
                     </a>
             </div>
         </section>
@@ -617,6 +668,6 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
-        <script src="./index.js"></script>
+        <script src="./index.js?v=phone-2"></script>
     </body>
 </html>
