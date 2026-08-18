@@ -98,8 +98,6 @@
                     <a class="header-links" href="#how-it-works">How It Works</a>
                     <a class="header-links" href="#pricing">Pricing</a>
                     <a class="header-links" href="pitch-deck.html">Pitch Deck</a>
-                    <a class="header-links" href="https://app.vectorscopeai.com" target="_blank" rel="noopener">Ledger App</a>
-                    <a class="header-links" href="https://globalskiatlas.com" target="_blank" rel="noopener">Demo</a>
                     <a class="header-links" href="#contact">Contact</a>
                 </div>
                 <div
@@ -131,38 +129,56 @@
 
         <!-- Hero -->
         <section
-            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-items-center tw-justify-center tw-overflow-hidden tw-p-[5%] tw-pt-[80px] max-lg:tw-p-4 max-md:tw-mt-[50px]"
-            style="background-image: url(./assets/images/hero-map.jpg); background-size: cover; background-position: center;"
+            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-items-center tw-justify-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-p-[5%] tw-pt-[96px] max-lg:tw-p-4 max-md:tw-mt-[50px]"
         >
-            <div class="tw-absolute tw-inset-0" style="background-color: rgba(248, 249, 250, 0.88);"></div>
-            <div class="tw-relative tw-flex tw-max-w-[800px] tw-flex-col tw-items-center tw-text-center">
-                <h1 class="reveal-hero-text tw-text-5xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-lg:tw-text-4xl max-md:tw-text-3xl">
-                    VECTOR SCOPE AI
-                </h1>
-                <p class="reveal-hero-text tw-mt-4 tw-text-2xl tw-font-medium tw-text-[#202124] max-lg:tw-text-xl">
-                    Collaborative map updates, without the GIS bottleneck
-                </p>
-                <p class="reveal-hero-text tw-mt-4 tw-max-w-[600px] tw-text-base tw-leading-relaxed tw-text-[#202124]">
-                    Vector Ledger is a hosted app. You upload a shapefile, people edit on the map, someone reviews the change list, and you get GeoParquet plus a shareable web map.
-                </p>
-                <p class="reveal-hero-text tw-mt-2 tw-max-w-[640px] tw-text-sm tw-leading-relaxed tw-text-gray-700">
-                    Try one dataset free (under 25 MB). Open it in QGIS, ArcGIS Pro, or DuckDB when you are done—your files are not stuck in our app.
-                </p>
-                <div class="reveal-hero-text tw-mt-8 tw-flex tw-flex-wrap tw-justify-center tw-gap-4">
-                    <a
-                        href="https://app.vectorscopeai.com"
-                        target="_blank"
-                        rel="noopener"
-                        class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
-                    >
-                        Open Vector Ledger
-                    </a>
-                    <a
-                        href="#pricing"
-                        class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
-                    >
-                        See pricing
-                    </a>
+            <div
+                class="tw-relative tw-flex tw-w-full tw-max-w-[1160px] tw-items-center tw-gap-12 max-lg:tw-flex-col max-lg:tw-text-center"
+            >
+                <div class="tw-flex tw-max-w-[520px] tw-flex-1 tw-flex-col max-lg:tw-items-center">
+                    <p class="reveal-hero-text tw-text-sm tw-font-semibold tw-tracking-wide tw-text-[#1A73E8]">
+                        Vector Scope AI
+                    </p>
+                    <h1 class="reveal-hero-text tw-mt-2 tw-text-5xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-lg:tw-text-4xl max-md:tw-text-3xl">
+                        Vector Ledger
+                    </h1>
+                    <p class="reveal-hero-text tw-mt-4 tw-text-xl tw-font-medium tw-text-[#202124] max-lg:tw-text-lg">
+                        Collaborative map updates, without the GIS bottleneck
+                    </p>
+                    <p class="reveal-hero-text tw-mt-4 tw-text-base tw-leading-relaxed tw-text-gray-700">
+                        Upload a shapefile, edit on the map, approve the change list, and publish GeoParquet plus a shareable web map.
+                    </p>
+                    <p class="reveal-hero-text tw-mt-2 tw-text-sm tw-leading-relaxed tw-text-gray-600">
+                        One dataset free (under 25 MB). Open the files in QGIS, ArcGIS Pro, or DuckDB—they are not stuck in our app.
+                    </p>
+                    <div class="reveal-hero-text tw-mt-8 tw-flex tw-flex-wrap tw-gap-4 max-lg:tw-justify-center">
+                        <a
+                            href="https://app.vectorscopeai.com"
+                            target="_blank"
+                            rel="noopener"
+                            class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
+                        >
+                            Try Vector Ledger
+                        </a>
+                        <a
+                            href="#how-it-works"
+                            class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
+                        >
+                            See how it works
+                        </a>
+                    </div>
+                </div>
+                <div class="reveal-hero-img tw-w-full tw-flex-1 tw-overflow-hidden tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-shadow-xl">
+                    <div class="tw-flex tw-h-8 tw-items-center tw-gap-1.5 tw-border-b tw-border-gray-200 tw-bg-gray-100 tw-px-3">
+                        <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FF5F57]"></span>
+                        <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FEBC2E]"></span>
+                        <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#28C840]"></span>
+                        <span class="tw-ml-2 tw-truncate tw-text-xs tw-text-gray-500">app.vectorscopeai.com</span>
+                    </div>
+                    <img
+                        src="./assets/images/product-editor.jpg"
+                        alt="Ledger Editor: draw and edit map features, then submit for approval"
+                        class="tw-block tw-w-full"
+                    />
                 </div>
             </div>
         </section>
@@ -173,51 +189,17 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-white tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                VECTOR LEDGER
+                What Vector Ledger is
             </h2>
-            <p class="reveal-up tw-mt-3 tw-max-w-[600px] tw-text-center tw-text-lg tw-text-[#202124]">
-                A place for the map to live while people are still arguing over the last edit.
+            <p class="reveal-up tw-mt-3 tw-max-w-[640px] tw-text-center tw-text-lg tw-text-[#202124]">
+                A hosted place for the map to live while people are still arguing over the last edit.
             </p>
             <p class="reveal-up tw-mt-2 tw-max-w-[700px] tw-text-center tw-text-base tw-text-gray-600">
                 Staff and partners propose changes. Approvers see what moved. When you publish, you get files desktop GIS and analytics tools can actually open—not a screenshot of a web map.
             </p>
-            <p class="reveal-up tw-mt-4 tw-max-w-[640px] tw-text-center tw-text-sm tw-text-gray-600">
-                Four parts: <strong class="tw-text-[#202124]">Setup</strong>, <strong class="tw-text-[#202124]">Editor</strong>, <strong class="tw-text-[#202124]">Dashboard</strong>, and <strong class="tw-text-[#202124]">Lake</strong>.
-            </p>
-            <div class="reveal-up tw-mt-10 tw-flex tw-w-full tw-max-w-[900px] tw-flex-col tw-items-center tw-gap-3">
-                <img
-                    src="./assets/images/VectorLedger_AWS_ESRI_Architecture.png"
-                    alt="Vector Ledger future architecture with ArcGIS, GeoParquet, and analytics"
-                    class="tw-w-full tw-max-h-[500px] tw-object-contain tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-shadow-sm"
-                />
-                <p class="tw-text-center tw-text-sm tw-text-gray-600">Roadmap: tighter ArcGIS sync, Iceberg tables, and heavier GIS production. The live app today is Setup, Editor, Dashboard, and Lake.</p>
-            </div>
             <div
-                class="reveal-up tw-mt-12 tw-flex tw-w-full tw-max-w-[1100px] tw-flex-wrap tw-items-start tw-justify-center tw-gap-12 max-lg:tw-flex-col max-lg:tw-items-center"
+                class="reveal-up tw-mt-10 tw-flex tw-w-full tw-max-w-[720px] tw-flex-col tw-gap-4"
             >
-                <div class="tw-flex tw-flex-1 tw-flex-col tw-gap-6 tw-min-w-[280px]">
-                    <img
-                        src="./assets/images/vector-setup.jpg"
-                        alt="Ledger Setup – sandbox and shapefile upload"
-                        class="tw-h-[180px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow-md"
-                    />
-                    <img
-                        src="./assets/images/placeholder-editing.jpg"
-                        alt="Ledger Editor – map editing"
-                        class="tw-h-[180px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow-md"
-                    />
-                    <img
-                        src="./assets/images/placeholder-dashboard.jpg"
-                        alt="Ledger Dashboard – proposals and roles"
-                        class="tw-h-[180px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow-md"
-                    />
-                    <img
-                        src="./assets/images/placeholder-geoparquet.jpg"
-                        alt="Ledger Lake – GeoParquet and publish"
-                        class="tw-h-[180px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow-md"
-                    />
-                </div>
-                <div class="tw-flex tw-flex-1 tw-flex-col tw-gap-4 tw-min-w-[280px]">
                     <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
                         <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
                         <strong>Ledger Setup:</strong> Create a sandbox, drop in a shapefile zip, convert to GeoParquet
@@ -248,9 +230,8 @@
                         rel="noopener"
                         class="tw-mt-2 tw-inline-flex tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
                     >
-                        Open Vector Ledger App <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
+                        Open the app <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
                     </a>
-                </div>
             </div>
         </section>
 
@@ -260,43 +241,43 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                HOW VECTOR LEDGER WORKS
+                How it works
             </h2>
             <div
                 class="reveal-up tw-mt-12 tw-flex tw-w-full tw-max-w-[1200px] tw-flex-wrap tw-justify-center tw-gap-8 max-lg:tw-flex-col max-lg:tw-items-center"
             >
-                <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
+                <div class="tw-flex tw-w-full tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
                     <img
-                        src="./assets/images/vector-setup.jpg"
-                        alt="Ledger Setup"
-                        class="tw-h-[160px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow"
+                        src="./assets/images/product-setup.jpg"
+                        alt="Ledger Setup workspace"
+                        class="tw-h-[150px] tw-w-full tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-object-cover tw-object-top tw-shadow"
                     />
                     <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Ledger Setup</h3>
                     <p class="tw-mt-1 tw-text-base tw-text-gray-600">Create a sandbox, upload a shapefile zip, convert to GeoParquet</p>
                 </div>
-                <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
+                <div class="tw-flex tw-w-full tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
                     <img
-                        src="./assets/images/placeholder-editing.jpg"
-                        alt="Ledger Editor"
-                        class="tw-h-[160px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow"
+                        src="./assets/images/product-editor.jpg"
+                        alt="Ledger Editor map tools"
+                        class="tw-h-[150px] tw-w-full tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-object-cover tw-object-top tw-shadow"
                     />
                     <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Ledger Editor</h3>
                     <p class="tw-mt-1 tw-text-base tw-text-gray-600">Draw and edit on the map. Changes stay pending until they are approved</p>
                 </div>
-                <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
+                <div class="tw-flex tw-w-full tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
                     <img
-                        src="./assets/images/placeholder-dashboard.jpg"
-                        alt="Ledger Dashboard"
-                        class="tw-h-[160px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow"
+                        src="./assets/images/product-dashboard.jpg"
+                        alt="Ledger Dashboard pending approvals"
+                        class="tw-h-[150px] tw-w-full tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-object-cover tw-object-top tw-shadow"
                     />
                     <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Ledger Dashboard</h3>
                     <p class="tw-mt-1 tw-text-base tw-text-gray-600">Review the change list, assign editor / approver / viewer roles</p>
                 </div>
-                <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
+                <div class="tw-flex tw-w-full tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
                     <img
-                        src="./assets/images/placeholder-geoparquet.jpg"
-                        alt="Ledger Lake"
-                        class="tw-h-[160px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow"
+                        src="./assets/images/product-lake.jpg"
+                        alt="Ledger Lake export and publish"
+                        class="tw-h-[150px] tw-w-full tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-object-cover tw-object-top tw-shadow"
                     />
                     <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Ledger Lake</h3>
                     <p class="tw-mt-1 tw-text-base tw-text-gray-600">Publish GeoParquet, PMTiles, and a MapLibre web map</p>
@@ -309,7 +290,7 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-white tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                OPEN FILES, A REAL WEB MAP
+                Open files, a real web map
             </h2>
             <div
                 class="reveal-up tw-mt-8 tw-flex tw-w-full tw-max-w-[800px] tw-flex-wrap tw-justify-center tw-gap-8"
@@ -332,40 +313,24 @@
             </p>
         </section>
 
-        <!-- Showcase: Global Ski Atlas -->
+        <!-- Related project -->
         <section
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                GLOBAL SKI ATLAS
+                Related project: Global Ski Atlas
             </h2>
-            <p class="reveal-up tw-mt-2 tw-text-center tw-text-lg tw-text-[#202124]">
-                3000+ resorts, live web editing, versioned data.
+            <p class="reveal-up tw-mt-2 tw-max-w-[600px] tw-text-center tw-text-base tw-text-gray-600">
+                A public atlas we built first—3,000+ resorts, web editing, versioned data. It is a related vertical, not Vector Ledger.
             </p>
-            <p class="reveal-up tw-mt-1 tw-max-w-[600px] tw-text-center tw-text-base tw-text-gray-600">
-                Our first vertical: ski resorts and communities. Same idea—people on the ground update the map, the public gets a clean atlas.
-            </p>
-            <div class="reveal-up tw-mt-10 tw-flex tw-max-w-[700px] tw-flex-col tw-gap-6 tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
-                <img
-                    src="./assets/images/pic01cs.jpg"
-                    alt="Global Ski Atlas"
-                    class="tw-h-[200px] tw-w-full tw-object-cover tw-rounded-lg"
-                />
-                <ul class="tw-flex tw-flex-col tw-gap-2 tw-text-[#202124]">
-                    <li>3000+ resorts with runs, lifts, amenities</li>
-                    <li>Resorts update via web editor (no GIS needed)</li>
-                    <li>Volunteers contributed editing and processing of final products</li>
-                    <li>Today it runs on OSM, MapTiler, MapLibre, and DynamoDB—not on Vector Ledger’s Esri stack</li>
-                </ul>
-                <a
-                    href="https://globalskiatlas.com"
-                    target="_blank"
-                    rel="noopener"
-                    class="tw-inline-flex tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
-                >
-                    Live demo <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
-                </a>
-            </div>
+            <a
+                href="https://globalskiatlas.com"
+                target="_blank"
+                rel="noopener"
+                class="reveal-up tw-mt-6 tw-inline-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
+            >
+                globalskiatlas.com <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
+            </a>
         </section>
 
         <!-- Competition / Why us -->
@@ -374,7 +339,7 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-white tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                WHY THIS EXISTS
+                Why this exists
             </h2>
             <p class="reveal-up tw-mt-6 tw-max-w-[720px] tw-text-center tw-text-base tw-text-gray-600">
                 <strong class="tw-text-[#202124]">The usual mess:</strong> shapefiles in email, a geodatabase nobody else can open, or a web map with no file you can take home.
@@ -392,7 +357,7 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-white tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                WHO WE SERVE
+                Who we serve
             </h2>
             <p class="reveal-up tw-mt-4 tw-max-w-[600px] tw-text-center tw-text-base tw-text-gray-600">
                 Boundary updates, infrastructure tracking, service areas, program mapping—any authoritative geospatial data your organization maintains.
@@ -426,7 +391,7 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                ABOUT US
+                About us
             </h2>
             <div class="reveal-up tw-mt-10 tw-flex tw-max-w-[560px] tw-flex-col tw-items-center tw-text-center">
                 <p class="tw-text-lg tw-font-semibold tw-text-[#202124]">Jonathan Witcoski</p>
@@ -443,7 +408,7 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                PRICING
+                Pricing
             </h2>
             <p class="reveal-up tw-mt-4 tw-max-w-[560px] tw-text-center tw-text-base tw-text-gray-600">
                 Start with one small dataset. Upgrade when you have more layers to keep in play.
@@ -562,7 +527,7 @@
                 rel="noopener"
                 class="tw-flex tw-h-[50px] tw-place-items-center tw-justify-center tw-rounded-full tw-bg-[#1A73E8] tw-px-8 tw-text-lg tw-font-medium tw-text-white"
             >
-                OPEN THE APP
+                Open the app
             </a>
             <div class="tw-flex tw-flex-wrap tw-justify-center tw-gap-6 tw-text-sm">
                 <a href="#product" class="footer-link tw-text-gray-300 hover:tw-text-white">Product</a>
@@ -571,7 +536,7 @@
                 <a href="#competition" class="footer-link tw-text-gray-300 hover:tw-text-white">Why Us</a>
                 <a href="pitch-deck.html" class="footer-link tw-text-gray-300 hover:tw-text-white">Pitch Deck</a>
                 <a href="https://app.vectorscopeai.com" target="_blank" rel="noopener" class="footer-link tw-text-gray-300 hover:tw-text-white">Ledger App</a>
-                <a href="https://globalskiatlas.com" target="_blank" rel="noopener" class="footer-link tw-text-gray-300 hover:tw-text-white">Demo</a>
+                <a href="https://globalskiatlas.com" target="_blank" rel="noopener" class="footer-link tw-text-gray-300 hover:tw-text-white">Ski Atlas</a>
                 <a href="#contact" class="footer-link tw-text-gray-300 hover:tw-text-white">Contact</a>
             </div>
             <div class="tw-flex tw-gap-4 tw-text-2xl tw-text-gray-400">
