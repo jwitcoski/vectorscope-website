@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vector Scope AI – Collaborative Map Updates for Agencies | Vector Ledger</title>
-        <meta name="description" content="The missing lakehouse layer for ArcGIS. Collaborative editing on Iceberg and GeoParquet, containerized GIS—so your Spark/Sedona data lakes work with ArcGIS Online. Vector Ledger." />
-        <meta name="keywords" content="ArcGIS, GeoParquet, collaborative mapping, GIS, Esri, Vector Ledger, geospatial, map updates, Iceberg, Spark, Sedona, Kubernetes, ArcGIS Online, Experience Builder, agencies" />
+        <title>Vector Scope AI – Vector Ledger | Collaborative map updates</title>
+        <meta name="description" content="Vector Ledger is a hosted app for collaborative map updates. Upload a shapefile, edit on the map, approve changes, and publish GeoParquet, PMTiles, and a web map." />
+        <meta name="keywords" content="Vector Ledger, GeoParquet, PMTiles, MapLibre, collaborative mapping, GIS, shapefile, QGIS, ArcGIS Pro, DuckDB, agencies" />
         <meta name="author" content="Vector Scope AI" />
         <link rel="canonical" href="https://vectorscopeai.com/" />
         <meta name="robots" content="index, follow" />
@@ -14,8 +14,8 @@
         <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
 
         <!-- Open Graph / Facebook -->
-        <meta property="og:title" content="Vector Scope AI – Collaborative Map Updates for Agencies" />
-        <meta property="og:description" content="The missing lakehouse layer for ArcGIS. Collaborative editing on Iceberg and GeoParquet, containerized GIS—so your Spark/Sedona data lakes work with ArcGIS Online. Vector Ledger." />
+        <meta property="og:title" content="Vector Scope AI – Vector Ledger" />
+        <meta property="og:description" content="Upload a shapefile, edit on the map, approve changes, and publish GeoParquet plus a web map. Try one dataset free." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://vectorscopeai.com/" />
         <meta property="og:image" content="https://vectorscopeai.com/assets/logo.png" />
@@ -24,8 +24,8 @@
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Vector Scope AI – Collaborative Map Updates for Agencies" />
-        <meta name="twitter:description" content="The missing lakehouse layer for ArcGIS. Collaborative editing on Iceberg and GeoParquet—Vector Ledger connects ArcGIS with GeoParquet and data lakes." />
+        <meta name="twitter:title" content="Vector Scope AI – Vector Ledger" />
+        <meta name="twitter:description" content="Collaborative map updates: shapefile in, GeoParquet and a shareable web map out." />
         <meta name="twitter:image" content="https://vectorscopeai.com/assets/logo.png" />
 
         <link rel="sitemap" type="application/xml" title="Sitemap" href="https://vectorscopeai.com/sitemap.xml" />
@@ -41,7 +41,7 @@
                     "name": "Vector Scope AI",
                     "url": "https://vectorscopeai.com",
                     "logo": "https://vectorscopeai.com/assets/logo.png",
-                    "description": "Collaborative map updates for agencies. The missing lakehouse layer for ArcGIS—Vector Ledger connects ArcGIS Online with Iceberg, GeoParquet, and Spark/Sedona data lakes.",
+                    "description": "Vector Ledger is a hosted app for collaborative map updates. Teams upload shapefiles, propose edits, approve changes, and publish GeoParquet and web maps.",
                     "sameAs": [
                         "https://www.linkedin.com/company/vectorscopeai",
                         "https://twitter.com/vectorscopeai"
@@ -53,15 +53,19 @@
                     "url": "https://vectorscopeai.com",
                     "name": "Vector Scope AI",
                     "publisher": { "@id": "https://vectorscopeai.com/#organization" },
-                    "description": "Collaborative map updates for agencies. Vector Ledger: Esri web apps meet GeoParquet and data lakes."
+                    "description": "Collaborative map updates for agencies. Vector Ledger: Setup, Editor, Dashboard, and Lake."
                 },
                 {
                     "@type": "SoftwareApplication",
                     "name": "Vector Ledger",
                     "applicationCategory": "BusinessApplication",
                     "operatingSystem": "Web",
-                    "description": "Agencies get authoritative map data updated by staff and partners via Esri web apps, delivered as versioned GeoParquet files. The bridge between ArcGIS and Iceberg/Spark/Sedona data lakes.",
-                    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+                    "description": "Hosted collaborative map editing. Upload a shapefile, review proposed edits, and publish versioned GeoParquet, PMTiles, and TileJSON.",
+                    "offers": [
+                        { "@type": "Offer", "name": "Free trial", "price": "0", "priceCurrency": "USD" },
+                        { "@type": "Offer", "name": "Standard", "price": "30", "priceCurrency": "USD" },
+                        { "@type": "Offer", "name": "Unlimited", "price": "100", "priceCurrency": "USD" }
+                    ]
                 }
             ]
         }
@@ -92,6 +96,7 @@
                 >
                     <a class="header-links" href="#product">Product</a>
                     <a class="header-links" href="#how-it-works">How It Works</a>
+                    <a class="header-links" href="#pricing">Pricing</a>
                     <a class="header-links" href="pitch-deck.html">Pitch Deck</a>
                     <a class="header-links" href="https://app.vectorscopeai.com" target="_blank" rel="noopener">Ledger App</a>
                     <a class="header-links" href="https://globalskiatlas.com" target="_blank" rel="noopener">Demo</a>
@@ -101,15 +106,17 @@
                     class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
                 >
                     <a
-                        href="#contact"
-                        aria-label="Contact for Pilot"
+                        href="https://app.vectorscopeai.com"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Try Vector Ledger free"
                         class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-p-1 tw-pl-4 tw-text-white"
                     >
-                        <span>Contact for Pilot</span>
+                        <span>Try it free</span>
                         <div
                             class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-[#1A73E8]"
                         >
-                            <i class="bi bi-envelope"></i>
+                            <i class="bi bi-box-arrow-up-right"></i>
                         </div>
                     </a>
                 </div>
@@ -133,13 +140,13 @@
                     VECTOR SCOPE AI
                 </h1>
                 <p class="reveal-hero-text tw-mt-4 tw-text-2xl tw-font-medium tw-text-[#202124] max-lg:tw-text-xl">
-                    Collaborative Map Updates for Agencies &amp; Organizations
+                    Collaborative map updates, without the GIS bottleneck
                 </p>
                 <p class="reveal-hero-text tw-mt-4 tw-max-w-[600px] tw-text-base tw-leading-relaxed tw-text-[#202124]">
-                    Non-technical staff and partners update official geospatial data through simple Esri web apps. We handle validation, versioning, and deliver clean GeoParquet files for analytics and archiving.
+                    Vector Ledger is a hosted app. You upload a shapefile, people edit on the map, someone reviews the change list, and you get GeoParquet plus a shareable web map.
                 </p>
                 <p class="reveal-hero-text tw-mt-2 tw-max-w-[640px] tw-text-sm tw-leading-relaxed tw-text-gray-700">
-                    The missing lakehouse layer for ArcGIS: collaborative editing on Iceberg and GeoParquet, with containerized GIS—so your Spark/Sedona data lakes work with ArcGIS Online.
+                    Try one dataset free (under 25 MB). Open it in QGIS, ArcGIS Pro, or DuckDB when you are done—your files are not stuck in our app.
                 </p>
                 <div class="reveal-hero-text tw-mt-8 tw-flex tw-flex-wrap tw-justify-center tw-gap-4">
                     <a
@@ -151,10 +158,10 @@
                         Open Vector Ledger
                     </a>
                     <a
-                        href="#contact"
+                        href="#pricing"
                         class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
                     >
-                        Contact for Pilot
+                        See pricing
                     </a>
                 </div>
             </div>
@@ -169,76 +176,71 @@
                 VECTOR LEDGER
             </h2>
             <p class="reveal-up tw-mt-3 tw-max-w-[600px] tw-text-center tw-text-lg tw-text-[#202124]">
-                Agencies get authoritative map data updated by real people, delivered as modern GeoParquet files.
+                A place for the map to live while people are still arguing over the last edit.
             </p>
             <p class="reveal-up tw-mt-2 tw-max-w-[700px] tw-text-center tw-text-base tw-text-gray-600">
-                No Esri partner ships Iceberg + wiki editing + GeoParquet for ArcGIS today—we do. Esri community has 100+ votes on Sedona/Iceberg ideas (source: <a href="https://community.esri.com/community/arcgis-ideas" target="_blank" rel="noopener">Esri ArcGIS Ideas</a>). Vector Ledger is the bridge between your Spark/Sedona/Iceberg data lakes and collaborative editing in ArcGIS.
-            </p>
-            <h3
-                class="reveal-up tw-text-center tw-text-2xl tw-font-semibold tw-text-[#202124] max-md:tw-text-xl"
-            >
-                Iceberg + GeoParquet for Geospatial Analytics
-            </h3>
-            <p
-                class="reveal-up tw-mt-2 tw-max-w-[760px] tw-text-center tw-text-base tw-text-gray-600"
-            >
-                Vector Ledger stores every approved edit as versioned GeoParquet (and optionally Apache Iceberg) in your data lake, enabling Spark/Sedona/Athena geospatial analytics while ArcGIS remains the editing and publishing environment.
+                Staff and partners propose changes. Approvers see what moved. When you publish, you get files desktop GIS and analytics tools can actually open—not a screenshot of a web map.
             </p>
             <p class="reveal-up tw-mt-4 tw-max-w-[640px] tw-text-center tw-text-sm tw-text-gray-600">
-                Four parts work together: <strong class="tw-text-[#202124]">Ledger Editor</strong> (Esri-based editing for staff), <strong class="tw-text-[#202124]">Ledger Dashboard</strong> (statistics, data viewing, approval and QC), <strong class="tw-text-[#202124]">Ledger Lake</strong> (versioned GeoParquet storage), and <strong class="tw-text-[#202124]">Ledger Grid</strong> (Kubernetes running GIS for map production).
+                Four parts: <strong class="tw-text-[#202124]">Setup</strong>, <strong class="tw-text-[#202124]">Editor</strong>, <strong class="tw-text-[#202124]">Dashboard</strong>, and <strong class="tw-text-[#202124]">Lake</strong>.
             </p>
             <div class="reveal-up tw-mt-10 tw-flex tw-w-full tw-max-w-[900px] tw-flex-col tw-items-center tw-gap-3">
                 <img
                     src="./assets/images/VectorLedger_AWS_ESRI_Architecture.png"
-                    alt="Vector Ledger future architecture: ESRI applications (ArcGIS Online, Enterprise, Experience Builder), Ledger Editor, Ledger Dashboard, Ledger Lake (S3 GeoParquet, Iceberg, Glue, Athena/Spark/Sedona), Ledger Grid (Kubernetes), ArcGIS/Map publishing and Analytics"
+                    alt="Vector Ledger future architecture with ArcGIS, GeoParquet, and analytics"
                     class="tw-w-full tw-max-h-[500px] tw-object-contain tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-shadow-sm"
                 />
-                <p class="tw-text-center tw-text-sm tw-text-gray-600">Future architecture: ESRI web apps → Ledger Editor → Ledger Lake (GeoParquet/Iceberg on AWS) → Ledger Dashboard &amp; Ledger Grid → ArcGIS and analytics.</p>
+                <p class="tw-text-center tw-text-sm tw-text-gray-600">Roadmap: tighter ArcGIS sync, Iceberg tables, and heavier GIS production. The live app today is Setup, Editor, Dashboard, and Lake.</p>
             </div>
             <div
                 class="reveal-up tw-mt-12 tw-flex tw-w-full tw-max-w-[1100px] tw-flex-wrap tw-items-start tw-justify-center tw-gap-12 max-lg:tw-flex-col max-lg:tw-items-center"
             >
                 <div class="tw-flex tw-flex-1 tw-flex-col tw-gap-6 tw-min-w-[280px]">
                     <img
+                        src="./assets/images/vector-setup.jpg"
+                        alt="Ledger Setup – sandbox and shapefile upload"
+                        class="tw-h-[180px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow-md"
+                    />
+                    <img
                         src="./assets/images/placeholder-editing.jpg"
-                        alt="Ledger Editor – web editing interface"
-                        class="tw-h-[140px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow-md"
+                        alt="Ledger Editor – map editing"
+                        class="tw-h-[180px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow-md"
                     />
                     <img
                         src="./assets/images/placeholder-dashboard.jpg"
-                        alt="Ledger Dashboard – statistics, data viewing, approval workflow"
-                        class="tw-h-[140px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow-md"
+                        alt="Ledger Dashboard – proposals and roles"
+                        class="tw-h-[180px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow-md"
                     />
                     <img
                         src="./assets/images/placeholder-geoparquet.jpg"
-                        alt="Ledger Lake – GeoParquet storage"
-                        class="tw-h-[140px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow-md"
+                        alt="Ledger Lake – GeoParquet and publish"
+                        class="tw-h-[180px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow-md"
                     />
                 </div>
                 <div class="tw-flex tw-flex-1 tw-flex-col tw-gap-4 tw-min-w-[280px]">
                     <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
                         <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
-                        <strong>Ledger Editor:</strong> Staff &amp; volunteers edit via Esri web apps (no GIS skills needed)
+                        <strong>Ledger Setup:</strong> Create a sandbox, drop in a shapefile zip, convert to GeoParquet
                     </p>
                     <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
                         <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
-                        <strong>Ledger Dashboard:</strong> Statistics, data viewing, quality checks &amp; approval workflows
+                        <strong>Ledger Editor:</strong> Draw and edit features on the map—adds, edits, and deletes stay pending until someone approves
                     </p>
                     <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
                         <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
-                        <strong>Ledger Lake:</strong> Every change saved as versioned GeoParquet files
+                        <strong>Ledger Dashboard:</strong> See the change list, invite editors / approvers / viewers
                     </p>
                     <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
                         <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
-                        <strong>Ledger Grid:</strong> Kubernetes runs GIS software for map production
+                        <strong>Ledger Lake:</strong> Publish GeoParquet, PMTiles, and a MapLibre preview
                     </p>
                     <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
                         <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
-                        Works with your existing ArcGIS Online/Enterprise
+                        Open the files in QGIS, ArcGIS Pro, or DuckDB
                     </p>
                     <p class="tw-flex tw-items-start tw-gap-2 tw-text-[#202124]">
                         <i class="bi bi-check2 tw-mt-0.5 tw-text-[#34A853]"></i>
-                        No database lock-in, instant analytics compatibility
+                        Share a stable Ledger URL—not a one-hour S3 link you have to babysit
                     </p>
                     <a
                         href="https://app.vectorscopeai.com"
@@ -258,37 +260,46 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                FROM ESRI EDITS TO GEOPARQUET IN MINUTES
+                HOW VECTOR LEDGER WORKS
             </h2>
             <div
-                class="reveal-up tw-mt-12 tw-flex tw-w-full tw-max-w-[1000px] tw-flex-wrap tw-justify-center tw-gap-8 max-lg:tw-flex-col max-lg:tw-items-center"
+                class="reveal-up tw-mt-12 tw-flex tw-w-full tw-max-w-[1200px] tw-flex-wrap tw-justify-center tw-gap-8 max-lg:tw-flex-col max-lg:tw-items-center"
             >
+                <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
+                    <img
+                        src="./assets/images/vector-setup.jpg"
+                        alt="Ledger Setup"
+                        class="tw-h-[160px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow"
+                    />
+                    <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Ledger Setup</h3>
+                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">Create a sandbox, upload a shapefile zip, convert to GeoParquet</p>
+                </div>
                 <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
                     <img
                         src="./assets/images/placeholder-editing.jpg"
                         alt="Ledger Editor"
-                        class="tw-h-[120px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow"
+                        class="tw-h-[160px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow"
                     />
                     <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Ledger Editor</h3>
-                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">Staff &amp; partners edit via guided Esri web apps and forms</p>
+                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">Draw and edit on the map. Changes stay pending until they are approved</p>
                 </div>
                 <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
                     <img
                         src="./assets/images/placeholder-dashboard.jpg"
                         alt="Ledger Dashboard"
-                        class="tw-h-[120px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow"
+                        class="tw-h-[160px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow"
                     />
                     <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Ledger Dashboard</h3>
-                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">View statistics and data, review changes, run QC, approve updates</p>
+                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">Review the change list, assign editor / approver / viewer roles</p>
                 </div>
                 <div class="tw-flex tw-max-w-[280px] tw-flex-col tw-items-center tw-text-center">
                     <img
                         src="./assets/images/placeholder-geoparquet.jpg"
                         alt="Ledger Lake"
-                        class="tw-h-[120px] tw-w-full tw-rounded-lg tw-object-cover tw-shadow"
+                        class="tw-h-[160px] tw-w-full tw-rounded-lg tw-object-contain tw-bg-white tw-shadow"
                     />
                     <h3 class="tw-mt-4 tw-text-xl tw-font-semibold tw-text-[#202124]">Ledger Lake</h3>
-                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">Versioned GeoParquet for analytics, sharing, archiving</p>
+                    <p class="tw-mt-1 tw-text-base tw-text-gray-600">Publish GeoParquet, PMTiles, and a MapLibre web map</p>
                 </div>
             </div>
         </section>
@@ -298,19 +309,11 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-white tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                BUILT ON ESRI + ICEBERG/GEOPARQUET DATA STANDARDS
+                OPEN FILES, A REAL WEB MAP
             </h2>
             <div
                 class="reveal-up tw-mt-8 tw-flex tw-w-full tw-max-w-[800px] tw-flex-wrap tw-justify-center tw-gap-8"
             >
-                <div class="tw-flex tw-flex-col tw-items-center tw-gap-2 tw-rounded tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-min-w-[140px]">
-                    <img src="./assets/images/tech/arcgis.png" alt="ArcGIS Online/Enterprise" class="tw-h-10 tw-w-auto tw-object-contain" />
-                    <span class="tw-text-sm tw-font-medium tw-text-[#202124]">ArcGIS Online/Enterprise</span>
-                </div>
-                <div class="tw-flex tw-flex-col tw-items-center tw-gap-2 tw-rounded tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-min-w-[140px]">
-                    <img src="./assets/images/tech/experience-builder.png" alt="Experience Builder" class="tw-h-10 tw-w-auto tw-object-contain" />
-                    <span class="tw-text-sm tw-font-medium tw-text-[#202124]">Experience Builder</span>
-                </div>
                 <div class="tw-flex tw-flex-col tw-items-center tw-gap-2 tw-rounded tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-min-w-[140px]">
                     <img src="./assets/images/tech/geoparquet.png" alt="GeoParquet" class="tw-h-10 tw-w-auto tw-object-contain" />
                     <span class="tw-text-sm tw-font-medium tw-text-[#202124]">GeoParquet</span>
@@ -320,12 +323,12 @@
                     <span class="tw-text-sm tw-font-medium tw-text-[#202124]">AWS</span>
                 </div>
                 <div class="tw-flex tw-flex-col tw-items-center tw-gap-2 tw-rounded tw-border tw-border-gray-200 tw-bg-gray-50 tw-p-4 tw-min-w-[140px]">
-                    <img src="./assets/images/tech/kubernetes.png" alt="Kubernetes" class="tw-h-10 tw-w-auto tw-object-contain" />
-                    <span class="tw-text-sm tw-font-medium tw-text-[#202124]">Kubernetes</span>
+                    <img src="./assets/images/tech/arcgis.png" alt="QGIS and ArcGIS Pro" class="tw-h-10 tw-w-auto tw-object-contain" />
+                    <span class="tw-text-sm tw-font-medium tw-text-[#202124]">QGIS / ArcGIS Pro</span>
                 </div>
             </div>
             <p class="reveal-up tw-mt-6 tw-max-w-[600px] tw-text-center tw-text-base tw-text-gray-600">
-                Esri web apps meet open-standard GeoParquet and Iceberg. Kubernetes runs GIS for map production. Your data stays portable, scalable, and analytics-ready.
+                The live app serves GeoParquet, PMTiles, and TileJSON for MapLibre. QGIS and ArcGIS Pro can open the lake file. Iceberg and deeper ArcGIS sync are on the roadmap—not what you get the first time you sign in.
             </p>
         </section>
 
@@ -340,7 +343,7 @@
                 3000+ resorts, live web editing, versioned data.
             </p>
             <p class="reveal-up tw-mt-1 tw-max-w-[600px] tw-text-center tw-text-base tw-text-gray-600">
-                Same workflow available for agency data (boundaries, infrastructure, program areas). Our first vertical: ski resorts &amp; communities.
+                Our first vertical: ski resorts and communities. Same idea—people on the ground update the map, the public gets a clean atlas.
             </p>
             <div class="reveal-up tw-mt-10 tw-flex tw-max-w-[700px] tw-flex-col tw-gap-6 tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
                 <img
@@ -352,7 +355,7 @@
                     <li>3000+ resorts with runs, lifts, amenities</li>
                     <li>Resorts update via web editor (no GIS needed)</li>
                     <li>Volunteers contributed editing and processing of final products</li>
-                    <li>Today: OSM data, MapTiler, MapLibre, DynamoDB, JS—can use Esri for agency deployments</li>
+                    <li>Today it runs on OSM, MapTiler, MapLibre, and DynamoDB—not on Vector Ledger’s Esri stack</li>
                 </ul>
                 <a
                     href="https://globalskiatlas.com"
@@ -371,16 +374,16 @@
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-white tw-py-16 tw-px-6"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
-                COMPETITION / WHY US
+                WHY THIS EXISTS
             </h2>
             <p class="reveal-up tw-mt-6 tw-max-w-[720px] tw-text-center tw-text-base tw-text-gray-600">
-                <strong class="tw-text-[#202124]">Who else?</strong> CARTO and Wherobots push Iceberg + GeoParquet as data platforms—but not as “Esri + lakehouse collaboration.” Most agencies DIY or have nothing.
+                <strong class="tw-text-[#202124]">The usual mess:</strong> shapefiles in email, a geodatabase nobody else can open, or a web map with no file you can take home.
             </p>
             <p class="reveal-up tw-mt-4 tw-max-w-[720px] tw-text-center tw-text-base tw-text-gray-600">
-                <strong class="tw-text-[#202124]">Vector Ledger:</strong> First Esri-aligned partner doing Iceberg + collaborative editing + GeoParquet for ArcGIS.
+                <strong class="tw-text-[#202124]">Vector Ledger:</strong> a hosted editor with an approval trail and GeoParquet / PMTiles you can download.
             </p>
             <p class="reveal-up tw-mt-4 tw-max-w-[720px] tw-text-center tw-text-base tw-text-gray-600">
-                <strong class="tw-text-[#202124]">Moat:</strong> Working product, not just a diagram—Esri sync, approval workflows, deployment support.
+                Data platforms like CARTO and Wherobots are strong at lakehouse analytics. We are aimed at the people who still have to change the lines on the map.
             </p>
         </section>
 
@@ -429,8 +432,72 @@
                 <p class="tw-text-lg tw-font-semibold tw-text-[#202124]">Jonathan Witcoski</p>
                 <p class="tw-mt-1 tw-text-base tw-font-medium tw-text-gray-600">Founder &amp; GIS Architect</p>
                 <p class="tw-mt-4 tw-text-base tw-leading-relaxed tw-text-[#202124]">
-                    15+ years federal GIS contracting (CDC, Census, ARNG, DHS). Python ETL, AWS serverless, geospatial automation expert. Building tools that make agencies move faster.
+                    Fifteen-plus years of federal GIS work (CDC, Census, ARNG, DHS). I got tired of watching good map data die in email threads, so I built Vector Ledger.
                 </p>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section
+            id="pricing"
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-py-16 tw-px-6"
+        >
+            <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-md:tw-text-2xl">
+                PRICING
+            </h2>
+            <p class="reveal-up tw-mt-4 tw-max-w-[560px] tw-text-center tw-text-base tw-text-gray-600">
+                Start with one small dataset. Upgrade when you have more layers to keep in play.
+            </p>
+            <div
+                class="reveal-up tw-mt-10 tw-flex tw-w-full tw-max-w-[960px] tw-flex-wrap tw-justify-center tw-gap-6"
+            >
+                <div class="tw-flex tw-w-full tw-max-w-[280px] tw-flex-col tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
+                    <h3 class="tw-text-lg tw-font-semibold tw-text-[#202124]">Free trial</h3>
+                    <p class="tw-mt-2 tw-text-3xl tw-font-bold tw-text-[#202124]">$0</p>
+                    <p class="tw-mt-1 tw-text-sm tw-text-gray-600">One dataset, under 25 MB</p>
+                    <ul class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-sm tw-text-[#202124]">
+                        <li>Shapefile zip → GeoParquet</li>
+                        <li>Editor, dashboard, and publish</li>
+                    </ul>
+                    <a
+                        href="https://app.vectorscopeai.com"
+                        target="_blank"
+                        rel="noopener"
+                        class="tw-mt-6 tw-inline-flex tw-h-[44px] tw-place-items-center tw-justify-center tw-rounded-full tw-bg-[#1A73E8] tw-px-5 tw-text-white"
+                    >
+                        Open Vector Ledger
+                    </a>
+                </div>
+                <div class="tw-flex tw-w-full tw-max-w-[280px] tw-flex-col tw-rounded-xl tw-border-2 tw-border-[#1A73E8] tw-bg-white tw-p-6 tw-shadow-sm">
+                    <h3 class="tw-text-lg tw-font-semibold tw-text-[#202124]">Standard</h3>
+                    <p class="tw-mt-2 tw-text-3xl tw-font-bold tw-text-[#202124]">$30<span class="tw-text-base tw-font-medium tw-text-gray-600">/month</span></p>
+                    <p class="tw-mt-1 tw-text-sm tw-text-gray-600">The main plan for ongoing work</p>
+                    <ul class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-sm tw-text-[#202124]">
+                        <li>More than one dataset</li>
+                        <li>Keep publishing and inviting teammates</li>
+                    </ul>
+                    <a
+                        href="#contact"
+                        class="tw-mt-6 tw-inline-flex tw-h-[44px] tw-place-items-center tw-justify-center tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-5 tw-text-[#1A73E8]"
+                    >
+                        Ask about Standard
+                    </a>
+                </div>
+                <div class="tw-flex tw-w-full tw-max-w-[280px] tw-flex-col tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-p-6 tw-shadow-sm">
+                    <h3 class="tw-text-lg tw-font-semibold tw-text-[#202124]">Unlimited</h3>
+                    <p class="tw-mt-2 tw-text-3xl tw-font-bold tw-text-[#202124]">$100<span class="tw-text-base tw-font-medium tw-text-gray-600">/month</span></p>
+                    <p class="tw-mt-1 tw-text-sm tw-text-gray-600">For teams with a lot of layers</p>
+                    <ul class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-sm tw-text-[#202124]">
+                        <li>Unlimited datasets</li>
+                        <li>Full Setup, Editor, Dashboard, and Lake</li>
+                    </ul>
+                    <a
+                        href="#contact"
+                        class="tw-mt-6 tw-inline-flex tw-h-[44px] tw-place-items-center tw-justify-center tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-5 tw-text-[#1A73E8]"
+                    >
+                        Ask about Unlimited
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -440,10 +507,10 @@
             class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-6 tw-bg-white tw-py-16 tw-px-6 tw-px-[10%]"
         >
             <h2 class="reveal-up tw-text-center tw-text-3xl tw-font-semibold tw-text-[#202124] max-md:tw-text-xl">
-                Ready to simplify collaborative map updates?
+                Questions, or a dataset that does not fit the trial?
             </h2>
             <p class="reveal-up tw-text-center tw-text-lg tw-text-gray-600">
-                License $10K–$30K/year + implementation $15K–$40K per deployment. Pilot engagements (free or discounted) available. Send a message below and we’ll get back to you.
+                Free trial is one dataset under 25 MB. Standard is $30/month. Unlimited is $100/month. Send a note and we will get back to you.
             </p>
             <form
                 action="https://formspree.io/f/mykjvjwb"
@@ -479,7 +546,7 @@
                     class="tw-w-full tw-rounded-lg tw-border tw-border-gray-300 tw-px-4 tw-py-3 tw-text-base focus:tw-border-[#1A73E8] focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-[#1A73E8]"
                 ></textarea>
                 <button type="submit" class="btn tw-h-[50px] tw-w-full tw-px-8 tw-transition-colors tw-duration-[0.3s]">
-                    Start Pilot
+                    Send message
                 </button>
             </form>
         </section>
@@ -488,16 +555,19 @@
         <footer
             class="tw-mt-auto tw-flex tw-w-full tw-flex-col tw-place-items-center tw-gap-6 tw-bg-[#202124] tw-py-12 tw-px-6 tw-text-white"
         >
-            <p class="tw-text-center tw-text-lg tw-font-medium">Ready to simplify collaborative map updates?</p>
+            <p class="tw-text-center tw-text-lg tw-font-medium">Ready to try Vector Ledger?</p>
             <a
-                href="#contact"
+                href="https://app.vectorscopeai.com"
+                target="_blank"
+                rel="noopener"
                 class="tw-flex tw-h-[50px] tw-place-items-center tw-justify-center tw-rounded-full tw-bg-[#1A73E8] tw-px-8 tw-text-lg tw-font-medium tw-text-white"
             >
-                START YOUR PILOT
+                OPEN THE APP
             </a>
-            <div class="tw-flex tw-gap-6 tw-text-sm">
+            <div class="tw-flex tw-flex-wrap tw-justify-center tw-gap-6 tw-text-sm">
                 <a href="#product" class="footer-link tw-text-gray-300 hover:tw-text-white">Product</a>
                 <a href="#how-it-works" class="footer-link tw-text-gray-300 hover:tw-text-white">How It Works</a>
+                <a href="#pricing" class="footer-link tw-text-gray-300 hover:tw-text-white">Pricing</a>
                 <a href="#competition" class="footer-link tw-text-gray-300 hover:tw-text-white">Why Us</a>
                 <a href="pitch-deck.html" class="footer-link tw-text-gray-300 hover:tw-text-white">Pitch Deck</a>
                 <a href="https://app.vectorscopeai.com" target="_blank" rel="noopener" class="footer-link tw-text-gray-300 hover:tw-text-white">Ledger App</a>
