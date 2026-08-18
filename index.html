@@ -142,15 +142,21 @@
                     Collaborative map updates, without the GIS bottleneck
                 </p>
                 <p class="reveal-hero-text tw-mt-4 tw-max-w-[720px] tw-text-base tw-leading-relaxed tw-text-gray-700">
-                    Try the live map below—no login. Click a feature, propose an edit, and see it on the change list.
+                    Try the live map—no login. Select a feature, propose an edit, and see it on the change list.
                 </p>
                 <p class="reveal-hero-text tw-mt-2 tw-max-w-[720px] tw-text-sm tw-leading-relaxed tw-text-gray-600">
                     One dataset free (under 25 MB). Open the files in QGIS, ArcGIS Pro, or DuckDB—they are not stuck in our app.
                 </p>
                 <div class="reveal-hero-text tw-mt-8 tw-flex tw-flex-wrap tw-justify-center tw-gap-4">
                     <a
+                        href="https://app.vectorscopeai.com/public"
+                        class="playground-phone-cta tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
+                    >
+                        Try the map
+                    </a>
+                    <a
                         href="#ledger-playground"
-                        class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
+                        class="playground-desktop-cta tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
                     >
                         Try the map
                     </a>
@@ -158,7 +164,7 @@
                         href="https://app.vectorscopeai.com/public"
                         target="_blank"
                         rel="noopener"
-                        class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
+                        class="playground-desktop-cta tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
                     >
                         Open full screen <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
                     </a>
@@ -167,36 +173,68 @@
 
             <div
                 id="ledger-playground"
-                class="tw-mt-10 tw-w-full tw-max-w-[1160px] tw-overflow-hidden tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-shadow-xl"
+                class="playground tw-mt-10 tw-w-full tw-max-w-[1160px] tw-overflow-hidden tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-shadow-xl"
             >
-                <div class="tw-flex tw-h-10 tw-items-center tw-justify-between tw-gap-3 tw-border-b tw-border-gray-200 tw-bg-gray-100 tw-px-3">
-                    <div class="tw-flex tw-min-w-0 tw-items-center tw-gap-1.5">
-                        <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FF5F57]"></span>
-                        <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FEBC2E]"></span>
-                        <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#28C840]"></span>
-                        <span class="tw-ml-2 tw-truncate tw-text-xs tw-text-gray-500">app.vectorscopeai.com/public — live, no login</span>
+                <div class="playground-desktop">
+                    <div class="tw-flex tw-h-10 tw-items-center tw-justify-between tw-gap-3 tw-border-b tw-border-gray-200 tw-bg-gray-100 tw-px-3">
+                        <div class="tw-flex tw-min-w-0 tw-items-center tw-gap-1.5">
+                            <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FF5F57]"></span>
+                            <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FEBC2E]"></span>
+                            <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#28C840]"></span>
+                            <span class="tw-ml-2 tw-truncate tw-text-xs tw-text-gray-500">app.vectorscopeai.com/public — live, no login</span>
+                        </div>
+                        <a
+                            href="https://app.vectorscopeai.com/public"
+                            target="_blank"
+                            rel="noopener"
+                            class="tw-shrink-0 tw-text-xs tw-font-medium tw-text-[#1A73E8] hover:tw-underline"
+                        >
+                            Open in a new tab
+                        </a>
                     </div>
-                    <a
-                        href="https://app.vectorscopeai.com/public"
-                        target="_blank"
-                        rel="noopener"
-                        class="tw-shrink-0 tw-text-xs tw-font-medium tw-text-[#1A73E8] hover:tw-underline"
-                    >
-                        Open in a new tab
-                    </a>
+                    <iframe
+                        id="ledger-embed"
+                        data-src="https://app.vectorscopeai.com/public?embed=1"
+                        title="Vector Ledger public playground. Select a feature to propose edits. No login required."
+                        allow="clipboard-write; fullscreen"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        class="playground-iframe"
+                    ></iframe>
+                    <script>
+                        (function () {
+                            var iframe = document.getElementById("ledger-embed");
+                            if (iframe && window.matchMedia("(min-width: 1024px)").matches) {
+                                iframe.src = iframe.getAttribute("data-src");
+                            }
+                        })();
+                    </script>
                 </div>
-                <iframe
-                    src="https://app.vectorscopeai.com/public?embed=1"
-                    title="Vector Ledger public playground. Click the map to propose edits. No login required."
-                    allow="clipboard-write; fullscreen"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    loading="eager"
-                    class="tw-block tw-w-full tw-border-0"
-                    style="height: min(75vh, 780px); min-height: 520px;"
-                ></iframe>
+                <a
+                    class="playground-phone"
+                    href="https://app.vectorscopeai.com/public"
+                    aria-label="Open the live Vector Ledger map"
+                >
+                    <img
+                        src="./assets/images/product-editor.jpg"
+                        alt="Ledger Editor map with a park polygon selected"
+                        width="1160"
+                        height="640"
+                    />
+                    <span class="playground-phone-overlay">
+                        <span class="playground-phone-kicker">Live map · no login</span>
+                        <span class="playground-phone-button">
+                            Open the live map
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+                        <span class="playground-phone-hint">Easier to pan and zoom full screen.</span>
+                    </span>
+                </a>
             </div>
-            <p class="tw-mt-3 tw-max-w-[720px] tw-text-center tw-text-sm tw-text-gray-600">
+            <p class="playground-desktop-cta tw-mt-3 tw-max-w-[720px] tw-text-center tw-text-sm tw-text-gray-600">
                 This is the real public sandbox. Edits you submit stay pending until they are reviewed.
+            </p>
+            <p class="playground-phone-cta tw-mt-3 tw-max-w-[720px] tw-text-center tw-text-sm tw-text-gray-600">
+                Opens the real public sandbox full screen. Edits stay pending until they are reviewed.
             </p>
         </section>
 

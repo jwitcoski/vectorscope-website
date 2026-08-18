@@ -51,6 +51,31 @@ function responsive() {
 
 window.addEventListener("resize", responsive)
 
+function syncLedgerEmbed() {
+    const iframe = document.getElementById("ledger-embed")
+    if (!iframe) return
+
+    const src = iframe.getAttribute("data-src")
+    if (!src) return
+
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches
+    if (isDesktop) {
+        if (iframe.getAttribute("src") !== src) {
+            iframe.src = src
+        }
+    } else if (iframe.getAttribute("src")) {
+        iframe.removeAttribute("src")
+    }
+}
+
+syncLedgerEmbed()
+const desktopPlaygroundQuery = window.matchMedia("(min-width: 1024px)")
+if (typeof desktopPlaygroundQuery.addEventListener === "function") {
+    desktopPlaygroundQuery.addEventListener("change", syncLedgerEmbed)
+} else if (typeof desktopPlaygroundQuery.addListener === "function") {
+    desktopPlaygroundQuery.addListener(syncLedgerEmbed)
+}
+
 
 /**
  * Animations
