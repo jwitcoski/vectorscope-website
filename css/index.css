@@ -17,6 +17,12 @@ html {
     font-family: "Inter", sans-serif;
 }
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 header{
     /* background-color: #fff;
     color: #000; */
@@ -196,4 +202,108 @@ header > .collapsible-header{
         color: black;
     }
     
+}
+
+/* Live playground: iframe on desktop, tappable preview on phones */
+.playground-iframe {
+    display: block;
+    width: 100%;
+    height: min(75vh, 780px);
+    min-height: 520px;
+    border: 0;
+}
+
+.playground-phone {
+    display: none;
+}
+
+.playground-phone-cta {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    #try-it {
+        padding-top: 88px;
+    }
+
+    .playground-desktop {
+        display: none;
+    }
+
+    .playground-desktop-cta {
+        display: none;
+    }
+
+    a.playground-phone-cta {
+        display: flex;
+    }
+
+    p.playground-phone-cta {
+        display: block;
+    }
+
+    .playground-phone {
+        position: relative;
+        display: block;
+        min-height: 240px;
+        color: inherit;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .playground-phone:focus-visible {
+        outline: 3px solid #1A73E8;
+        outline-offset: 3px;
+    }
+
+    .playground-phone img {
+        display: block;
+        width: 100%;
+        height: min(52vw, 280px);
+        min-height: 220px;
+        object-fit: cover;
+        object-position: left top;
+    }
+
+    .playground-phone-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        padding: 1.25rem 1rem 1.5rem;
+        background: linear-gradient(to top, rgba(32, 33, 36, 0.82) 0%, rgba(32, 33, 36, 0.28) 55%, rgba(32, 33, 36, 0.08) 100%);
+        text-align: center;
+    }
+
+    .playground-phone-kicker {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .playground-phone-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        min-height: 44px;
+        padding: 0.6rem 1.25rem;
+        border-radius: 999px;
+        background: #1A73E8;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .playground-phone-hint {
+        max-width: 22rem;
+        font-size: 0.8rem;
+        line-height: 1.35;
+        color: rgba(255, 255, 255, 0.9);
+    }
 }
