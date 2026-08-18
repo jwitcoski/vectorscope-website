@@ -52,13 +52,18 @@ function responsive() {
 window.addEventListener("resize", responsive)
 
 function syncLedgerEmbed() {
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches
+    const desktop = document.querySelector(".playground-desktop")
+    const phone = document.querySelector(".playground-phone")
+    if (desktop) desktop.hidden = !isDesktop
+    if (phone) phone.hidden = isDesktop
+
     const iframe = document.getElementById("ledger-embed")
     if (!iframe) return
 
     const src = iframe.getAttribute("data-src")
     if (!src) return
 
-    const isDesktop = window.matchMedia("(min-width: 1024px)").matches
     if (isDesktop) {
         if (iframe.getAttribute("src") !== src) {
             iframe.src = src
