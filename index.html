@@ -94,6 +94,7 @@
                 <div
                     class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-[#202124] max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
                 >
+                    <a class="header-links" href="#try-it">Try the map</a>
                     <a class="header-links" href="#product">Product</a>
                     <a class="header-links" href="#how-it-works">How It Works</a>
                     <a class="header-links" href="#pricing">Pricing</a>
@@ -104,17 +105,15 @@
                     class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
                 >
                     <a
-                        href="https://app.vectorscopeai.com/public"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="Try Vector Ledger free"
+                        href="#try-it"
+                        aria-label="Try Vector Ledger on this page"
                         class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-p-1 tw-pl-4 tw-text-white"
                     >
                         <span>Try it free</span>
                         <div
                             class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-[#1A73E8]"
                         >
-                            <i class="bi bi-box-arrow-up-right"></i>
+                            <i class="bi bi-arrow-down"></i>
                         </div>
                     </a>
                 </div>
@@ -127,60 +126,78 @@
             ></button>
         </header>
 
-        <!-- Hero -->
+        <!-- Hero + live public playground -->
         <section
-            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-items-center tw-justify-center tw-overflow-hidden tw-bg-[#F8F9FA] tw-p-[5%] tw-pt-[96px] max-lg:tw-p-4 max-md:tw-mt-[50px]"
+            id="try-it"
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-items-center tw-bg-[#F8F9FA] tw-p-[5%] tw-pt-[96px] max-lg:tw-p-4 max-md:tw-mt-[50px]"
         >
-            <div
-                class="tw-relative tw-flex tw-w-full tw-max-w-[1160px] tw-items-center tw-gap-12 max-lg:tw-flex-col max-lg:tw-text-center"
-            >
-                <div class="tw-flex tw-max-w-[520px] tw-flex-1 tw-flex-col max-lg:tw-items-center">
-                    <p class="reveal-hero-text tw-text-sm tw-font-semibold tw-tracking-wide tw-text-[#1A73E8]">
-                        Vector Scope AI
-                    </p>
-                    <h1 class="reveal-hero-text tw-mt-2 tw-text-5xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-lg:tw-text-4xl max-md:tw-text-3xl">
-                        Vector Ledger
-                    </h1>
-                    <p class="reveal-hero-text tw-mt-4 tw-text-xl tw-font-medium tw-text-[#202124] max-lg:tw-text-lg">
-                        Collaborative map updates, without the GIS bottleneck
-                    </p>
-                    <p class="reveal-hero-text tw-mt-4 tw-text-base tw-leading-relaxed tw-text-gray-700">
-                        Upload a shapefile, edit on the map, approve the change list, and publish GeoParquet plus a shareable web map.
-                    </p>
-                    <p class="reveal-hero-text tw-mt-2 tw-text-sm tw-leading-relaxed tw-text-gray-600">
-                        One dataset free (under 25 MB). Open the files in QGIS, ArcGIS Pro, or DuckDB—they are not stuck in our app.
-                    </p>
-                    <div class="reveal-hero-text tw-mt-8 tw-flex tw-flex-wrap tw-gap-4 max-lg:tw-justify-center">
-                        <a
-                            href="https://app.vectorscopeai.com/public"
-                            target="_blank"
-                            rel="noopener"
-                            class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
-                        >
-                            Try Vector Ledger
-                        </a>
-                        <a
-                            href="#how-it-works"
-                            class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
-                        >
-                            See how it works
-                        </a>
-                    </div>
+            <div class="tw-relative tw-flex tw-w-full tw-max-w-[1160px] tw-flex-col tw-items-center tw-text-center">
+                <p class="reveal-hero-text tw-text-sm tw-font-semibold tw-tracking-wide tw-text-[#1A73E8]">
+                    Vector Scope AI
+                </p>
+                <h1 class="reveal-hero-text tw-mt-2 tw-text-5xl tw-font-bold tw-tracking-tight tw-text-[#202124] max-lg:tw-text-4xl max-md:tw-text-3xl">
+                    Vector Ledger
+                </h1>
+                <p class="reveal-hero-text tw-mt-4 tw-text-xl tw-font-medium tw-text-[#202124] max-lg:tw-text-lg">
+                    Collaborative map updates, without the GIS bottleneck
+                </p>
+                <p class="reveal-hero-text tw-mt-4 tw-max-w-[720px] tw-text-base tw-leading-relaxed tw-text-gray-700">
+                    Try the live map below—no login. Click a feature, propose an edit, and see it on the change list.
+                </p>
+                <p class="reveal-hero-text tw-mt-2 tw-max-w-[720px] tw-text-sm tw-leading-relaxed tw-text-gray-600">
+                    One dataset free (under 25 MB). Open the files in QGIS, ArcGIS Pro, or DuckDB—they are not stuck in our app.
+                </p>
+                <div class="reveal-hero-text tw-mt-8 tw-flex tw-flex-wrap tw-justify-center tw-gap-4">
+                    <a
+                        href="#ledger-playground"
+                        class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
+                    >
+                        Try the map
+                    </a>
+                    <a
+                        href="https://app.vectorscopeai.com/public"
+                        target="_blank"
+                        rel="noopener"
+                        class="tw-flex tw-h-[44px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-2 tw-border-[#1A73E8] tw-px-6 tw-text-[#1A73E8]"
+                    >
+                        Open full screen <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
+                    </a>
                 </div>
-                <div class="reveal-hero-img tw-w-full tw-flex-1 tw-overflow-hidden tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-shadow-xl">
-                    <div class="tw-flex tw-h-8 tw-items-center tw-gap-1.5 tw-border-b tw-border-gray-200 tw-bg-gray-100 tw-px-3">
+            </div>
+
+            <div
+                id="ledger-playground"
+                class="tw-mt-10 tw-w-full tw-max-w-[1160px] tw-overflow-hidden tw-rounded-xl tw-border tw-border-gray-200 tw-bg-white tw-shadow-xl"
+            >
+                <div class="tw-flex tw-h-10 tw-items-center tw-justify-between tw-gap-3 tw-border-b tw-border-gray-200 tw-bg-gray-100 tw-px-3">
+                    <div class="tw-flex tw-min-w-0 tw-items-center tw-gap-1.5">
                         <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FF5F57]"></span>
                         <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#FEBC2E]"></span>
                         <span class="tw-inline-block tw-h-2.5 tw-w-2.5 tw-rounded-full tw-bg-[#28C840]"></span>
-                        <span class="tw-ml-2 tw-truncate tw-text-xs tw-text-gray-500">app.vectorscopeai.com</span>
+                        <span class="tw-ml-2 tw-truncate tw-text-xs tw-text-gray-500">app.vectorscopeai.com/public — live, no login</span>
                     </div>
-                    <img
-                        src="./assets/images/product-editor.jpg"
-                        alt="Ledger Editor: draw and edit map features, then submit for approval"
-                        class="tw-block tw-w-full"
-                    />
+                    <a
+                        href="https://app.vectorscopeai.com/public"
+                        target="_blank"
+                        rel="noopener"
+                        class="tw-shrink-0 tw-text-xs tw-font-medium tw-text-[#1A73E8] hover:tw-underline"
+                    >
+                        Open in a new tab
+                    </a>
                 </div>
+                <iframe
+                    src="https://app.vectorscopeai.com/public?embed=1"
+                    title="Vector Ledger public playground. Click the map to propose edits. No login required."
+                    allow="clipboard-write; fullscreen"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    loading="eager"
+                    class="tw-block tw-w-full tw-border-0"
+                    style="height: min(75vh, 780px); min-height: 520px;"
+                ></iframe>
             </div>
+            <p class="tw-mt-3 tw-max-w-[720px] tw-text-center tw-text-sm tw-text-gray-600">
+                This is the real public sandbox. Edits you submit stay pending until they are reviewed.
+            </p>
         </section>
 
         <!-- Product: Vector Ledger -->
@@ -225,12 +242,10 @@
                         Share a stable Ledger URL—not a one-hour S3 link you have to babysit
                     </p>
                     <a
-                        href="https://app.vectorscopeai.com/public"
-                        target="_blank"
-                        rel="noopener"
+                        href="#try-it"
                         class="tw-mt-2 tw-inline-flex tw-h-[44px] tw-w-max tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-[#1A73E8] tw-px-6 tw-text-white"
                     >
-                        Open the app <i class="bi bi-box-arrow-up-right tw-text-sm"></i>
+                        Try the live map <i class="bi bi-arrow-up tw-text-sm"></i>
                     </a>
             </div>
         </section>
